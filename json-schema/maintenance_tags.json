@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/wikimedia/refs/heads/main/json-schema/maintenance_tags.json",
+  "title": "maintenance_tags",
+  "description": "Schema for maintenance_tags from the Wikimedia Enterprise API",
+  "properties": {
+    "citation_needed_count": {
+      "type": "integer"
+    },
+    "pov_count": {
+      "type": "integer"
+    },
+    "clarification_needed_count": {
+      "type": "integer"
+    },
+    "update_count": {
+      "type": "integer"
+    }
+  },
+  "type": "object"
+}

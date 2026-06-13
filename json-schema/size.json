@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/wikimedia/refs/heads/main/json-schema/size.json",
+  "title": "size",
+  "description": "Schema for size from the Wikimedia Enterprise API",
+  "type": "object",
+  "properties": {
+    "unit_text": {
+      "type": "string",
+      "example": "B"
+    },
+    "value": {
+      "type": "number",
+      "example": 76760
+    }
+  }
+}

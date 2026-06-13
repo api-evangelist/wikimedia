@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/wikimedia/refs/heads/main/json-schema/scores.json",
+  "title": "scores",
+  "description": "Schema for scores from the Wikimedia Enterprise API",
+  "properties": {
+    "revertrisk": {
+      "$ref": "#/components/schemas/revertrisk"
+    },
+    "referencerisk": {
+      "$ref": "#/components/schemas/referencerisk"
+    },
+    "referenceneed": {
+      "$ref": "#/components/schemas/referenceneed"
+    }
+  },
+  "type": "object"
+}

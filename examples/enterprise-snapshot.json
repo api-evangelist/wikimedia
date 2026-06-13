@@ -1,0 +1,20 @@
+{
+  "identifier": "enwiki_namespace_0",
+  "date_modified": "2024-01-15T00:00:00Z",
+  "size": {
+    "value": 25000000000,
+    "unit_text": "bytes"
+  },
+  "is_part_of": {
+    "identifier": "enwiki"
+  },
+  "namespace": {
+    "identifier": 0,
+    "name": ""
+  },
+  "in_language": {
+    "identifier": "en",
+    "name": "English"
+  },
+  "version": "20240115"
+}

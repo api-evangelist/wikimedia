@@ -1,0 +1,44 @@
+{
+  "title": "Albert Einstein",
+  "displaytitle": "<span>Albert Einstein</span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q937",
+  "titles": {
+    "canonical": "Albert_Einstein",
+    "normalized": "Albert Einstein",
+    "display": "<span>Albert Einstein</span>"
+  },
+  "pageid": 736,
+  "thumbnail": {
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Albert_Einstein_Head.jpg/320px-Albert_Einstein_Head.jpg",
+    "width": 320,
+    "height": 417
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg",
+    "width": 800,
+    "height": 1041
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1234567890",
+  "tid": "12345678-1234-1234-1234-123456789012",
+  "timestamp": "2024-01-15T12:00:00Z",
+  "description": "German-born theoretical physicist (1879\u20131955)",
+  "description_source": "local",
+  "content_urls": {
+    "page": {
+      "desktop": {
+        "page": "https://en.wikipedia.org/wiki/Albert_Einstein"
+      }
+    },
+    "mobile": {
+      "page": "https://en.m.wikipedia.org/wiki/Albert_Einstein"
+    }
+  },
+  "extract": "Albert Einstein was a German-born theoretical physicist who is best known for developing the theory of relativity.",
+  "extract_html": "<p>Albert Einstein was a German-born theoretical physicist...</p>"
+}

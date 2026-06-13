@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/wikimedia/refs/heads/main/json-schema/article_body.json",
+  "title": "article_body",
+  "description": "Schema for article_body from the Wikimedia Enterprise API",
+  "properties": {
+    "html": {
+      "type": "string"
+    },
+    "wikitext": {
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

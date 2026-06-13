@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/wikimedia/refs/heads/main/json-schema/reference.json",
+  "title": "reference",
+  "description": "Schema for reference from the Wikimedia Enterprise API",
+  "type": "object",
+  "properties": {
+    "identifier": {
+      "type": "string"
+    },
+    "group": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "metadata": {
+      "type": "object"
+    },
+    "text": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "links": {
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/link"
+          }
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "links": {
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/link"
+          }
+        }
+      }
+    },
+    "parent_reference": {
+      "type": "string"
+    }
+  }
+}

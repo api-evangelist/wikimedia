@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/wikimedia/refs/heads/main/json-schema/article_namespace.json",
+  "title": "article_namespace",
+  "description": "Schema for article_namespace from the Wikimedia Enterprise API",
+  "type": "object",
+  "properties": {
+    "identifier": {
+      "type": "number",
+      "example": 0
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/wikimedia/refs/heads/main/json-schema/revisionIdentifier.json",
+  "title": "revisionIdentifier",
+  "description": "Unique revision identifier",
+  "type": "object",
+  "properties": {
+    "revision": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "tid": {
+      "type": "string"
+    }
+  }
+}

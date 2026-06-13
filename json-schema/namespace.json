@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/wikimedia/refs/heads/main/json-schema/namespace.json",
+  "title": "namespace",
+  "description": "Schema for namespace from the Wikimedia Enterprise API",
+  "type": "object",
+  "properties": {
+    "identifier": {
+      "type": "number",
+      "example": 0
+    },
+    "name": {
+      "type": "string",
+      "example": "Article"
+    },
+    "description": {
+      "type": "string",
+      "example": "The Article namespace, also known as the main or mainspace, is where a project's primary content resides, whether articles, entries, or main documents depending on the Wikimedia project."
+    }
+  }
+}

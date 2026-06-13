@@ -1,0 +1,21 @@
+{
+  "count": 10,
+  "older": "https://en.wikipedia.org/api/rest_v1/page/history/Albert_Einstein?older_than=123",
+  "newer": "https://en.wikipedia.org/api/rest_v1/page/history/Albert_Einstein?newer_than=456",
+  "revisions": [
+    {
+      "id": 1234567890,
+      "timestamp": "2024-01-15T12:00:00Z",
+      "minor": false,
+      "size": {
+        "new": 150000,
+        "old": 149900
+      },
+      "comment": "Fixed citation",
+      "editor": {
+        "user_id": 42,
+        "name": "WikiEditor"
+      }
+    }
+  ]
+}

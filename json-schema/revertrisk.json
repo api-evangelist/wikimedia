@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/wikimedia/refs/heads/main/json-schema/revertrisk.json",
+  "title": "revertrisk",
+  "description": "Schema for revertrisk from the Wikimedia Enterprise API",
+  "properties": {
+    "prediction": {
+      "type": "boolean"
+    },
+    "probability": {
+      "properties": {
+        "false": {
+          "type": "number"
+        },
+        "true": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "type": "object"
+}

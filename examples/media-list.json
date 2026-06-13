@@ -1,0 +1,28 @@
+{
+  "revision": "1234567890",
+  "tid": "12345678-1234-1234-1234-123456789012",
+  "items": [
+    {
+      "title": "File:Albert_Einstein_Head.jpg",
+      "section_id": 0,
+      "type": "image",
+      "showInGallery": true,
+      "caption": {
+        "html": "<p>Einstein in 1947</p>",
+        "text": "Einstein in 1947"
+      },
+      "thumbnail": {
+        "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Albert_Einstein_Head.jpg/320px-Albert_Einstein_Head.jpg",
+        "width": 320,
+        "height": 417,
+        "mime": "image/jpeg"
+      },
+      "original": {
+        "source": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg",
+        "width": 800,
+        "height": 1041,
+        "mime": "image/jpeg"
+      }
+    }
+  ]
+}

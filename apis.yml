@@ -75,6 +75,8 @@ apis:
     properties:
       - type: Documentation
         url: https://www.mediawiki.org/wiki/Wikimedia_REST_API
+      - type: OpenAPI
+        url: /openapi/wikimedia-rest-api.json
       - type: RateLimits
         url: /rate-limits/wikimedia-rest-api.yml
     contact:
@@ -96,6 +98,8 @@ apis:
     properties:
       - type: Documentation
         url: https://enterprise.wikimedia.com/docs/
+      - type: OpenAPI
+        url: /openapi/wikimedia-enterprise-api.yaml
       - type: Pricing
         url: https://enterprise.wikimedia.com/pricing/
       - type: Plans

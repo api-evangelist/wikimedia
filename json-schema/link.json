@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/wikimedia/refs/heads/main/json-schema/link.json",
+  "title": "link",
+  "description": "Schema for link from the Wikimedia Enterprise API",
+  "type": "object",
+  "properties": {
+    "url": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "images": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/image"
+      }
+    }
+  }
+}

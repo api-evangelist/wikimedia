@@ -1,0 +1,65 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "wiki": "https://www.mediawiki.org/wiki/",
+    "wikidata": "https://www.wikidata.org/wiki/",
+    "wikimedia": "https://api.enterprise.wikimedia.com/",
+
+    "title": "schema:name",
+    "displaytitle": "schema:alternateName",
+    "description": "schema:description",
+    "extract": "schema:description",
+    "abstract": "schema:abstract",
+    "url": "schema:url",
+    "thumbnail": {
+      "@id": "schema:image",
+      "@type": "@id"
+    },
+    "source": "schema:contentUrl",
+    "width": "schema:width",
+    "height": "schema:height",
+
+    "pageid": "wiki:Page",
+    "wikibase_item": {
+      "@id": "wikidata:Item",
+      "@type": "@id"
+    },
+    "namespace": "wiki:Namespace",
+    "revision": "wiki:Revision",
+    "timestamp": "schema:dateModified",
+    "lang": "schema:inLanguage",
+
+    "categories": {
+      "@id": "schema:about",
+      "@type": "@id"
+    },
+    "templates": "wiki:Template",
+    "is_part_of": "schema:isPartOf",
+    "in_language": "schema:inLanguage",
+    "identifier": "schema:identifier",
+    "name": "schema:name",
+    "editor": "schema:author",
+    "comment": "schema:description",
+
+    "article": "schema:Article",
+    "snapshot": "wiki:Special:Export",
+    "entity": "wikidata:EntityPage",
+    "language": "schema:Language",
+    "project": "wiki:Project",
+    "image": "schema:ImageObject",
+    "license": "schema:license",
+    "citation": "schema:citation",
+    "reference": "schema:citation",
+    "protection": "wiki:FullyProtectedPage",
+    "redirect": "wiki:Redirect",
+    "size": "schema:contentSize",
+    "version": "schema:version",
+    "visibility": "wiki:ProtectionLevel",
+    "link": "schema:url",
+
+    "date_modified": "schema:dateModified",
+    "date_created": "schema:dateCreated",
+    "edit_count": "schema:numberOfItems",
+    "is_bot": "schema:Boolean"
+  }
+}

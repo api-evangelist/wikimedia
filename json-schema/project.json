@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/wikimedia/refs/heads/main/json-schema/project.json",
+  "title": "project",
+  "description": "Schema for project from the Wikimedia Enterprise API",
+  "type": "object",
+  "properties": {
+    "identifier": {
+      "type": "string",
+      "example": "enwiki"
+    },
+    "code": {
+      "type": "string",
+      "example": "wiki"
+    },
+    "name": {
+      "type": "string",
+      "example": "Wikipedia"
+    },
+    "url": {
+      "type": "string",
+      "example": "https://en.wikipedia.org"
+    },
+    "in_language": {
+      "$ref": "#/components/schemas/language"
+    }
+  }
+}

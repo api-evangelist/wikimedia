@@ -1,0 +1,57 @@
+{
+  "name": "Albert_Einstein",
+  "identifier": 736,
+  "version": {
+    "identifier": 1234567890,
+    "comment": "Fixed citation",
+    "editor": {
+      "name": "WikiEditor",
+      "identifier": 42,
+      "edit_count": 1500,
+      "is_bot": false
+    },
+    "scores": {
+      "revertrisk": {
+        "output": {
+          "prediction": false,
+          "probability": {
+            "true": 0.02,
+            "false": 0.98
+          }
+        }
+      },
+      "referencerisk": {
+        "output": {
+          "prediction": false
+        }
+      }
+    },
+    "noindex": false
+  },
+  "url": "https://en.wikipedia.org/wiki/Albert_Einstein",
+  "abstract": "Albert Einstein was a German-born theoretical physicist.",
+  "categories": [
+    {
+      "name": "Category:German physicists",
+      "url": "https://en.wikipedia.org/wiki/Category:German_physicists"
+    }
+  ],
+  "templates": [
+    {
+      "name": "Template:Infobox scientist",
+      "url": "https://en.wikipedia.org/wiki/Template:Infobox_scientist"
+    }
+  ],
+  "is_part_of": {
+    "identifier": "enwiki",
+    "url": "https://en.wikipedia.org/"
+  },
+  "namespace": {
+    "identifier": 0,
+    "name": ""
+  },
+  "in_language": {
+    "identifier": "en",
+    "name": "English"
+  }
+}

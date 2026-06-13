@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/wikimedia/refs/heads/main/json-schema/list_read.json",
+  "title": "list",
+  "description": "Schema for list_read from the Wikimedia REST API",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "example": 42
+    },
+    "name": {
+      "type": "string",
+      "example": "Planets"
+    },
+    "description": {
+      "type": "string",
+      "example": "Planets of the Solar System"
+    },
+    "created": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Creation date (in ISO 8601)"
+    },
+    "updated": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last modification date (in ISO 8601)"
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "created",
+    "updated"
+  ]
+}
