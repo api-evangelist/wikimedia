@@ -1,0 +1,36 @@
+name: MediaWiki REST API Rate Limits
+description: Rate limiting information for the MediaWiki REST API (/w/rest.php/v1). The REST API shares Wikimedia's infrastructure and follows the same etiquette guidelines as the Action API. Responsible usage and proper User-Agent headers are required.
+url: https://www.mediawiki.org/wiki/API:REST_API
+created: "2026-06-13"
+modified: "2026-06-13"
+rateLimits:
+  - name: Read Requests
+    description: No published hard rate limit for read operations. Requests should be made responsibly and in series rather than in parallel to avoid triggering automated blocks.
+    quota: unlimited
+    period: none
+    unit: requests
+    notes: Set a descriptive User-Agent. Use caching and avoid repeated identical queries.
+
+  - name: Write Requests
+    description: Page creation and editing endpoints are subject to rate limiting. Authenticated requests using OAuth 2.0 have higher limits than anonymous requests.
+    quota: variable
+    period: variable
+    unit: requests
+    notes: Write operations require OAuth 2.0 authentication. Limits vary by account type and wiki configuration.
+
+authentication:
+  - type: OAuth2
+    description: Required for all write operations (POST, PUT). Read operations are unauthenticated.
+    url: https://www.mediawiki.org/wiki/OAuth/For_Developers
+
+throttlingBehavior:
+  retryStrategy: exponential-backoff
+  userAgentRequired: true
+  userAgentFormat: "clientname/version (contact-url; contact-email) library/version"
+
+restrictions:
+  - description: A descriptive User-Agent header is required for all requests to Wikimedia APIs. Mimicking browser user-agents is prohibited.
+    required: true
+  - description: OAuth 2.0 credentials are required for all content modification endpoints.
+    required: true
+    appliesTo: write-operations

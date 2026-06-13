@@ -1,0 +1,46 @@
+name: MediaWiki Action API Rate Limits
+description: Rate limiting rules and usage guidelines for the MediaWiki Action API (api.php). Read operations have no hard rate cap but require responsible usage. Write operations are subject to site-configured limits based on user rights.
+url: https://www.mediawiki.org/wiki/API:Etiquette
+created: "2026-06-13"
+modified: "2026-06-13"
+rateLimits:
+  - name: Read Requests
+    description: No hard rate limit is enforced for read requests. Requests should be made serially rather than in parallel to remain within acceptable usage. Clients that send too many requests too quickly may be blocked by administrators.
+    quota: unlimited
+    period: none
+    unit: requests
+    notes: Make requests in series rather than in parallel. Implement exponential backoff on errors.
+
+  - name: Write Requests
+    description: Write operations are subject to rate limiting. Limits vary based on user rights and individual wiki configuration. Query your limits at action=query&meta=userinfo&uiprop=ratelimits.
+    quota: variable
+    period: variable
+    unit: requests
+    notes: Check your specific limits via action=query&meta=userinfo&uiprop=ratelimits. Handle ratelimited error codes with exponential backoff.
+
+  - name: List and Property Query Results
+    description: Results for list and property queries cannot exceed 500 items per call for regular users. Some modules may impose stricter limits.
+    quota: 500
+    period: per-request
+    unit: results
+
+  - name: Batch Requests
+    description: Multiple pages can be requested in a single call using pipe-separated titles (titles=PageA|PageB|PageC) to reduce total request volume.
+    quota: 50
+    period: per-request
+    unit: titles
+    notes: Use the generator pattern and batch parameters to minimize API calls.
+
+throttlingBehavior:
+  errorCode: ratelimited
+  retryStrategy: exponential-backoff
+  userAgentRequired: true
+  userAgentFormat: "clientname/version (contact-url; contact-email) library/version"
+
+restrictions:
+  - description: A descriptive User-Agent header is mandatory for all Wikimedia API requests. Requests without a proper User-Agent may be blocked.
+    required: true
+  - description: For bulk data downloads, use Wikimedia database dumps or the Enterprise API rather than the Action API.
+    required: false
+  - description: GZip compression should be requested via Accept-Encoding header to reduce bandwidth.
+    required: false

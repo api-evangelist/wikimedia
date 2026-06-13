@@ -1,0 +1,78 @@
+name: Wikimedia Enterprise API Plans
+description: Pricing and plan tiers for the Wikimedia Enterprise API, which offers commercial-grade access to Wikimedia content across 920+ datasets and 360+ languages.
+url: https://enterprise.wikimedia.com/pricing/
+created: "2026-06-13"
+modified: "2026-06-13"
+plans:
+  - name: Free Account
+    description: No-cost access to Wikimedia Enterprise APIs with monthly request limits. No credit card required. Suitable for developers, researchers, and small-scale projects exploring Wikimedia content at scale.
+    url: https://enterprise.wikimedia.com/pricing/
+    price: 0.00
+    currency: USD
+    billingCycle: monthly
+    features:
+      - name: Snapshot API Access
+        description: Monthly snapshot updates of Wikimedia datasets
+      - name: Monthly Snapshot Requests
+        description: Up to 30 snapshot requests per month
+      - name: Monthly Snapshot Chunks
+        description: Up to 1,500 snapshot chunks per month
+      - name: On-demand API Access
+        description: Up to 50,000 on-demand API requests per month
+      - name: Structured Contents Beta
+        description: Beta access to structured content snapshots
+      - name: FAQ Support
+        description: Self-service help center and FAQ support
+    rateLimits:
+      - name: On-demand Requests
+        description: Maximum on-demand API calls per month
+        quota: 50000
+        period: month
+        unit: requests
+      - name: Snapshot Requests
+        description: Maximum snapshot API calls per month
+        quota: 30
+        period: month
+        unit: requests
+      - name: Snapshot Chunks
+        description: Maximum snapshot data chunks per month
+        quota: 1500
+        period: month
+        unit: chunks
+
+  - name: Paid Account
+    description: Enterprise-grade access with unlimited requests, daily snapshot updates, realtime streaming, guaranteed SLAs, and dedicated support. Pricing is based on bespoke egress data usage; contact sales for a custom quote.
+    url: https://enterprise.wikimedia.com/pricing/
+    price: custom
+    currency: USD
+    billingCycle: monthly
+    features:
+      - name: Snapshot API Access
+        description: Daily snapshot updates of Wikimedia datasets
+      - name: Unlimited Snapshot Requests
+        description: No monthly cap on snapshot requests
+      - name: Unlimited Snapshot Chunks
+        description: No monthly cap on snapshot data chunks
+      - name: Unlimited On-demand Requests
+        description: No monthly cap on on-demand API requests
+      - name: Realtime API Access
+        description: Streamed live updates and hourly batched updates with vandalism alerts
+      - name: 99% SLA Uptime
+        description: Service-level agreement guaranteeing up to 99% uptime
+      - name: Dedicated Support
+        description: Dedicated support team with guaranteed response times
+      - name: Priority Feedback
+        description: Priority recognition for product feedback
+      - name: Tailored Contracts
+        description: Custom contracts and SLA terms negotiated with sales
+    rateLimits:
+      - name: On-demand Requests
+        description: Unlimited on-demand requests; pay for data egress only
+        quota: unlimited
+        period: month
+        unit: requests
+      - name: Snapshot Requests
+        description: Unlimited snapshot requests
+        quota: unlimited
+        period: month
+        unit: requests

@@ -1,0 +1,46 @@
+name: Wikimedia REST API (RESTBase) Rate Limits
+description: Rate limiting information for the Wikimedia REST API served at /api/rest_v1/ on Wikipedia and other Wikimedia projects. This API benefits from globally distributed caching infrastructure designed to support high request volumes with reduced latencies.
+url: https://www.mediawiki.org/wiki/Wikimedia_REST_API
+created: "2026-06-13"
+modified: "2026-06-13"
+rateLimits:
+  - name: General Read Requests
+    description: No published hard per-minute or per-second limit. The API is served via distributed CDN caching and is designed for high request volumes. Responsible usage and proper User-Agent headers are required to avoid blocks.
+    quota: unlimited
+    period: none
+    unit: requests
+    notes: Cached responses are served from Wikimedia's globally distributed edge network. Repeated identical requests are served from cache without hitting origin servers.
+
+  - name: Page Summary Endpoint
+    description: GET /api/rest_v1/page/summary/{title} - Returns summary data for a Wikipedia article. Highly cached; suitable for high-frequency read access.
+    quota: unlimited
+    period: none
+    unit: requests
+    endpoint: /api/rest_v1/page/summary/{title}
+
+  - name: Page HTML Endpoint
+    description: GET /api/rest_v1/page/html/{title} - Returns full HTML rendering of a Wikipedia page. Served from cache; larger response payload than summary.
+    quota: unlimited
+    period: none
+    unit: requests
+    endpoint: /api/rest_v1/page/html/{title}
+
+  - name: Page Metrics Endpoint
+    description: GET /api/rest_v1/metrics/pageviews/... - Returns page view statistics. Part of the Wikimedia Analytics API.
+    quota: unlimited
+    period: none
+    unit: requests
+    endpoint: /api/rest_v1/metrics/pageviews/
+
+throttlingBehavior:
+  retryStrategy: exponential-backoff
+  userAgentRequired: true
+  userAgentFormat: "clientname/version (contact-url; contact-email) library/version"
+  cacheHeaders: true
+  notes: Respect Cache-Control and ETag response headers to minimize redundant requests.
+
+restrictions:
+  - description: A descriptive User-Agent header is mandatory for all requests to Wikimedia APIs.
+    required: true
+  - description: The API is read-only. No write operations are supported at this endpoint.
+    required: false

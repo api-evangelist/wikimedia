@@ -1,0 +1,64 @@
+name: Wikimedia Enterprise API FinOps
+description: Financial operations guidance for managing costs when using the Wikimedia Enterprise API. The free tier provides meaningful monthly allowances at no cost. Paid tiers use egress-based pricing with no fixed per-request fees beyond the free allocation.
+url: https://enterprise.wikimedia.com/pricing/
+created: "2026-06-13"
+modified: "2026-06-13"
+costModel:
+  type: egress-based
+  description: Paid accounts are billed based on data egress volume beyond included free allocations. There are no per-request charges beyond egress. Pricing is bespoke and negotiated with sales.
+  currency: USD
+  billingCycle: monthly
+  notes: No hidden charges. Pay only for data egress beyond the free allocation.
+
+tiers:
+  - name: Free Account
+    monthlyCost: 0.00
+    includedResources:
+      - resource: On-demand API requests
+        quantity: 50000
+        period: month
+      - resource: Snapshot API requests
+        quantity: 30
+        period: month
+      - resource: Snapshot chunks
+        quantity: 1500
+        period: month
+    overage:
+      description: No overage allowed on free accounts. Upgrade to a paid account for additional capacity.
+
+  - name: Paid Account
+    monthlyCost: custom
+    includedResources:
+      - resource: On-demand API requests
+        quantity: unlimited
+        period: month
+      - resource: Snapshot API requests
+        quantity: unlimited
+        period: month
+      - resource: Snapshot chunks
+        quantity: unlimited
+        period: month
+      - resource: Realtime API events
+        quantity: unlimited
+        period: month
+    egress:
+      description: Billing is based on data egress. Specific per-GB rates are negotiated with the Wikimedia Enterprise sales team.
+      unit: GB
+      rate: custom
+
+costOptimization:
+  - recommendation: Use the Snapshot API for bulk data ingestion instead of making thousands of individual On-demand API requests. Snapshots are compressed and more data-efficient.
+    impact: high
+  - recommendation: Cache On-demand API responses locally to avoid re-fetching unchanged content. Wikimedia content changes infrequently for most articles.
+    impact: high
+  - recommendation: Request only the language editions and dataset types you need. The Enterprise API covers 360+ languages; limiting scope reduces egress costs.
+    impact: medium
+  - recommendation: Use the free tier for development and testing. Switch to a paid plan only when production volume exceeds the 50,000 monthly On-demand request cap.
+    impact: medium
+  - recommendation: Monitor monthly usage via the Enterprise API dashboard to anticipate when free tier limits will be reached.
+    impact: low
+
+contact:
+  - FN: Wikimedia Enterprise Sales
+    url: https://enterprise.wikimedia.com/contact/
+    notes: Contact sales for custom pricing, SLA terms, and volume discounts.

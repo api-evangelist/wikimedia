@@ -1,0 +1,135 @@
+name: Wikimedia
+description: Wikimedia provides REST APIs for accessing Wikipedia, Wikidata, Commons, and other Wikimedia project content including page summaries, search, media files, page revision history, and usage metrics. The suite includes the MediaWiki Action API for bot and edit operations, the MediaWiki REST API for modern content access, and the Wikimedia Enterprise API for commercial-scale high-volume data reuse across 920+ datasets and 360+ languages.
+image: https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/240px-Wikimedia-logo.svg.png
+tags:
+  - Wikipedia
+  - Wikimedia
+  - Encyclopedia
+  - Open Knowledge
+  - Content
+  - Search
+  - Reference
+url: https://www.mediawiki.org/wiki/API:Main_page
+created: "2026-06-13"
+modified: "2026-06-13"
+specificationVersion: "0.19"
+apis:
+  - name: MediaWiki Action API
+    description: The MediaWiki Action API is a web service that allows access to wiki features including authentication, page read and write operations, search, user management, and maintenance tasks. Accessible on every Wikimedia project via the api.php endpoint, it supports bots, automated tools, and third-party integrations.
+    image: https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/240px-Wikimedia-logo.svg.png
+    humanURL: https://www.mediawiki.org/wiki/API:Main_page
+    baseURL: https://en.wikipedia.org/w/api.php
+    tags:
+      - Wikipedia
+      - Wiki
+      - Pages
+      - Search
+      - Bots
+      - Content
+    properties:
+      - type: Documentation
+        url: https://www.mediawiki.org/wiki/API:Main_page
+      - type: OpenAPI
+        url: https://en.wikipedia.org/w/api.php?action=openapi
+      - type: Etiquette
+        url: https://www.mediawiki.org/wiki/API:Etiquette
+      - type: RateLimits
+        url: /rate-limits/mediawiki-action-api.yml
+    contact:
+      - FN: Wikimedia Developer Relations
+        url: https://www.mediawiki.org/wiki/Developer_advocacy
+
+  - name: MediaWiki REST API
+    description: The MediaWiki REST API provides a modern RESTful interface for reading and writing wiki content including pages, revisions, file metadata, search, and content transformation between wikitext and HTML. Available on Wikipedia and all Wikimedia projects at the /rest.php endpoint.
+    image: https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/240px-Wikimedia-logo.svg.png
+    humanURL: https://www.mediawiki.org/wiki/API:REST_API
+    baseURL: https://en.wikipedia.org/w/rest.php/v1
+    tags:
+      - Wikipedia
+      - Pages
+      - Search
+      - Revisions
+      - Media
+      - Transform
+    properties:
+      - type: Documentation
+        url: https://www.mediawiki.org/wiki/API:REST_API/Reference
+      - type: RateLimits
+        url: /rate-limits/mediawiki-rest-api.yml
+    contact:
+      - FN: Wikimedia Developer Relations
+        url: https://www.mediawiki.org/wiki/Developer_advocacy
+
+  - name: Wikimedia REST API (RESTBase)
+    description: The Wikimedia REST API provides high-performance access to Wikipedia and other Wikimedia project content through a globally distributed caching layer. Endpoints cover page summaries, full HTML content, media files, and page view metrics. Available at /api/rest_v1/ on all major Wikimedia wikis.
+    image: https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/240px-Wikimedia-logo.svg.png
+    humanURL: https://www.mediawiki.org/wiki/Wikimedia_REST_API
+    baseURL: https://en.wikipedia.org/api/rest_v1
+    tags:
+      - Wikipedia
+      - Page Summary
+      - Content
+      - Media
+      - Metrics
+      - Page Views
+    properties:
+      - type: Documentation
+        url: https://www.mediawiki.org/wiki/Wikimedia_REST_API
+      - type: RateLimits
+        url: /rate-limits/wikimedia-rest-api.yml
+    contact:
+      - FN: Wikimedia Developer Relations
+        url: https://www.mediawiki.org/wiki/Developer_advocacy
+
+  - name: Wikimedia Enterprise API
+    description: Wikimedia Enterprise provides commercial-grade APIs for high-volume reuse of Wikimedia content. The suite includes an On-demand API for current article content with consistent JSON schema, a Realtime API for streaming live changes with vandalism alerts, and a Snapshot API for bulk 24-hour compressed data dumps. Covers 920+ datasets across 360+ languages.
+    image: https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/240px-Wikimedia-logo.svg.png
+    humanURL: https://enterprise.wikimedia.com/
+    baseURL: https://api.enterprise.wikimedia.com/v2
+    tags:
+      - Enterprise
+      - Realtime
+      - Snapshots
+      - On-Demand
+      - Commercial
+      - Bulk Data
+    properties:
+      - type: Documentation
+        url: https://enterprise.wikimedia.com/docs/
+      - type: Pricing
+        url: https://enterprise.wikimedia.com/pricing/
+      - type: Plans
+        url: /plans/wikimedia-enterprise.yml
+      - type: RateLimits
+        url: /rate-limits/wikimedia-enterprise-api.yml
+      - type: FinOps
+        url: /finops/wikimedia-enterprise.yml
+    contact:
+      - FN: Wikimedia Enterprise Sales
+        url: https://enterprise.wikimedia.com/contact/
+
+common:
+  - type: Portal
+    url: https://www.mediawiki.org/wiki/API:Main_page
+  - type: TermsOfService
+    url: https://www.mediawiki.org/wiki/Wikimedia_Terms_of_Use
+  - type: PrivacyPolicy
+    url: https://foundation.wikimedia.org/wiki/Privacy_policy
+  - type: StatusPage
+    url: https://www.wikimediastatus.net/
+  - type: Blog
+    url: https://wikimediafoundation.org/news/
+  - type: Community
+    url: https://www.mediawiki.org/wiki/Communication
+  - type: Licensing
+    url: https://creativecommons.org/licenses/by-sa/4.0/
+  - type: GettingStarted
+    url: https://www.mediawiki.org/wiki/API:Tutorial
+  - type: BugTracker
+    url: https://phabricator.wikimedia.org/
+  - type: GitHub
+    url: https://github.com/wikimedia
+maintainers:
+  - FN: Wikimedia Foundation
+    url: https://wikimediafoundation.org/
+    email: developer-relations@wikimedia.org

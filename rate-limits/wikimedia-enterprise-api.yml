@@ -1,0 +1,58 @@
+name: Wikimedia Enterprise API Rate Limits
+description: Rate limiting and quota information for the Wikimedia Enterprise API. Free accounts have monthly request quotas. Paid accounts have unlimited requests with egress-based billing. No per-minute or per-second rate limits are published; limits are enforced monthly.
+url: https://enterprise.wikimedia.com/pricing/
+created: "2026-06-13"
+modified: "2026-06-13"
+rateLimits:
+  - name: Free Account - On-demand API
+    description: On-demand API requests are capped at 50,000 per month for free accounts. Requests return current article content in a consistent machine-readable JSON schema.
+    quota: 50000
+    period: month
+    unit: requests
+    plan: Free Account
+    endpoint: /v2/page
+
+  - name: Free Account - Snapshot API Requests
+    description: Snapshot API calls are capped at 30 per month for free accounts. Each request retrieves a batch of compressed dataset files.
+    quota: 30
+    period: month
+    unit: requests
+    plan: Free Account
+    endpoint: /v2/snapshot
+
+  - name: Free Account - Snapshot Chunks
+    description: Total snapshot data chunks are capped at 1,500 per month for free accounts. Each chunk is a portion of a compressed dataset file.
+    quota: 1500
+    period: month
+    unit: chunks
+    plan: Free Account
+
+  - name: Paid Account - On-demand API
+    description: Unlimited on-demand API requests for paid accounts. Billing is based on data egress rather than request count.
+    quota: unlimited
+    period: month
+    unit: requests
+    plan: Paid Account
+
+  - name: Paid Account - Snapshot API
+    description: Unlimited snapshot requests and chunks for paid accounts with daily update frequency.
+    quota: unlimited
+    period: month
+    unit: requests
+    plan: Paid Account
+
+  - name: Paid Account - Realtime API
+    description: Streamed HTTP push of real-time Wikimedia activity including live edits and vandalism alerts. Available only on paid accounts.
+    quota: unlimited
+    period: none
+    unit: events
+    plan: Paid Account
+
+throttlingBehavior:
+  retryStrategy: exponential-backoff
+  notes: When monthly quota is exhausted on free accounts, requests return an error. Upgrade to a paid account for unlimited access.
+
+authentication:
+  - type: API Key
+    description: API key authentication is required for all Wikimedia Enterprise API requests. Obtain credentials by registering at enterprise.wikimedia.com.
+    url: https://enterprise.wikimedia.com/
