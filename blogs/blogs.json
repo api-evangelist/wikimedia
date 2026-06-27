@@ -2,6 +2,20 @@
   "repo": "wikimedia",
   "feeds": [
     {
+      "source": "https://www.wikimediastatus.net/history.atom",
+      "feed_url": "https://www.wikimediastatus.net/history.atom",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
+      "source": "https://wikimediafoundation.org/news/feed/",
+      "feed_url": "https://wikimediafoundation.org/news/feed/",
+      "title": "",
+      "saved": 1,
+      "method": "feed"
+    },
+    {
       "source": "https://www.wikimediastatus.net/",
       "feed_url": "https://www.wikimediastatus.net/history.atom",
       "title": "",
@@ -9,6 +23,6 @@
       "method": "discovered"
     }
   ],
-  "post_count": 0,
-  "fetched": "2026-06-14T20:42:17Z"
+  "post_count": 5,
+  "fetched": "2026-06-27T12:03:07Z"
 }
