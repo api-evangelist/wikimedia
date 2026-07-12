@@ -113,6 +113,12 @@ apis:
         url: https://enterprise.wikimedia.com/contact/
 
 common:
+  - type: VulnerabilityDisclosure
+    url: security/wikimedia-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/wikimedia-domain-security.yml
+  - type: Authentication
+    url: authentication/wikimedia-authentication.yml
   - type: Portal
     url: https://www.mediawiki.org/wiki/API:Main_page
   - type: TermsOfService
