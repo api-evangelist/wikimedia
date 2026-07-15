@@ -113,6 +113,8 @@ apis:
         url: https://enterprise.wikimedia.com/contact/
 
 common:
+  - type: AgenticAccess
+    url: agentic-access/wikimedia-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/wikimedia-vulnerability-disclosure.yml
   - type: DomainSecurity
