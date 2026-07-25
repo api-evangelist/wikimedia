@@ -1,0 +1,439 @@
+openapi: 3.1.0
+info:
+  title: Wikimedia Enterprise API spec articles namespaces API
+  description: 'OpenAPI 3.0 specification for the Metadata, On-demand, Snapshot, and Realtime Batch API(s) of WME.
+
+
+    While we provide this swagger spec for quick reference, our official documentation is located on our website:
+
+
+    - [Official Documentation](https://enterprise.wikimedia.com/docs/)
+
+    - [Data Dictionary & Schema](https://enterprise.wikimedia.com/docs/data-dictionary/)
+
+    '
+  version: 2.0.0
+servers:
+- url: https://api.enterprise.wikimedia.com
+security:
+- bearerAuth: []
+tags:
+- name: namespaces
+  description: Metadata
+  externalDocs:
+    description: enterprise docs - metadata
+    url: https://enterprise.wikimedia.com/docs/metadata/
+paths:
+  /v2/namespaces:
+    summary: Namespaces Available
+    description: List of available namespaces. Includes name, identifier and description.
+    get:
+      tags:
+      - namespaces
+      parameters:
+      - in: query
+        name: fields
+        description: Select which fields to receive in your response, using JSON dot notation.
+        schema:
+          type: array
+          items:
+            type: string
+            example: name
+      - in: query
+        name: filters
+        description: Select which projects and languages to receive in your response.
+        schema:
+          type: array
+          items:
+            $ref: '#/components/schemas/filter'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/namespace'
+            application/x-ndjson:
+              schema:
+                type: string
+                format: ndjson
+                example: '{"identifier": 0,"name": "string","description": "string"} {"identifier": 0,"name": "string","description": "string"}
+
+                  '
+        401:
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+            application/x-ndjson:
+              schema:
+                type: string
+                format: ndjson
+                example: '{"message":"string","status": 401}
+
+                  '
+        403:
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+            application/x-ndjson:
+              schema:
+                type: string
+                format: ndjson
+                example: '{"message":"string","status": 403}
+
+                  '
+        422:
+          description: Unprocessable Entity
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+            application/x-ndjson:
+              schema:
+                type: string
+                format: ndjson
+                example: '{"message":"string","status":422}
+
+                  '
+        500:
+          description: Internal Server Error, Retry Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+            application/x-ndjson:
+              schema:
+                type: string
+                format: ndjson
+                example: '{"message":"string","status":500}
+
+                  '
+    post:
+      tags:
+      - namespaces
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                fields:
+                  type: array
+                  example: '["name","identifier"]'
+                  description: Select which fields to receive in your response, using JSON dot notation.
+                  items:
+                    type: string
+                filters:
+                  type: array
+                  description: Select which projects and languages to receive in your response.
+                  items:
+                    $ref: '#/components/schemas/filter'
+                  example: '[{"field": "identifier","value": 0}]'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/namespace'
+            application/x-ndjson:
+              schema:
+                type: string
+                format: ndjson
+                example: '{"identifier": 0,"name": "string","description": "string"} {"identifier": 0,"name": "string","description": "string"}
+
+                  '
+        401:
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+            application/x-ndjson:
+              schema:
+                type: string
+                format: ndjson
+                example: '{"message":"string","status": 401}
+
+                  '
+        403:
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+            application/x-ndjson:
+              schema:
+                type: string
+                format: ndjson
+                example: '{"message":"string","status": 403}
+
+                  '
+        422:
+          description: Unprocessable Entity
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+            application/x-ndjson:
+              schema:
+                type: string
+                format: ndjson
+                example: '{"message":"string","status":422}
+
+                  '
+        500:
+          description: Internal Server Error, Retry Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+            application/x-ndjson:
+              schema:
+                type: string
+                format: ndjson
+                example: '{"message":"string","status":500}
+
+                  '
+  /v2/namespaces/{identifier}:
+    summary: Namespace Info
+    description: Information on specific namespace. Includes name, identifier and description.
+    get:
+      tags:
+      - namespaces
+      parameters:
+      - in: path
+        name: identifier
+        description: Namespace identifier.
+        required: true
+        schema:
+          type: integer
+      - in: query
+        name: fields
+        description: Select which fields to receive in your response, using JSON dot notation.
+        schema:
+          type: array
+          items:
+            type: string
+            example: name
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/namespace'
+            application/x-ndjson:
+              schema:
+                type: string
+                format: ndjson
+                example: '{"identifier":0,"name":"string","description":"string"}
+
+                  '
+        401:
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+            application/x-ndjson:
+              schema:
+                type: string
+                format: ndjson
+                example: '{"message":"string","status": 401}
+
+                  '
+        403:
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+            application/x-ndjson:
+              schema:
+                type: string
+                format: ndjson
+                example: '{"message":"string","status": 403}
+
+                  '
+        404:
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+            application/x-ndjson:
+              schema:
+                type: string
+                format: ndjson
+                example: '{"message":"string","status": 404}
+
+                  '
+        422:
+          description: Unprocessable Entity
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+            application/x-ndjson:
+              schema:
+                type: string
+                format: ndjson
+                example: '{"message":"string","status":422}
+
+                  '
+        500:
+          description: Internal Server Error, Retry Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+            application/x-ndjson:
+              schema:
+                type: string
+                format: ndjson
+                example: '{"message":"string","status":500}
+
+                  '
+    post:
+      tags:
+      - namespaces
+      parameters:
+      - in: path
+        name: identifier
+        description: Namespace identifier.
+        required: true
+        schema:
+          type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                fields:
+                  type: array
+                  example: '["name","identifier"]'
+                  description: Select which fields to receive in your response, using JSON dot notation.
+                  items:
+                    type: string
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/namespace'
+            application/x-ndjson:
+              schema:
+                type: string
+                format: ndjson
+                example: '{"identifier":0,"name":"string","description":"string"}
+
+                  '
+        401:
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+            application/x-ndjson:
+              schema:
+                type: string
+                format: ndjson
+                example: '{"message":"string","status": 401}
+
+                  '
+        403:
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+            application/x-ndjson:
+              schema:
+                type: string
+                format: ndjson
+                example: '{"message":"string","status": 403}
+
+                  '
+        404:
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+            application/x-ndjson:
+              schema:
+                type: string
+                format: ndjson
+                example: '{"message":"string","status": 404}
+
+                  '
+        422:
+          description: Unprocessable Entity
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+            application/x-ndjson:
+              schema:
+                type: string
+                format: ndjson
+                example: '{"message":"string","status":422}
+
+                  '
+        500:
+          description: Internal Server Error, Retry Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+            application/x-ndjson:
+              schema:
+                type: string
+                format: ndjson
+                example: '{"message":"string","status":500}
+
+                  '
+components:
+  schemas:
+    namespace:
+      type: object
+      properties:
+        identifier:
+          type: number
+          example: 0
+        name:
+          type: string
+          example: Article
+        description:
+          type: string
+          example: The Article namespace, also known as the main or mainspace, is where a project's primary content resides, whether articles, entries, or main documents depending on the Wikimedia project.
+    error:
+      type: object
+      properties:
+        message:
+          type: string
+        status:
+          type: integer
+    filter:
+      type: object
+      properties:
+        field:
+          type: string
+        value:
+          type: string
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

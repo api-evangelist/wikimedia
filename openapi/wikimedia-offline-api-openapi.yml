@@ -1,0 +1,132 @@
+openapi: 3.1.0
+info:
+  title: Wikimedia Enterprise API spec articles offline API
+  description: 'OpenAPI 3.0 specification for the Metadata, On-demand, Snapshot, and Realtime Batch API(s) of WME.
+
+
+    While we provide this swagger spec for quick reference, our official documentation is located on our website:
+
+
+    - [Official Documentation](https://enterprise.wikimedia.com/docs/)
+
+    - [Data Dictionary & Schema](https://enterprise.wikimedia.com/docs/data-dictionary/)
+
+    '
+  version: 2.0.0
+servers:
+- url: https://api.enterprise.wikimedia.com
+security:
+- bearerAuth: []
+tags:
+- name: offline
+paths:
+  /page/mobile-html-offline-resources/{title}:
+    get:
+      tags:
+      - offline
+      summary: Get styles and scripts for offline consumption of mobile-html-formatted pages
+      description: 'Provides links to scripts and styles needed for viewing mobile-html-formatted pages offline.
+
+
+        Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)
+
+        '
+      parameters:
+      - name: title
+        in: path
+        description: 'Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`.'
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: links to scripts and styles to accompany the mobile-html of the page for offline consumption
+          content:
+            application/json; charset=utf-8; profile="https://www.mediawiki.org/wiki/Specs/Mobile-HTML-Offline-Resources/1.2.1":
+              schema:
+                type: string
+        default:
+          description: Error
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/problem'
+      x-monitor: true
+      x-amples:
+      - title: Get offline resource links to accompany page content HTML for test page
+        request:
+          params:
+            title: User:BSitzmann_(WMF)/MCS/Test/Frankenstein
+        response:
+          status: 200
+          headers:
+            content-type: /^application\/json.+/
+  /page/mobile-html-offline-resources/{title}/{revision}:
+    get:
+      tags:
+      - offline
+      summary: Get styles and scripts for offline consumption of mobile-html-formatted pages
+      description: 'Provides links to scripts and styles needed for viewing mobile-html-formatted pages offline.
+
+
+        Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)
+
+        '
+      parameters:
+      - name: title
+        in: path
+        description: 'Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`.'
+        required: true
+        schema:
+          type: string
+      - name: revision
+        in: path
+        description: 'Optional page revision. Note that older revisions are not stored, so request latency with the revision would be higher.
+
+          '
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: links to scripts and styles to accompany the mobile-html of the page for offline consumption
+          content:
+            application/json; charset=utf-8; profile="https://www.mediawiki.org/wiki/Specs/Mobile-HTML-Offline-Resources/1.2.1":
+              schema:
+                type: string
+        default:
+          description: Error
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/problem'
+      x-monitor: false
+      x-amples:
+      - title: Get offline resource links to accompany page content HTML for test page
+        request:
+          params:
+            title: User:BSitzmann_(WMF)/MCS/Test/Frankenstein
+        response:
+          status: 200
+          headers:
+            content-type: /^application\/json.+/
+components:
+  schemas:
+    problem:
+      required:
+      - type
+      type: object
+      properties:
+        type:
+          type: string
+        title:
+          type: string
+        detail:
+          type: string
+        instance:
+          type: string
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
