@@ -1,0 +1,234 @@
+{
+  "item": [
+    {
+      "id": "072a7aef-8572-46cd-a6eb-077b92b3c5c8",
+      "name": "Citation",
+      "description": {
+        "content": "generation of citation data",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "d54193dd-2429-4cf1-bcd6-7477d9191aa3",
+          "name": "Get citation data given an article identifier.",
+          "request": {
+            "name": "Get citation data given an article identifier.",
+            "description": {
+              "content": "Generates citation data given a URL, DOI, PMID, or PMCID.\n\nAutomated requests can be made at a rate of 1 request per second (rps).\n\nSee more at [Citoid service documentation](https://www.mediawiki.org/wiki/Citoid)\n\nThe citation data can be requested in one of the following formats:\n  - `mediawiki`: format designed for MediaWiki to be used with `templateData`.\n    Uses [Zotero field names](https://aurimasv.github.io/z2csl/typeMap.xml).\n  - `mediawiki-basefields`: `mediawiki` format with Zotero `basefield` field names.\n  - `zotero`: format used by [Zotero](https://www.zotero.org/).\n  - `bibtex`: format used in conjunction with LaTeX documents.\n    See [bibtex.org](http://www.bibtex.org/).\n  - `wikibase`: format designed for [Wikibase](https://www.mediawiki.org/wiki/Extension:Wikibase_Repository).\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "data",
+                "citation",
+                ":format",
+                ":query"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "format",
+                  "description": "(Required) The format to use for the resulting citation data"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "query",
+                  "description": "(Required) URL of an article, DOI, PMCID or PMID in the URL-encoded format. Note that on the Swagger-UI doc page you don't need to URI-encode the parameter manually, it will be done by the docs engine.\n"
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "For some articles the result depends on the `Accept-Language` header, so provide it if localized content is required.\n",
+                "key": "Accept-Language",
+                "value": "<string>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json; charset=utf-8;"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0ba854ae-7651-49e0-8aa0-514a5e4b2ddf",
+              "name": "The citation data in the requested format",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "data",
+                    "citation",
+                    ":format",
+                    ":query"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "format",
+                      "description": "(Required) The format to use for the resulting citation data"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "query",
+                      "description": "(Required) URL of an article, DOI, PMCID or PMID in the URL-encoded format. Note that on the Swagger-UI doc page you don't need to URI-encode the parameter manually, it will be done by the docs engine.\n"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "For some articles the result depends on the `Accept-Language` header, so provide it if localized content is required.\n",
+                    "key": "Accept-Language",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json; charset=utf-8;"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8;"
+                }
+              ],
+              "body": "{\n  \"title\": \"string\",\n  \"url\": \"string\",\n  \"itemType\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "36d791d6-a5f5-4552-854d-d69c8804a05e",
+              "name": "Citation data was not found.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "data",
+                    "citation",
+                    ":format",
+                    ":query"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "format",
+                      "description": "(Required) The format to use for the resulting citation data"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "query",
+                      "description": "(Required) URL of an article, DOI, PMCID or PMID in the URL-encoded format. Note that on the Swagger-UI doc page you don't need to URI-encode the parameter manually, it will be done by the docs engine.\n"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "For some articles the result depends on the `Accept-Language` header, so provide it if localized content is required.\n",
+                    "key": "Accept-Language",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/problem+json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/problem+json"
+                }
+              ],
+              "body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"detail\": \"string\",\n  \"instance\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.enterprise.wikimedia.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "7877041f-ee1b-4d76-9e6f-37b4ba2721bb",
+    "name": "Wikimedia Enterprise API spec articles Citation API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "OpenAPI 3.0 specification for the Metadata, On-demand, Snapshot, and Realtime Batch API(s) of WME.\n\nWhile we provide this swagger spec for quick reference, our official documentation is located on our website:\n\n- [Official Documentation](https://enterprise.wikimedia.com/docs/)\n- [Data Dictionary & Schema](https://enterprise.wikimedia.com/docs/data-dictionary/)\n",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,579 @@
+{
+  "item": [
+    {
+      "id": "7d364c4c-2af3-4e41-b30f-cffd9e3a3d9f",
+      "name": "Recommendation",
+      "description": {
+        "content": "contribution recommendations",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "09e99ed8-1574-492f-8a66-6550d8a3ce9d",
+          "name": "Recommend articles for translation.",
+          "request": {
+            "name": "Recommend articles for translation.",
+            "description": {
+              "content": "Recommends articles to be translated from the source\nto the domain language.\n\nSee more at [Recommendation API documentation](https://meta.wikimedia.org/wiki/Recommendation_API)\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "data",
+                "recommendation",
+                "article",
+                "creation",
+                "translation",
+                ":from_lang"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "count",
+                  "value": "24",
+                  "description": "The max number of articles to return"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "from_lang",
+                  "description": "(Required) The source language code"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c70dde70-b95b-475b-931b-c60bf7ec8da9",
+              "name": "the list of articles recommended for translation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "data",
+                    "recommendation",
+                    "article",
+                    "creation",
+                    "translation",
+                    ":from_lang"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "count",
+                      "value": "24"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "from_lang",
+                      "description": "(Required) The source language code"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"count\": 1989,\n  \"items\": [\n    {\n      \"wikidata_id\": \"string\",\n      \"title\": \"string\",\n      \"sitelink_count\": 9351\n    },\n    {\n      \"wikidata_id\": \"string\",\n      \"title\": \"string\",\n      \"sitelink_count\": 3783\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "07e2520e-333b-4834-9c6e-852ec54ea17d",
+              "name": "Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "data",
+                    "recommendation",
+                    "article",
+                    "creation",
+                    "translation",
+                    ":from_lang"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "count",
+                      "value": "24"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "from_lang",
+                      "description": "(Required) The source language code"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/problem+json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/problem+json"
+                }
+              ],
+              "body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"detail\": \"string\",\n  \"instance\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ebf2129f-e7e2-4075-9fa3-294e4f95e6d9",
+          "name": "Recommend articles for translation.",
+          "request": {
+            "name": "Recommend articles for translation.",
+            "description": {
+              "content": "Recommends articles to be translated from the source\nto the domain language.\n\nSee more at [Recommendation API documentation](https://meta.wikimedia.org/wiki/Recommendation_API)\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "data",
+                "recommendation",
+                "article",
+                "creation",
+                "translation",
+                ":from_lang",
+                ":seed_article"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "count",
+                  "value": "24",
+                  "description": "The max number of articles to return"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "from_lang",
+                  "description": "(Required) The source language code"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "seed_article",
+                  "description": "(Required) The article to use as a search seed"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d9ae483e-1c25-4314-8bf2-239e2b3b3e79",
+              "name": "the list of articles recommended for translation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "data",
+                    "recommendation",
+                    "article",
+                    "creation",
+                    "translation",
+                    ":from_lang",
+                    ":seed_article"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "count",
+                      "value": "24"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "from_lang",
+                      "description": "(Required) The source language code"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "seed_article",
+                      "description": "(Required) The article to use as a search seed"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"count\": 1989,\n  \"items\": [\n    {\n      \"wikidata_id\": \"string\",\n      \"title\": \"string\",\n      \"sitelink_count\": 9351\n    },\n    {\n      \"wikidata_id\": \"string\",\n      \"title\": \"string\",\n      \"sitelink_count\": 3783\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f0314375-ec4b-4113-a524-b3e84b167d28",
+              "name": "Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "data",
+                    "recommendation",
+                    "article",
+                    "creation",
+                    "translation",
+                    ":from_lang",
+                    ":seed_article"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "count",
+                      "value": "24"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "from_lang",
+                      "description": "(Required) The source language code"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "seed_article",
+                      "description": "(Required) The article to use as a search seed"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/problem+json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/problem+json"
+                }
+              ],
+              "body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"detail\": \"string\",\n  \"instance\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ba6c1cae-3efe-45be-8d3e-e9178611ea66",
+          "name": "Recommend missing articles",
+          "request": {
+            "name": "Recommend missing articles",
+            "description": {
+              "content": "Recommends articles similar to the seed article but are missing\nfrom the domain language Wikipedia.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "data",
+                "recommendation",
+                "article",
+                "creation",
+                "morelike",
+                ":seed_article"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "seed_article",
+                  "description": "(Required) The article title used to search similar but missing articles"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c3f88151-4a64-46d5-ba97-55089dbd3d90",
+              "name": "the prioritized list of Wikidata IDs recommended for creation as Wikipedia articles",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "data",
+                    "recommendation",
+                    "article",
+                    "creation",
+                    "morelike",
+                    ":seed_article"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "seed_article",
+                      "description": "(Required) The article title used to search similar but missing articles"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"wikidata_id\": \"string\",\n    \"score\": 9375.744079681408,\n    \"source_language\": \"string\"\n  },\n  {\n    \"wikidata_id\": \"string\",\n    \"score\": 255.20125854091913,\n    \"source_language\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a0fdf15c-ab08-49a8-8b1a-e35992fb16ce",
+              "name": "Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "data",
+                    "recommendation",
+                    "article",
+                    "creation",
+                    "morelike",
+                    ":seed_article"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "seed_article",
+                      "description": "(Required) The article title used to search similar but missing articles"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/problem+json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/problem+json"
+                }
+              ],
+              "body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"detail\": \"string\",\n  \"instance\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.enterprise.wikimedia.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "1a7f3bf7-be0c-437e-9244-87a3ea6936c8",
+    "name": "Wikimedia Enterprise API spec articles Recommendation API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "OpenAPI 3.0 specification for the Metadata, On-demand, Snapshot, and Realtime Batch API(s) of WME.\n\nWhile we provide this swagger spec for quick reference, our official documentation is located on our website:\n\n- [Official Documentation](https://enterprise.wikimedia.com/docs/)\n- [Data Dictionary & Schema](https://enterprise.wikimedia.com/docs/data-dictionary/)\n",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,979 @@
+{
+  "item": [
+    {
+      "id": "a4baacdd-4966-44b2-a775-4a6e54d3925b",
+      "name": "articles",
+      "description": {
+        "content": "On-demand API",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "9ee2d801-5473-4a3b-a07e-36226358195d",
+          "name": "/v2/articles/:name",
+          "request": {
+            "name": "/v2/articles/:name",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "articles",
+                ":name"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "3",
+                  "description": "Limit of articles to return."
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Select which fields to receive in your response, using JSON dot notation."
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Select which fields to receive in your response, using JSON dot notation."
+                },
+                {
+                  "disabled": false,
+                  "key": "filters",
+                  "value": "{\"field\":\"<string>\",\"value\":\"<string>\"}",
+                  "description": "Select which projects and languages to receive in your response."
+                },
+                {
+                  "disabled": false,
+                  "key": "filters",
+                  "value": "{\"field\":\"<string>\",\"value\":\"<string>\"}",
+                  "description": "Select which projects and languages to receive in your response."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "name",
+                  "description": "(Required) Article name."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a705a538-df12-41d3-908c-d8f6ee020510",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "articles",
+                    ":name"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "3"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "filters",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "key": "filters",
+                      "value": "[object Object]"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "name",
+                      "description": "(Required) Article name."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"event\": {\n      \"identifier\": \"f7c737db-4b50-4982-8804-7c2b9fa89020\",\n      \"type\": \"update\",\n      \"date_created\": \"2026-03-18 12:38:23.437225+00:00\"\n    },\n    \"additional_entities\": [\n      {\n        \"identifier\": \"string\",\n        \"url\": \"string\"\n      },\n      {\n        \"identifier\": \"string\",\n        \"url\": \"string\"\n      }\n    ],\n    \"article_body\": {\n      \"html\": \"string\",\n      \"wikitext\": \"string\"\n    },\n    \"has_parts\": [\n      {\n        \"name\": \"string\",\n        \"type\": \"string\",\n        \"value\": \"string\",\n        \"values\": [\n          \"string\",\n          \"string\"\n        ],\n        \"images\": [\n          {\n            \"content_url\": \"https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/40px-Flag_of_Italy.svg.png\",\n            \"identifier\": \"383b3fee-3da7-c769-747d-9f726465f1f3\",\n            \"name\": \"./File:Flag_of_Italy.svg\",\n            \"width\": 156,\n            \"height\": 255,\n            \"thumbnail\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"caption\": \"Flag of Italy\",\n            \"alternative_text\": \"a flag divided in three vertical sections colored green, white, and red from left to right\",\n            \"encoding_format\": \"image/png\",\n            \"media_type\": \"drawing\"\n          },\n          {\n            \"content_url\": \"https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/40px-Flag_of_Italy.svg.png\",\n            \"identifier\": \"051fad47-1fde-ad0d-318a-ab70e16b1da4\",\n            \"name\": \"./File:Flag_of_Italy.svg\",\n            \"width\": 156,\n            \"height\": 255,\n            \"thumbnail\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"caption\": \"Flag of Italy\",\n            \"alternative_text\": \"a flag divided in three vertical sections colored green, white, and red from left to right\",\n            \"encoding_format\": \"image/png\",\n            \"media_type\": \"drawing\"\n          }\n        ],\n        \"links\": [\n          {\n            \"url\": \"string\",\n            \"text\": \"string\",\n            \"images\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"url\": \"string\",\n            \"text\": \"string\",\n            \"images\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ],\n        \"citations\": [\n          {\n            \"identifier\": \"string\",\n            \"group\": \"string\",\n            \"text\": \"string\"\n          },\n          {\n            \"identifier\": \"string\",\n            \"group\": \"string\",\n            \"text\": \"string\"\n          }\n        ]\n      },\n      {\n        \"name\": \"string\",\n        \"type\": \"string\",\n        \"value\": \"string\",\n        \"values\": [\n          \"string\",\n          \"string\"\n        ],\n        \"images\": [\n          {\n            \"content_url\": \"https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/40px-Flag_of_Italy.svg.png\",\n            \"identifier\": \"90d8dd49-55fe-1115-342b-d3f8c2ae1968\",\n            \"name\": \"./File:Flag_of_Italy.svg\",\n            \"width\": 156,\n            \"height\": 255,\n            \"thumbnail\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"caption\": \"Flag of Italy\",\n            \"alternative_text\": \"a flag divided in three vertical sections colored green, white, and red from left to right\",\n            \"encoding_format\": \"image/png\",\n            \"media_type\": \"drawing\"\n          },\n          {\n            \"content_url\": \"https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/40px-Flag_of_Italy.svg.png\",\n            \"identifier\": \"5a86d853-8f45-75c0-7f57-a0dc86568f51\",\n            \"name\": \"./File:Flag_of_Italy.svg\",\n            \"width\": 156,\n            \"height\": 255,\n            \"thumbnail\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"caption\": \"Flag of Italy\",\n            \"alternative_text\": \"a flag divided in three vertical sections colored green, white, and red from left to right\",\n            \"encoding_format\": \"image/png\",\n            \"media_type\": \"drawing\"\n          }\n        ],\n        \"links\": [\n          {\n            \"url\": \"string\",\n            \"text\": \"string\",\n            \"images\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"url\": \"string\",\n            \"text\": \"string\",\n            \"images\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ],\n        \"citations\": [\n          {\n            \"identifier\": \"string\",\n            \"group\": \"string\",\n            \"text\": \"string\"\n          },\n          {\n            \"identifier\": \"string\",\n            \"group\": \"string\",\n            \"text\": \"string\"\n          }\n        ]\n      }\n    ],\n    \"categories\": [\n      {\n        \"name\": \"string\",\n        \"url\": \"string\"\n      },\n      {\n        \"name\": \"string\",\n        \"url\": \"string\"\n      }\n    ],\n    \"date_modified\": \"string\",\n    \"identifier\": 449,\n    \"in_language\": {\n      \"identifier\": \"en\",\n      \"name\": \"English\",\n      \"alternate_name\": \"English\",\n      \"direction\": \"ltr\"\n    },\n    \"is_part_of\": {\n      \"identifier\": \"enwiki\",\n      \"code\": \"wiki\",\n      \"name\": \"Wikipedia\",\n      \"url\": \"https://en.wikipedia.org\",\n      \"in_language\": {\n        \"identifier\": \"en\",\n        \"name\": \"English\",\n        \"alternate_name\": \"English\",\n        \"direction\": \"ltr\"\n      }\n    },\n    \"license\": [\n      {\n        \"identifier\": \"CC-BY-SA-4.0\",\n        \"name\": \"Creative Commons Attribution-ShareAlike License 4.0\",\n        \"url\": \"https://creativecommons.org/licenses/by-sa/4.0/\"\n      },\n      {\n        \"identifier\": \"CC-BY-SA-4.0\",\n        \"name\": \"Creative Commons Attribution-ShareAlike License 4.0\",\n        \"url\": \"https://creativecommons.org/licenses/by-sa/4.0/\"\n      }\n    ],\n    \"main_entity\": {\n      \"identifier\": \"string\",\n      \"url\": \"string\"\n    },\n    \"name\": \"string\",\n    \"abstract\": \"string\",\n    \"namespace\": {\n      \"identifier\": 0\n    },\n    \"protection\": [\n      {\n        \"expiry\": \"infinity\",\n        \"level\": \"extendedconfirmed\",\n        \"type\": \"edit\"\n      },\n      {\n        \"expiry\": \"infinity\",\n        \"level\": \"extendedconfirmed\",\n        \"type\": \"edit\"\n      }\n    ],\n    \"redirects\": [\n      {\n        \"name\": \"string\",\n        \"url\": \"string\"\n      },\n      {\n        \"name\": \"string\",\n        \"url\": \"string\"\n      }\n    ],\n    \"templates\": [\n      {\n        \"name\": \"string\",\n        \"url\": \"string\"\n      },\n      {\n        \"name\": \"string\",\n        \"url\": \"string\"\n      }\n    ],\n    \"url\": \"string\",\n    \"version\": {\n      \"comment\": \"string\",\n      \"editor\": {\n        \"date_started\": \"string\",\n        \"edit_count\": 1758,\n        \"groups\": [\n          \"string\",\n          \"string\"\n        ],\n        \"identifier\": 2929,\n        \"is_anonymous\": true,\n        \"is_bot\": true,\n        \"name\": \"string\"\n      },\n      \"identifier\": 6179,\n      \"is_flagged_stable\": false,\n      \"is_minor_edit\": false,\n      \"noindex\": false,\n      \"scores\": {\n        \"revertrisk\": {\n          \"prediction\": false,\n          \"probability\": {\n            \"false\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"true\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        \"referencerisk\": {\n          \"reference_risk_score\": 1365.1445685050644\n        },\n        \"referenceneed\": {\n          \"reference_need_score\": 8384.333816087834\n        }\n      },\n      \"maintenance_tags\": {\n        \"citation_needed_count\": 6847,\n        \"pov_count\": 2838,\n        \"clarification_needed_count\": 2681,\n        \"update_count\": 7128\n      },\n      \"tags\": [\n        \"string\",\n        \"string\"\n      ]\n    },\n    \"visibility\": {\n      \"comment\": true,\n      \"text\": true,\n      \"user\": false\n    }\n  },\n  {\n    \"event\": {\n      \"identifier\": \"f7c737db-4b50-4982-8804-7c2b9fa89020\",\n      \"type\": \"update\",\n      \"date_created\": \"2026-03-18 12:38:23.437225+00:00\"\n    },\n    \"additional_entities\": [\n      {\n        \"identifier\": \"string\",\n        \"url\": \"string\"\n      },\n      {\n        \"identifier\": \"string\",\n        \"url\": \"string\"\n      }\n    ],\n    \"article_body\": {\n      \"html\": \"string\",\n      \"wikitext\": \"string\"\n    },\n    \"has_parts\": [\n      {\n        \"name\": \"string\",\n        \"type\": \"string\",\n        \"value\": \"string\",\n        \"values\": [\n          \"string\",\n          \"string\"\n        ],\n        \"images\": [\n          {\n            \"content_url\": \"https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/40px-Flag_of_Italy.svg.png\",\n            \"identifier\": \"43a6598e-4605-1adf-5455-af46fc10cd1c\",\n            \"name\": \"./File:Flag_of_Italy.svg\",\n            \"width\": 156,\n            \"height\": 255,\n            \"thumbnail\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"caption\": \"Flag of Italy\",\n            \"alternative_text\": \"a flag divided in three vertical sections colored green, white, and red from left to right\",\n            \"encoding_format\": \"image/png\",\n            \"media_type\": \"drawing\"\n          },\n          {\n            \"content_url\": \"https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/40px-Flag_of_Italy.svg.png\",\n            \"identifier\": \"5e894764-0e7b-ea03-96f7-5f83190cf06d\",\n            \"name\": \"./File:Flag_of_Italy.svg\",\n            \"width\": 156,\n            \"height\": 255,\n            \"thumbnail\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"caption\": \"Flag of Italy\",\n            \"alternative_text\": \"a flag divided in three vertical sections colored green, white, and red from left to right\",\n            \"encoding_format\": \"image/png\",\n            \"media_type\": \"drawing\"\n          }\n        ],\n        \"links\": [\n          {\n            \"url\": \"string\",\n            \"text\": \"string\",\n            \"images\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"url\": \"string\",\n            \"text\": \"string\",\n            \"images\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ],\n        \"citations\": [\n          {\n            \"identifier\": \"string\",\n            \"group\": \"string\",\n            \"text\": \"string\"\n          },\n          {\n            \"identifier\": \"string\",\n            \"group\": \"string\",\n            \"text\": \"string\"\n          }\n        ]\n      },\n      {\n        \"name\": \"string\",\n        \"type\": \"string\",\n        \"value\": \"string\",\n        \"values\": [\n          \"string\",\n          \"string\"\n        ],\n        \"images\": [\n          {\n            \"content_url\": \"https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/40px-Flag_of_Italy.svg.png\",\n            \"identifier\": \"23189ca5-8b75-88af-70aa-089d0e1437f9\",\n            \"name\": \"./File:Flag_of_Italy.svg\",\n            \"width\": 156,\n            \"height\": 255,\n            \"thumbnail\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"caption\": \"Flag of Italy\",\n            \"alternative_text\": \"a flag divided in three vertical sections colored green, white, and red from left to right\",\n            \"encoding_format\": \"image/png\",\n            \"media_type\": \"drawing\"\n          },\n          {\n            \"content_url\": \"https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/40px-Flag_of_Italy.svg.png\",\n            \"identifier\": \"aa994f7c-71eb-c9a6-fcfc-b2e210209d1d\",\n            \"name\": \"./File:Flag_of_Italy.svg\",\n            \"width\": 156,\n            \"height\": 255,\n            \"thumbnail\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"caption\": \"Flag of Italy\",\n            \"alternative_text\": \"a flag divided in three vertical sections colored green, white, and red from left to right\",\n            \"encoding_format\": \"image/png\",\n            \"media_type\": \"drawing\"\n          }\n        ],\n        \"links\": [\n          {\n            \"url\": \"string\",\n            \"text\": \"string\",\n            \"images\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"url\": \"string\",\n            \"text\": \"string\",\n            \"images\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ],\n        \"citations\": [\n          {\n            \"identifier\": \"string\",\n            \"group\": \"string\",\n            \"text\": \"string\"\n          },\n          {\n            \"identifier\": \"string\",\n            \"group\": \"string\",\n            \"text\": \"string\"\n          }\n        ]\n      }\n    ],\n    \"categories\": [\n      {\n        \"name\": \"string\",\n        \"url\": \"string\"\n      },\n      {\n        \"name\": \"string\",\n        \"url\": \"string\"\n      }\n    ],\n    \"date_modified\": \"string\",\n    \"identifier\": 7335,\n    \"in_language\": {\n      \"identifier\": \"en\",\n      \"name\": \"English\",\n      \"alternate_name\": \"English\",\n      \"direction\": \"ltr\"\n    },\n    \"is_part_of\": {\n      \"identifier\": \"enwiki\",\n      \"code\": \"wiki\",\n      \"name\": \"Wikipedia\",\n      \"url\": \"https://en.wikipedia.org\",\n      \"in_language\": {\n        \"identifier\": \"en\",\n        \"name\": \"English\",\n        \"alternate_name\": \"English\",\n        \"direction\": \"ltr\"\n      }\n    },\n    \"license\": [\n      {\n        \"identifier\": \"CC-BY-SA-4.0\",\n        \"name\": \"Creative Commons Attribution-ShareAlike License 4.0\",\n        \"url\": \"https://creativecommons.org/licenses/by-sa/4.0/\"\n      },\n      {\n        \"identifier\": \"CC-BY-SA-4.0\",\n        \"name\": \"Creative Commons Attribution-ShareAlike License 4.0\",\n        \"url\": \"https://creativecommons.org/licenses/by-sa/4.0/\"\n      }\n    ],\n    \"main_entity\": {\n      \"identifier\": \"string\",\n      \"url\": \"string\"\n    },\n    \"name\": \"string\",\n    \"abstract\": \"string\",\n    \"namespace\": {\n      \"identifier\": 0\n    },\n    \"protection\": [\n      {\n        \"expiry\": \"infinity\",\n        \"level\": \"extendedconfirmed\",\n        \"type\": \"edit\"\n      },\n      {\n        \"expiry\": \"infinity\",\n        \"level\": \"extendedconfirmed\",\n        \"type\": \"edit\"\n      }\n    ],\n    \"redirects\": [\n      {\n        \"name\": \"string\",\n        \"url\": \"string\"\n      },\n      {\n        \"name\": \"string\",\n        \"url\": \"string\"\n      }\n    ],\n    \"templates\": [\n      {\n        \"name\": \"string\",\n        \"url\": \"string\"\n      },\n      {\n        \"name\": \"string\",\n        \"url\": \"string\"\n      }\n    ],\n    \"url\": \"string\",\n    \"version\": {\n      \"comment\": \"string\",\n      \"editor\": {\n        \"date_started\": \"string\",\n        \"edit_count\": 8802,\n        \"groups\": [\n          \"string\",\n          \"string\"\n        ],\n        \"identifier\": 9960,\n        \"is_anonymous\": false,\n        \"is_bot\": false,\n        \"name\": \"string\"\n      },\n      \"identifier\": 7377,\n      \"is_flagged_stable\": true,\n      \"is_minor_edit\": true,\n      \"noindex\": false,\n      \"scores\": {\n        \"revertrisk\": {\n          \"prediction\": false,\n          \"probability\": {\n            \"false\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"true\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        \"referencerisk\": {\n          \"reference_risk_score\": 5572.9852865291805\n        },\n        \"referenceneed\": {\n          \"reference_need_score\": 459.7345451602852\n        }\n      },\n      \"maintenance_tags\": {\n        \"citation_needed_count\": 803,\n        \"pov_count\": 6339,\n        \"clarification_needed_count\": 9412,\n        \"update_count\": 1784\n      },\n      \"tags\": [\n        \"string\",\n        \"string\"\n      ]\n    },\n    \"visibility\": {\n      \"comment\": true,\n      \"text\": true,\n      \"user\": false\n    }\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "ddb95207-b21e-4de7-b91c-3c1b46cf6a4d",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "articles",
+                    ":name"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "3"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "filters",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "key": "filters",
+                      "value": "[object Object]"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "name",
+                      "description": "(Required) Article name."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 247\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a21ea9b6-4c91-452f-b14c-860717132a3e",
+              "name": "Forbidden",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "articles",
+                    ":name"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "3"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "filters",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "key": "filters",
+                      "value": "[object Object]"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "name",
+                      "description": "(Required) Article name."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 247\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "4d8de508-fa14-41c0-ba40-d59a592e2bc6",
+              "name": "Not Found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "articles",
+                    ":name"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "3"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "filters",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "key": "filters",
+                      "value": "[object Object]"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "name",
+                      "description": "(Required) Article name."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 247\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "e22cbf81-2065-4075-ae7f-853495ad9cff",
+              "name": "Unprocessable Entity",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "articles",
+                    ":name"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "3"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "filters",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "key": "filters",
+                      "value": "[object Object]"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "name",
+                      "description": "(Required) Article name."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 247\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "1667de99-5a2a-4ab0-8372-5e71cce43817",
+              "name": "Internal Server Error, Retry Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "articles",
+                    ":name"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "3"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "filters",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "key": "filters",
+                      "value": "[object Object]"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "name",
+                      "description": "(Required) Article name."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 247\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b9ffe1eb-40fc-43b3-8a9c-7c2407f64ca1",
+          "name": "/v2/articles/:name",
+          "request": {
+            "name": "/v2/articles/:name",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "articles",
+                ":name"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "name",
+                  "description": "(Required) Article name."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fields\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"filters\": [\n    {\n      \"field\": \"<string>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"field\": \"<string>\",\n      \"value\": \"<string>\"\n    }\n  ],\n  \"limit\": 3\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "422086fd-6553-48b7-b3d0-f092bbc6eb4c",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "articles",
+                    ":name"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "name",
+                      "description": "(Required) Article name."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fields\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"filters\": [\n    {\n      \"field\": \"string\",\n      \"value\": \"string\"\n    },\n    {\n      \"field\": \"string\",\n      \"value\": \"string\"\n    }\n  ],\n  \"limit\": 3\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"event\": {\n      \"identifier\": \"f7c737db-4b50-4982-8804-7c2b9fa89020\",\n      \"type\": \"update\",\n      \"date_created\": \"2026-03-18 12:38:23.437225+00:00\"\n    },\n    \"additional_entities\": [\n      {\n        \"identifier\": \"string\",\n        \"url\": \"string\"\n      },\n      {\n        \"identifier\": \"string\",\n        \"url\": \"string\"\n      }\n    ],\n    \"article_body\": {\n      \"html\": \"string\",\n      \"wikitext\": \"string\"\n    },\n    \"has_parts\": [\n      {\n        \"name\": \"string\",\n        \"type\": \"string\",\n        \"value\": \"string\",\n        \"values\": [\n          \"string\",\n          \"string\"\n        ],\n        \"images\": [\n          {\n            \"content_url\": \"https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/40px-Flag_of_Italy.svg.png\",\n            \"identifier\": \"383b3fee-3da7-c769-747d-9f726465f1f3\",\n            \"name\": \"./File:Flag_of_Italy.svg\",\n            \"width\": 156,\n            \"height\": 255,\n            \"thumbnail\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"caption\": \"Flag of Italy\",\n            \"alternative_text\": \"a flag divided in three vertical sections colored green, white, and red from left to right\",\n            \"encoding_format\": \"image/png\",\n            \"media_type\": \"drawing\"\n          },\n          {\n            \"content_url\": \"https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/40px-Flag_of_Italy.svg.png\",\n            \"identifier\": \"051fad47-1fde-ad0d-318a-ab70e16b1da4\",\n            \"name\": \"./File:Flag_of_Italy.svg\",\n            \"width\": 156,\n            \"height\": 255,\n            \"thumbnail\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"caption\": \"Flag of Italy\",\n            \"alternative_text\": \"a flag divided in three vertical sections colored green, white, and red from left to right\",\n            \"encoding_format\": \"image/png\",\n            \"media_type\": \"drawing\"\n          }\n        ],\n        \"links\": [\n          {\n            \"url\": \"string\",\n            \"text\": \"string\",\n            \"images\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"url\": \"string\",\n            \"text\": \"string\",\n            \"images\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ],\n        \"citations\": [\n          {\n            \"identifier\": \"string\",\n            \"group\": \"string\",\n            \"text\": \"string\"\n          },\n          {\n            \"identifier\": \"string\",\n            \"group\": \"string\",\n            \"text\": \"string\"\n          }\n        ]\n      },\n      {\n        \"name\": \"string\",\n        \"type\": \"string\",\n        \"value\": \"string\",\n        \"values\": [\n          \"string\",\n          \"string\"\n        ],\n        \"images\": [\n          {\n            \"content_url\": \"https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/40px-Flag_of_Italy.svg.png\",\n            \"identifier\": \"90d8dd49-55fe-1115-342b-d3f8c2ae1968\",\n            \"name\": \"./File:Flag_of_Italy.svg\",\n            \"width\": 156,\n            \"height\": 255,\n            \"thumbnail\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"caption\": \"Flag of Italy\",\n            \"alternative_text\": \"a flag divided in three vertical sections colored green, white, and red from left to right\",\n            \"encoding_format\": \"image/png\",\n            \"media_type\": \"drawing\"\n          },\n          {\n            \"content_url\": \"https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/40px-Flag_of_Italy.svg.png\",\n            \"identifier\": \"5a86d853-8f45-75c0-7f57-a0dc86568f51\",\n            \"name\": \"./File:Flag_of_Italy.svg\",\n            \"width\": 156,\n            \"height\": 255,\n            \"thumbnail\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"caption\": \"Flag of Italy\",\n            \"alternative_text\": \"a flag divided in three vertical sections colored green, white, and red from left to right\",\n            \"encoding_format\": \"image/png\",\n            \"media_type\": \"drawing\"\n          }\n        ],\n        \"links\": [\n          {\n            \"url\": \"string\",\n            \"text\": \"string\",\n            \"images\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"url\": \"string\",\n            \"text\": \"string\",\n            \"images\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ],\n        \"citations\": [\n          {\n            \"identifier\": \"string\",\n            \"group\": \"string\",\n            \"text\": \"string\"\n          },\n          {\n            \"identifier\": \"string\",\n            \"group\": \"string\",\n            \"text\": \"string\"\n          }\n        ]\n      }\n    ],\n    \"categories\": [\n      {\n        \"name\": \"string\",\n        \"url\": \"string\"\n      },\n      {\n        \"name\": \"string\",\n        \"url\": \"string\"\n      }\n    ],\n    \"date_modified\": \"string\",\n    \"identifier\": 449,\n    \"in_language\": {\n      \"identifier\": \"en\",\n      \"name\": \"English\",\n      \"alternate_name\": \"English\",\n      \"direction\": \"ltr\"\n    },\n    \"is_part_of\": {\n      \"identifier\": \"enwiki\",\n      \"code\": \"wiki\",\n      \"name\": \"Wikipedia\",\n      \"url\": \"https://en.wikipedia.org\",\n      \"in_language\": {\n        \"identifier\": \"en\",\n        \"name\": \"English\",\n        \"alternate_name\": \"English\",\n        \"direction\": \"ltr\"\n      }\n    },\n    \"license\": [\n      {\n        \"identifier\": \"CC-BY-SA-4.0\",\n        \"name\": \"Creative Commons Attribution-ShareAlike License 4.0\",\n        \"url\": \"https://creativecommons.org/licenses/by-sa/4.0/\"\n      },\n      {\n        \"identifier\": \"CC-BY-SA-4.0\",\n        \"name\": \"Creative Commons Attribution-ShareAlike License 4.0\",\n        \"url\": \"https://creativecommons.org/licenses/by-sa/4.0/\"\n      }\n    ],\n    \"main_entity\": {\n      \"identifier\": \"string\",\n      \"url\": \"string\"\n    },\n    \"name\": \"string\",\n    \"abstract\": \"string\",\n    \"namespace\": {\n      \"identifier\": 0\n    },\n    \"protection\": [\n      {\n        \"expiry\": \"infinity\",\n        \"level\": \"extendedconfirmed\",\n        \"type\": \"edit\"\n      },\n      {\n        \"expiry\": \"infinity\",\n        \"level\": \"extendedconfirmed\",\n        \"type\": \"edit\"\n      }\n    ],\n    \"redirects\": [\n      {\n        \"name\": \"string\",\n        \"url\": \"string\"\n      },\n      {\n        \"name\": \"string\",\n        \"url\": \"string\"\n      }\n    ],\n    \"templates\": [\n      {\n        \"name\": \"string\",\n        \"url\": \"string\"\n      },\n      {\n        \"name\": \"string\",\n        \"url\": \"string\"\n      }\n    ],\n    \"url\": \"string\",\n    \"version\": {\n      \"comment\": \"string\",\n      \"editor\": {\n        \"date_started\": \"string\",\n        \"edit_count\": 1758,\n        \"groups\": [\n          \"string\",\n          \"string\"\n        ],\n        \"identifier\": 2929,\n        \"is_anonymous\": true,\n        \"is_bot\": true,\n        \"name\": \"string\"\n      },\n      \"identifier\": 6179,\n      \"is_flagged_stable\": false,\n      \"is_minor_edit\": false,\n      \"noindex\": false,\n      \"scores\": {\n        \"revertrisk\": {\n          \"prediction\": false,\n          \"probability\": {\n            \"false\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"true\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        \"referencerisk\": {\n          \"reference_risk_score\": 1365.1445685050644\n        },\n        \"referenceneed\": {\n          \"reference_need_score\": 8384.333816087834\n        }\n      },\n      \"maintenance_tags\": {\n        \"citation_needed_count\": 6847,\n        \"pov_count\": 2838,\n        \"clarification_needed_count\": 2681,\n        \"update_count\": 7128\n      },\n      \"tags\": [\n        \"string\",\n        \"string\"\n      ]\n    },\n    \"visibility\": {\n      \"comment\": true,\n      \"text\": true,\n      \"user\": false\n    }\n  },\n  {\n    \"event\": {\n      \"identifier\": \"f7c737db-4b50-4982-8804-7c2b9fa89020\",\n      \"type\": \"update\",\n      \"date_created\": \"2026-03-18 12:38:23.437225+00:00\"\n    },\n    \"additional_entities\": [\n      {\n        \"identifier\": \"string\",\n        \"url\": \"string\"\n      },\n      {\n        \"identifier\": \"string\",\n        \"url\": \"string\"\n      }\n    ],\n    \"article_body\": {\n      \"html\": \"string\",\n      \"wikitext\": \"string\"\n    },\n    \"has_parts\": [\n      {\n        \"name\": \"string\",\n        \"type\": \"string\",\n        \"value\": \"string\",\n        \"values\": [\n          \"string\",\n          \"string\"\n        ],\n        \"images\": [\n          {\n            \"content_url\": \"https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/40px-Flag_of_Italy.svg.png\",\n            \"identifier\": \"43a6598e-4605-1adf-5455-af46fc10cd1c\",\n            \"name\": \"./File:Flag_of_Italy.svg\",\n            \"width\": 156,\n            \"height\": 255,\n            \"thumbnail\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"caption\": \"Flag of Italy\",\n            \"alternative_text\": \"a flag divided in three vertical sections colored green, white, and red from left to right\",\n            \"encoding_format\": \"image/png\",\n            \"media_type\": \"drawing\"\n          },\n          {\n            \"content_url\": \"https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/40px-Flag_of_Italy.svg.png\",\n            \"identifier\": \"5e894764-0e7b-ea03-96f7-5f83190cf06d\",\n            \"name\": \"./File:Flag_of_Italy.svg\",\n            \"width\": 156,\n            \"height\": 255,\n            \"thumbnail\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"caption\": \"Flag of Italy\",\n            \"alternative_text\": \"a flag divided in three vertical sections colored green, white, and red from left to right\",\n            \"encoding_format\": \"image/png\",\n            \"media_type\": \"drawing\"\n          }\n        ],\n        \"links\": [\n          {\n            \"url\": \"string\",\n            \"text\": \"string\",\n            \"images\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"url\": \"string\",\n            \"text\": \"string\",\n            \"images\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ],\n        \"citations\": [\n          {\n            \"identifier\": \"string\",\n            \"group\": \"string\",\n            \"text\": \"string\"\n          },\n          {\n            \"identifier\": \"string\",\n            \"group\": \"string\",\n            \"text\": \"string\"\n          }\n        ]\n      },\n      {\n        \"name\": \"string\",\n        \"type\": \"string\",\n        \"value\": \"string\",\n        \"values\": [\n          \"string\",\n          \"string\"\n        ],\n        \"images\": [\n          {\n            \"content_url\": \"https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/40px-Flag_of_Italy.svg.png\",\n            \"identifier\": \"23189ca5-8b75-88af-70aa-089d0e1437f9\",\n            \"name\": \"./File:Flag_of_Italy.svg\",\n            \"width\": 156,\n            \"height\": 255,\n            \"thumbnail\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"caption\": \"Flag of Italy\",\n            \"alternative_text\": \"a flag divided in three vertical sections colored green, white, and red from left to right\",\n            \"encoding_format\": \"image/png\",\n            \"media_type\": \"drawing\"\n          },\n          {\n            \"content_url\": \"https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/40px-Flag_of_Italy.svg.png\",\n            \"identifier\": \"aa994f7c-71eb-c9a6-fcfc-b2e210209d1d\",\n            \"name\": \"./File:Flag_of_Italy.svg\",\n            \"width\": 156,\n            \"height\": 255,\n            \"thumbnail\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"caption\": \"Flag of Italy\",\n            \"alternative_text\": \"a flag divided in three vertical sections colored green, white, and red from left to right\",\n            \"encoding_format\": \"image/png\",\n            \"media_type\": \"drawing\"\n          }\n        ],\n        \"links\": [\n          {\n            \"url\": \"string\",\n            \"text\": \"string\",\n            \"images\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          },\n          {\n            \"url\": \"string\",\n            \"text\": \"string\",\n            \"images\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ]\n          }\n        ],\n        \"citations\": [\n          {\n            \"identifier\": \"string\",\n            \"group\": \"string\",\n            \"text\": \"string\"\n          },\n          {\n            \"identifier\": \"string\",\n            \"group\": \"string\",\n            \"text\": \"string\"\n          }\n        ]\n      }\n    ],\n    \"categories\": [\n      {\n        \"name\": \"string\",\n        \"url\": \"string\"\n      },\n      {\n        \"name\": \"string\",\n        \"url\": \"string\"\n      }\n    ],\n    \"date_modified\": \"string\",\n    \"identifier\": 7335,\n    \"in_language\": {\n      \"identifier\": \"en\",\n      \"name\": \"English\",\n      \"alternate_name\": \"English\",\n      \"direction\": \"ltr\"\n    },\n    \"is_part_of\": {\n      \"identifier\": \"enwiki\",\n      \"code\": \"wiki\",\n      \"name\": \"Wikipedia\",\n      \"url\": \"https://en.wikipedia.org\",\n      \"in_language\": {\n        \"identifier\": \"en\",\n        \"name\": \"English\",\n        \"alternate_name\": \"English\",\n        \"direction\": \"ltr\"\n      }\n    },\n    \"license\": [\n      {\n        \"identifier\": \"CC-BY-SA-4.0\",\n        \"name\": \"Creative Commons Attribution-ShareAlike License 4.0\",\n        \"url\": \"https://creativecommons.org/licenses/by-sa/4.0/\"\n      },\n      {\n        \"identifier\": \"CC-BY-SA-4.0\",\n        \"name\": \"Creative Commons Attribution-ShareAlike License 4.0\",\n        \"url\": \"https://creativecommons.org/licenses/by-sa/4.0/\"\n      }\n    ],\n    \"main_entity\": {\n      \"identifier\": \"string\",\n      \"url\": \"string\"\n    },\n    \"name\": \"string\",\n    \"abstract\": \"string\",\n    \"namespace\": {\n      \"identifier\": 0\n    },\n    \"protection\": [\n      {\n        \"expiry\": \"infinity\",\n        \"level\": \"extendedconfirmed\",\n        \"type\": \"edit\"\n      },\n      {\n        \"expiry\": \"infinity\",\n        \"level\": \"extendedconfirmed\",\n        \"type\": \"edit\"\n      }\n    ],\n    \"redirects\": [\n      {\n        \"name\": \"string\",\n        \"url\": \"string\"\n      },\n      {\n        \"name\": \"string\",\n        \"url\": \"string\"\n      }\n    ],\n    \"templates\": [\n      {\n        \"name\": \"string\",\n        \"url\": \"string\"\n      },\n      {\n        \"name\": \"string\",\n        \"url\": \"string\"\n      }\n    ],\n    \"url\": \"string\",\n    \"version\": {\n      \"comment\": \"string\",\n      \"editor\": {\n        \"date_started\": \"string\",\n        \"edit_count\": 8802,\n        \"groups\": [\n          \"string\",\n          \"string\"\n        ],\n        \"identifier\": 9960,\n        \"is_anonymous\": false,\n        \"is_bot\": false,\n        \"name\": \"string\"\n      },\n      \"identifier\": 7377,\n      \"is_flagged_stable\": true,\n      \"is_minor_edit\": true,\n      \"noindex\": false,\n      \"scores\": {\n        \"revertrisk\": {\n          \"prediction\": false,\n          \"probability\": {\n            \"false\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"true\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        \"referencerisk\": {\n          \"reference_risk_score\": 5572.9852865291805\n        },\n        \"referenceneed\": {\n          \"reference_need_score\": 459.7345451602852\n        }\n      },\n      \"maintenance_tags\": {\n        \"citation_needed_count\": 803,\n        \"pov_count\": 6339,\n        \"clarification_needed_count\": 9412,\n        \"update_count\": 1784\n      },\n      \"tags\": [\n        \"string\",\n        \"string\"\n      ]\n    },\n    \"visibility\": {\n      \"comment\": true,\n      \"text\": true,\n      \"user\": false\n    }\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "2a563505-0f4f-460b-a43e-597f9569ed93",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "articles",
+                    ":name"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "name",
+                      "description": "(Required) Article name."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fields\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"filters\": [\n    {\n      \"field\": \"string\",\n      \"value\": \"string\"\n    },\n    {\n      \"field\": \"string\",\n      \"value\": \"string\"\n    }\n  ],\n  \"limit\": 3\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 247\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d7c06a4b-71d2-40a0-a998-b11da53459e7",
+              "name": "Forbidden",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "articles",
+                    ":name"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "name",
+                      "description": "(Required) Article name."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fields\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"filters\": [\n    {\n      \"field\": \"string\",\n      \"value\": \"string\"\n    },\n    {\n      \"field\": \"string\",\n      \"value\": \"string\"\n    }\n  ],\n  \"limit\": 3\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 247\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "84f19a74-46a7-4f8e-87af-31c0ef0b0015",
+              "name": "Not Found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "articles",
+                    ":name"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "name",
+                      "description": "(Required) Article name."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fields\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"filters\": [\n    {\n      \"field\": \"string\",\n      \"value\": \"string\"\n    },\n    {\n      \"field\": \"string\",\n      \"value\": \"string\"\n    }\n  ],\n  \"limit\": 3\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 247\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f9672a72-1e45-4438-8400-3ca7f8780c02",
+              "name": "Unprocessable Entity",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "articles",
+                    ":name"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "name",
+                      "description": "(Required) Article name."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fields\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"filters\": [\n    {\n      \"field\": \"string\",\n      \"value\": \"string\"\n    },\n    {\n      \"field\": \"string\",\n      \"value\": \"string\"\n    }\n  ],\n  \"limit\": 3\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 247\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "80c6d6a4-9098-40ff-b3d6-55fa2c537a94",
+              "name": "Internal Server Error, Retry Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "articles",
+                    ":name"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "name",
+                      "description": "(Required) Article name."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fields\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"filters\": [\n    {\n      \"field\": \"string\",\n      \"value\": \"string\"\n    },\n    {\n      \"field\": \"string\",\n      \"value\": \"string\"\n    }\n  ],\n  \"limit\": 3\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 247\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.enterprise.wikimedia.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "dc2d4ae7-6a22-414e-bdd0-ddcf8bf9ce4e",
+    "name": "Wikimedia Enterprise API spec articles API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "OpenAPI 3.0 specification for the Metadata, On-demand, Snapshot, and Realtime Batch API(s) of WME.\n\nWhile we provide this swagger spec for quick reference, our official documentation is located on our website:\n\n- [Official Documentation](https://enterprise.wikimedia.com/docs/)\n- [Data Dictionary & Schema](https://enterprise.wikimedia.com/docs/data-dictionary/)\n",
+      "type": "text/plain"
+    }
+  }
+}

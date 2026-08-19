@@ -1,0 +1,2627 @@
+{
+  "item": [
+    {
+      "id": "4083e994-5a79-47d3-b1b7-5ecb4ef386fe",
+      "name": "wikidata",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "72414574-e4e5-4dc0-a2f9-a456d586753e",
+          "name": "/v2/wikidata/items/:identifier",
+          "request": {
+            "name": "/v2/wikidata/items/:identifier",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "wikidata",
+                "items",
+                ":identifier"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Select which fields to receive in your response, using JSON dot notation."
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Select which fields to receive in your response, using JSON dot notation."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "identifier",
+                  "description": "(Required) Wikidata Item identifier (Q-number, e.g. Q42)."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d72e85a7-9b2f-4656-ac01-1a7f8be1e75a",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "wikidata",
+                    "items",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Wikidata Item identifier (Q-number, e.g. Q42)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"name\": \"P31\",\n    \"identifier\": 104546757,\n    \"url\": \"https://www.wikidata.org/wiki/Q109388644\",\n    \"protection\": {\n      \"expiry\": \"infinity\",\n      \"level\": \"extendedconfirmed\",\n      \"type\": \"edit\"\n    },\n    \"license\": {\n      \"identifier\": \"CC-BY-SA-4.0\",\n      \"name\": \"Creative Commons Attribution-ShareAlike License 4.0\",\n      \"url\": \"https://creativecommons.org/licenses/by-sa/4.0/\"\n    },\n    \"date_created\": \"2024-04-01T12:00:00Z\",\n    \"date_modified\": \"2024-06-01T12:00:00Z\",\n    \"date_previously_modified\": \"2024-05-01T12:00:00Z\",\n    \"namespace\": {\n      \"identifier\": 0\n    },\n    \"is_part_of\": {\n      \"identifier\": \"enwiki\",\n      \"code\": \"wiki\",\n      \"name\": \"Wikipedia\",\n      \"url\": \"https://en.wikipedia.org\",\n      \"in_language\": {\n        \"identifier\": \"en\",\n        \"name\": \"English\",\n        \"alternate_name\": \"English\",\n        \"direction\": \"ltr\"\n      }\n    },\n    \"entity\": {\n      \"identifier\": \"Q42\",\n      \"type\": \"item\",\n      \"labels\": {\n        \"ce\": \"Оьзлер\",\n        \"en\": \"Özler\"\n      },\n      \"descriptions\": {\n        \"en\": \"Championship held at Balbir Singh Juneja Indoor Stadium\"\n      },\n      \"aliases\": {\n        \"eo\": [\n          \"Douglas ADAMS\",\n          \"Douglas Noel ADAMS\"\n        ]\n      },\n      \"statements\": [\n        {\n          \"identifier\": \"a15f6e74-b7f0-113c-86da-87e5a56c0971\",\n          \"rank\": \"normal\",\n          \"property\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"value\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"qualifiers\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"references\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        },\n        {\n          \"identifier\": \"5988e4aa-5411-5e31-6a9c-03c86c2507c9\",\n          \"rank\": \"normal\",\n          \"property\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"value\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"qualifiers\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"references\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        }\n      ],\n      \"sitelinks\": {\n        \"title\": \"Pentominium\",\n        \"badges\": [\n          \"Q17437796\",\n          \"Q6540326\"\n        ],\n        \"url\": \"https://de.wikipedia.org/wiki/Pentominium\"\n      }\n    },\n    \"visibility\": {\n      \"comment\": true,\n      \"text\": true,\n      \"user\": false\n    },\n    \"event\": {\n      \"identifier\": \"f7c737db-4b50-4982-8804-7c2b9fa89020\",\n      \"type\": \"update\",\n      \"date_created\": \"2026-03-18 12:38:23.437225+00:00\"\n    }\n  },\n  {\n    \"name\": \"P31\",\n    \"identifier\": 104546757,\n    \"url\": \"https://www.wikidata.org/wiki/Q109388644\",\n    \"protection\": {\n      \"expiry\": \"infinity\",\n      \"level\": \"extendedconfirmed\",\n      \"type\": \"edit\"\n    },\n    \"license\": {\n      \"identifier\": \"CC-BY-SA-4.0\",\n      \"name\": \"Creative Commons Attribution-ShareAlike License 4.0\",\n      \"url\": \"https://creativecommons.org/licenses/by-sa/4.0/\"\n    },\n    \"date_created\": \"2024-04-01T12:00:00Z\",\n    \"date_modified\": \"2024-06-01T12:00:00Z\",\n    \"date_previously_modified\": \"2024-05-01T12:00:00Z\",\n    \"namespace\": {\n      \"identifier\": 0\n    },\n    \"is_part_of\": {\n      \"identifier\": \"enwiki\",\n      \"code\": \"wiki\",\n      \"name\": \"Wikipedia\",\n      \"url\": \"https://en.wikipedia.org\",\n      \"in_language\": {\n        \"identifier\": \"en\",\n        \"name\": \"English\",\n        \"alternate_name\": \"English\",\n        \"direction\": \"ltr\"\n      }\n    },\n    \"entity\": {\n      \"identifier\": \"Q42\",\n      \"type\": \"item\",\n      \"labels\": {\n        \"ce\": \"Оьзлер\",\n        \"en\": \"Özler\"\n      },\n      \"descriptions\": {\n        \"en\": \"Championship held at Balbir Singh Juneja Indoor Stadium\"\n      },\n      \"aliases\": {\n        \"eo\": [\n          \"Douglas ADAMS\",\n          \"Douglas Noel ADAMS\"\n        ]\n      },\n      \"statements\": [\n        {\n          \"identifier\": \"d6209d3b-d574-a698-248c-310819b32e03\",\n          \"rank\": \"normal\",\n          \"property\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"value\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"qualifiers\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"references\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        },\n        {\n          \"identifier\": \"e629c3bb-17f4-51dc-f210-b8d86a369003\",\n          \"rank\": \"normal\",\n          \"property\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"value\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"qualifiers\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"references\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        }\n      ],\n      \"sitelinks\": {\n        \"title\": \"Pentominium\",\n        \"badges\": [\n          \"Q17437796\",\n          \"Q6540326\"\n        ],\n        \"url\": \"https://de.wikipedia.org/wiki/Pentominium\"\n      }\n    },\n    \"visibility\": {\n      \"comment\": true,\n      \"text\": true,\n      \"user\": false\n    },\n    \"event\": {\n      \"identifier\": \"f7c737db-4b50-4982-8804-7c2b9fa89020\",\n      \"type\": \"update\",\n      \"date_created\": \"2026-03-18 12:38:23.437225+00:00\"\n    }\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "2374aa83-2db1-4d15-a2d0-12f8eff97211",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "wikidata",
+                    "items",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Wikidata Item identifier (Q-number, e.g. Q42)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 5201\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "12a140ad-e83a-4013-a54b-264d361e382b",
+              "name": "Forbidden",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "wikidata",
+                    "items",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Wikidata Item identifier (Q-number, e.g. Q42)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 5201\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "8db78702-4522-4fb5-9711-a1b16603c1ce",
+              "name": "Not Found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "wikidata",
+                    "items",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Wikidata Item identifier (Q-number, e.g. Q42)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 5201\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "8882ca3e-5b82-4e6f-8983-d312f09fa973",
+              "name": "Unprocessable Entity",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "wikidata",
+                    "items",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Wikidata Item identifier (Q-number, e.g. Q42)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 5201\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "8a37d012-5e75-40f0-a237-d89da83088df",
+              "name": "Internal Server Error, Retry Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "wikidata",
+                    "items",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Wikidata Item identifier (Q-number, e.g. Q42)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 5201\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9d5082f2-37d6-4caf-8c36-4717a202d00f",
+          "name": "/v2/wikidata/items/:identifier",
+          "request": {
+            "name": "/v2/wikidata/items/:identifier",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "wikidata",
+                "items",
+                ":identifier"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "identifier",
+                  "description": "(Required) Wikidata Item identifier (Q-number, e.g. Q42)."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fields\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "d9986319-9ff8-4396-9637-6e97b8b2097e",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "wikidata",
+                    "items",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Wikidata Item identifier (Q-number, e.g. Q42)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fields\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"name\": \"P31\",\n    \"identifier\": 104546757,\n    \"url\": \"https://www.wikidata.org/wiki/Q109388644\",\n    \"protection\": {\n      \"expiry\": \"infinity\",\n      \"level\": \"extendedconfirmed\",\n      \"type\": \"edit\"\n    },\n    \"license\": {\n      \"identifier\": \"CC-BY-SA-4.0\",\n      \"name\": \"Creative Commons Attribution-ShareAlike License 4.0\",\n      \"url\": \"https://creativecommons.org/licenses/by-sa/4.0/\"\n    },\n    \"date_created\": \"2024-04-01T12:00:00Z\",\n    \"date_modified\": \"2024-06-01T12:00:00Z\",\n    \"date_previously_modified\": \"2024-05-01T12:00:00Z\",\n    \"namespace\": {\n      \"identifier\": 0\n    },\n    \"is_part_of\": {\n      \"identifier\": \"enwiki\",\n      \"code\": \"wiki\",\n      \"name\": \"Wikipedia\",\n      \"url\": \"https://en.wikipedia.org\",\n      \"in_language\": {\n        \"identifier\": \"en\",\n        \"name\": \"English\",\n        \"alternate_name\": \"English\",\n        \"direction\": \"ltr\"\n      }\n    },\n    \"entity\": {\n      \"identifier\": \"Q42\",\n      \"type\": \"item\",\n      \"labels\": {\n        \"ce\": \"Оьзлер\",\n        \"en\": \"Özler\"\n      },\n      \"descriptions\": {\n        \"en\": \"Championship held at Balbir Singh Juneja Indoor Stadium\"\n      },\n      \"aliases\": {\n        \"eo\": [\n          \"Douglas ADAMS\",\n          \"Douglas Noel ADAMS\"\n        ]\n      },\n      \"statements\": [\n        {\n          \"identifier\": \"a15f6e74-b7f0-113c-86da-87e5a56c0971\",\n          \"rank\": \"normal\",\n          \"property\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"value\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"qualifiers\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"references\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        },\n        {\n          \"identifier\": \"5988e4aa-5411-5e31-6a9c-03c86c2507c9\",\n          \"rank\": \"normal\",\n          \"property\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"value\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"qualifiers\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"references\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        }\n      ],\n      \"sitelinks\": {\n        \"title\": \"Pentominium\",\n        \"badges\": [\n          \"Q17437796\",\n          \"Q6540326\"\n        ],\n        \"url\": \"https://de.wikipedia.org/wiki/Pentominium\"\n      }\n    },\n    \"visibility\": {\n      \"comment\": true,\n      \"text\": true,\n      \"user\": false\n    },\n    \"event\": {\n      \"identifier\": \"f7c737db-4b50-4982-8804-7c2b9fa89020\",\n      \"type\": \"update\",\n      \"date_created\": \"2026-03-18 12:38:23.437225+00:00\"\n    }\n  },\n  {\n    \"name\": \"P31\",\n    \"identifier\": 104546757,\n    \"url\": \"https://www.wikidata.org/wiki/Q109388644\",\n    \"protection\": {\n      \"expiry\": \"infinity\",\n      \"level\": \"extendedconfirmed\",\n      \"type\": \"edit\"\n    },\n    \"license\": {\n      \"identifier\": \"CC-BY-SA-4.0\",\n      \"name\": \"Creative Commons Attribution-ShareAlike License 4.0\",\n      \"url\": \"https://creativecommons.org/licenses/by-sa/4.0/\"\n    },\n    \"date_created\": \"2024-04-01T12:00:00Z\",\n    \"date_modified\": \"2024-06-01T12:00:00Z\",\n    \"date_previously_modified\": \"2024-05-01T12:00:00Z\",\n    \"namespace\": {\n      \"identifier\": 0\n    },\n    \"is_part_of\": {\n      \"identifier\": \"enwiki\",\n      \"code\": \"wiki\",\n      \"name\": \"Wikipedia\",\n      \"url\": \"https://en.wikipedia.org\",\n      \"in_language\": {\n        \"identifier\": \"en\",\n        \"name\": \"English\",\n        \"alternate_name\": \"English\",\n        \"direction\": \"ltr\"\n      }\n    },\n    \"entity\": {\n      \"identifier\": \"Q42\",\n      \"type\": \"item\",\n      \"labels\": {\n        \"ce\": \"Оьзлер\",\n        \"en\": \"Özler\"\n      },\n      \"descriptions\": {\n        \"en\": \"Championship held at Balbir Singh Juneja Indoor Stadium\"\n      },\n      \"aliases\": {\n        \"eo\": [\n          \"Douglas ADAMS\",\n          \"Douglas Noel ADAMS\"\n        ]\n      },\n      \"statements\": [\n        {\n          \"identifier\": \"d6209d3b-d574-a698-248c-310819b32e03\",\n          \"rank\": \"normal\",\n          \"property\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"value\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"qualifiers\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"references\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        },\n        {\n          \"identifier\": \"e629c3bb-17f4-51dc-f210-b8d86a369003\",\n          \"rank\": \"normal\",\n          \"property\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"value\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"qualifiers\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"references\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        }\n      ],\n      \"sitelinks\": {\n        \"title\": \"Pentominium\",\n        \"badges\": [\n          \"Q17437796\",\n          \"Q6540326\"\n        ],\n        \"url\": \"https://de.wikipedia.org/wiki/Pentominium\"\n      }\n    },\n    \"visibility\": {\n      \"comment\": true,\n      \"text\": true,\n      \"user\": false\n    },\n    \"event\": {\n      \"identifier\": \"f7c737db-4b50-4982-8804-7c2b9fa89020\",\n      \"type\": \"update\",\n      \"date_created\": \"2026-03-18 12:38:23.437225+00:00\"\n    }\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "0defe0e2-416e-430c-842a-225c02c06b69",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "wikidata",
+                    "items",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Wikidata Item identifier (Q-number, e.g. Q42)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fields\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 5201\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "1e564fcb-ff25-475a-82ed-b448e7820aad",
+              "name": "Forbidden",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "wikidata",
+                    "items",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Wikidata Item identifier (Q-number, e.g. Q42)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fields\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 5201\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "0f1758c1-4144-4705-94d0-ab99f9d873c2",
+              "name": "Not Found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "wikidata",
+                    "items",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Wikidata Item identifier (Q-number, e.g. Q42)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fields\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 5201\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "191a2361-e2d9-4f3a-877e-c720ffdf108e",
+              "name": "Unprocessable Entity",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "wikidata",
+                    "items",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Wikidata Item identifier (Q-number, e.g. Q42)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fields\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 5201\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "93637fd6-b50a-460f-9e6c-e6944a292ad1",
+              "name": "Internal Server Error, Retry Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "wikidata",
+                    "items",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Wikidata Item identifier (Q-number, e.g. Q42)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fields\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 5201\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0145b0fd-4a20-4510-ab27-9e49e5cbef5e",
+          "name": "/v2/wikidata/properties/:identifier",
+          "request": {
+            "name": "/v2/wikidata/properties/:identifier",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "wikidata",
+                "properties",
+                ":identifier"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Select which fields to receive in your response, using JSON dot notation."
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Select which fields to receive in your response, using JSON dot notation."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "identifier",
+                  "description": "(Required) Wikidata Property identifier (P-number, e.g. P31)."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "943f1f07-f44d-44b8-b2fb-774ca0b1e07d",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "wikidata",
+                    "properties",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Wikidata Property identifier (P-number, e.g. P31)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"name\": \"P31\",\n    \"identifier\": 104546757,\n    \"url\": \"https://www.wikidata.org/wiki/Q109388644\",\n    \"protection\": {\n      \"expiry\": \"infinity\",\n      \"level\": \"extendedconfirmed\",\n      \"type\": \"edit\"\n    },\n    \"license\": {\n      \"identifier\": \"CC-BY-SA-4.0\",\n      \"name\": \"Creative Commons Attribution-ShareAlike License 4.0\",\n      \"url\": \"https://creativecommons.org/licenses/by-sa/4.0/\"\n    },\n    \"date_created\": \"2024-04-01T12:00:00Z\",\n    \"date_modified\": \"2024-06-01T12:00:00Z\",\n    \"date_previously_modified\": \"2024-05-01T12:00:00Z\",\n    \"namespace\": {\n      \"identifier\": 0\n    },\n    \"is_part_of\": {\n      \"identifier\": \"enwiki\",\n      \"code\": \"wiki\",\n      \"name\": \"Wikipedia\",\n      \"url\": \"https://en.wikipedia.org\",\n      \"in_language\": {\n        \"identifier\": \"en\",\n        \"name\": \"English\",\n        \"alternate_name\": \"English\",\n        \"direction\": \"ltr\"\n      }\n    },\n    \"entity\": {\n      \"identifier\": \"Q42\",\n      \"type\": \"item\",\n      \"labels\": {\n        \"ce\": \"Оьзлер\",\n        \"en\": \"Özler\"\n      },\n      \"descriptions\": {\n        \"en\": \"Championship held at Balbir Singh Juneja Indoor Stadium\"\n      },\n      \"aliases\": {\n        \"eo\": [\n          \"Douglas ADAMS\",\n          \"Douglas Noel ADAMS\"\n        ]\n      },\n      \"statements\": [\n        {\n          \"identifier\": \"a15f6e74-b7f0-113c-86da-87e5a56c0971\",\n          \"rank\": \"normal\",\n          \"property\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"value\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"qualifiers\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"references\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        },\n        {\n          \"identifier\": \"5988e4aa-5411-5e31-6a9c-03c86c2507c9\",\n          \"rank\": \"normal\",\n          \"property\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"value\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"qualifiers\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"references\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        }\n      ],\n      \"sitelinks\": {\n        \"title\": \"Pentominium\",\n        \"badges\": [\n          \"Q17437796\",\n          \"Q6540326\"\n        ],\n        \"url\": \"https://de.wikipedia.org/wiki/Pentominium\"\n      }\n    },\n    \"visibility\": {\n      \"comment\": true,\n      \"text\": true,\n      \"user\": false\n    },\n    \"event\": {\n      \"identifier\": \"f7c737db-4b50-4982-8804-7c2b9fa89020\",\n      \"type\": \"update\",\n      \"date_created\": \"2026-03-18 12:38:23.437225+00:00\"\n    }\n  },\n  {\n    \"name\": \"P31\",\n    \"identifier\": 104546757,\n    \"url\": \"https://www.wikidata.org/wiki/Q109388644\",\n    \"protection\": {\n      \"expiry\": \"infinity\",\n      \"level\": \"extendedconfirmed\",\n      \"type\": \"edit\"\n    },\n    \"license\": {\n      \"identifier\": \"CC-BY-SA-4.0\",\n      \"name\": \"Creative Commons Attribution-ShareAlike License 4.0\",\n      \"url\": \"https://creativecommons.org/licenses/by-sa/4.0/\"\n    },\n    \"date_created\": \"2024-04-01T12:00:00Z\",\n    \"date_modified\": \"2024-06-01T12:00:00Z\",\n    \"date_previously_modified\": \"2024-05-01T12:00:00Z\",\n    \"namespace\": {\n      \"identifier\": 0\n    },\n    \"is_part_of\": {\n      \"identifier\": \"enwiki\",\n      \"code\": \"wiki\",\n      \"name\": \"Wikipedia\",\n      \"url\": \"https://en.wikipedia.org\",\n      \"in_language\": {\n        \"identifier\": \"en\",\n        \"name\": \"English\",\n        \"alternate_name\": \"English\",\n        \"direction\": \"ltr\"\n      }\n    },\n    \"entity\": {\n      \"identifier\": \"Q42\",\n      \"type\": \"item\",\n      \"labels\": {\n        \"ce\": \"Оьзлер\",\n        \"en\": \"Özler\"\n      },\n      \"descriptions\": {\n        \"en\": \"Championship held at Balbir Singh Juneja Indoor Stadium\"\n      },\n      \"aliases\": {\n        \"eo\": [\n          \"Douglas ADAMS\",\n          \"Douglas Noel ADAMS\"\n        ]\n      },\n      \"statements\": [\n        {\n          \"identifier\": \"d6209d3b-d574-a698-248c-310819b32e03\",\n          \"rank\": \"normal\",\n          \"property\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"value\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"qualifiers\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"references\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        },\n        {\n          \"identifier\": \"e629c3bb-17f4-51dc-f210-b8d86a369003\",\n          \"rank\": \"normal\",\n          \"property\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"value\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"qualifiers\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"references\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        }\n      ],\n      \"sitelinks\": {\n        \"title\": \"Pentominium\",\n        \"badges\": [\n          \"Q17437796\",\n          \"Q6540326\"\n        ],\n        \"url\": \"https://de.wikipedia.org/wiki/Pentominium\"\n      }\n    },\n    \"visibility\": {\n      \"comment\": true,\n      \"text\": true,\n      \"user\": false\n    },\n    \"event\": {\n      \"identifier\": \"f7c737db-4b50-4982-8804-7c2b9fa89020\",\n      \"type\": \"update\",\n      \"date_created\": \"2026-03-18 12:38:23.437225+00:00\"\n    }\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "372b3ce4-38e1-4074-a114-247884404128",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "wikidata",
+                    "properties",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Wikidata Property identifier (P-number, e.g. P31)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 5201\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "24084e91-6bd1-4aca-a1fe-af4d9c64fbba",
+              "name": "Forbidden",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "wikidata",
+                    "properties",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Wikidata Property identifier (P-number, e.g. P31)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 5201\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "46a35e4a-4670-426c-89ca-165eee45e0aa",
+              "name": "Not Found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "wikidata",
+                    "properties",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Wikidata Property identifier (P-number, e.g. P31)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 5201\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "8ba050e6-5520-45e4-bd91-2171cf146503",
+              "name": "Unprocessable Entity",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "wikidata",
+                    "properties",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Wikidata Property identifier (P-number, e.g. P31)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 5201\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d4ca6b3f-6bed-4f98-a8ce-546b7b64cd97",
+              "name": "Internal Server Error, Retry Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "wikidata",
+                    "properties",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Wikidata Property identifier (P-number, e.g. P31)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 5201\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ac0b3370-226a-4490-ad3f-9d15f61e3a6e",
+          "name": "/v2/wikidata/properties/:identifier",
+          "request": {
+            "name": "/v2/wikidata/properties/:identifier",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "wikidata",
+                "properties",
+                ":identifier"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "identifier",
+                  "description": "(Required) Wikidata Property identifier (P-number, e.g. P31)."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fields\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "2f34c288-a662-49e6-8a78-fadc73084de8",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "wikidata",
+                    "properties",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Wikidata Property identifier (P-number, e.g. P31)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fields\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"name\": \"P31\",\n    \"identifier\": 104546757,\n    \"url\": \"https://www.wikidata.org/wiki/Q109388644\",\n    \"protection\": {\n      \"expiry\": \"infinity\",\n      \"level\": \"extendedconfirmed\",\n      \"type\": \"edit\"\n    },\n    \"license\": {\n      \"identifier\": \"CC-BY-SA-4.0\",\n      \"name\": \"Creative Commons Attribution-ShareAlike License 4.0\",\n      \"url\": \"https://creativecommons.org/licenses/by-sa/4.0/\"\n    },\n    \"date_created\": \"2024-04-01T12:00:00Z\",\n    \"date_modified\": \"2024-06-01T12:00:00Z\",\n    \"date_previously_modified\": \"2024-05-01T12:00:00Z\",\n    \"namespace\": {\n      \"identifier\": 0\n    },\n    \"is_part_of\": {\n      \"identifier\": \"enwiki\",\n      \"code\": \"wiki\",\n      \"name\": \"Wikipedia\",\n      \"url\": \"https://en.wikipedia.org\",\n      \"in_language\": {\n        \"identifier\": \"en\",\n        \"name\": \"English\",\n        \"alternate_name\": \"English\",\n        \"direction\": \"ltr\"\n      }\n    },\n    \"entity\": {\n      \"identifier\": \"Q42\",\n      \"type\": \"item\",\n      \"labels\": {\n        \"ce\": \"Оьзлер\",\n        \"en\": \"Özler\"\n      },\n      \"descriptions\": {\n        \"en\": \"Championship held at Balbir Singh Juneja Indoor Stadium\"\n      },\n      \"aliases\": {\n        \"eo\": [\n          \"Douglas ADAMS\",\n          \"Douglas Noel ADAMS\"\n        ]\n      },\n      \"statements\": [\n        {\n          \"identifier\": \"a15f6e74-b7f0-113c-86da-87e5a56c0971\",\n          \"rank\": \"normal\",\n          \"property\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"value\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"qualifiers\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"references\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        },\n        {\n          \"identifier\": \"5988e4aa-5411-5e31-6a9c-03c86c2507c9\",\n          \"rank\": \"normal\",\n          \"property\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"value\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"qualifiers\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"references\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        }\n      ],\n      \"sitelinks\": {\n        \"title\": \"Pentominium\",\n        \"badges\": [\n          \"Q17437796\",\n          \"Q6540326\"\n        ],\n        \"url\": \"https://de.wikipedia.org/wiki/Pentominium\"\n      }\n    },\n    \"visibility\": {\n      \"comment\": true,\n      \"text\": true,\n      \"user\": false\n    },\n    \"event\": {\n      \"identifier\": \"f7c737db-4b50-4982-8804-7c2b9fa89020\",\n      \"type\": \"update\",\n      \"date_created\": \"2026-03-18 12:38:23.437225+00:00\"\n    }\n  },\n  {\n    \"name\": \"P31\",\n    \"identifier\": 104546757,\n    \"url\": \"https://www.wikidata.org/wiki/Q109388644\",\n    \"protection\": {\n      \"expiry\": \"infinity\",\n      \"level\": \"extendedconfirmed\",\n      \"type\": \"edit\"\n    },\n    \"license\": {\n      \"identifier\": \"CC-BY-SA-4.0\",\n      \"name\": \"Creative Commons Attribution-ShareAlike License 4.0\",\n      \"url\": \"https://creativecommons.org/licenses/by-sa/4.0/\"\n    },\n    \"date_created\": \"2024-04-01T12:00:00Z\",\n    \"date_modified\": \"2024-06-01T12:00:00Z\",\n    \"date_previously_modified\": \"2024-05-01T12:00:00Z\",\n    \"namespace\": {\n      \"identifier\": 0\n    },\n    \"is_part_of\": {\n      \"identifier\": \"enwiki\",\n      \"code\": \"wiki\",\n      \"name\": \"Wikipedia\",\n      \"url\": \"https://en.wikipedia.org\",\n      \"in_language\": {\n        \"identifier\": \"en\",\n        \"name\": \"English\",\n        \"alternate_name\": \"English\",\n        \"direction\": \"ltr\"\n      }\n    },\n    \"entity\": {\n      \"identifier\": \"Q42\",\n      \"type\": \"item\",\n      \"labels\": {\n        \"ce\": \"Оьзлер\",\n        \"en\": \"Özler\"\n      },\n      \"descriptions\": {\n        \"en\": \"Championship held at Balbir Singh Juneja Indoor Stadium\"\n      },\n      \"aliases\": {\n        \"eo\": [\n          \"Douglas ADAMS\",\n          \"Douglas Noel ADAMS\"\n        ]\n      },\n      \"statements\": [\n        {\n          \"identifier\": \"d6209d3b-d574-a698-248c-310819b32e03\",\n          \"rank\": \"normal\",\n          \"property\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"value\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"qualifiers\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"references\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        },\n        {\n          \"identifier\": \"e629c3bb-17f4-51dc-f210-b8d86a369003\",\n          \"rank\": \"normal\",\n          \"property\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"value\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"qualifiers\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"references\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        }\n      ],\n      \"sitelinks\": {\n        \"title\": \"Pentominium\",\n        \"badges\": [\n          \"Q17437796\",\n          \"Q6540326\"\n        ],\n        \"url\": \"https://de.wikipedia.org/wiki/Pentominium\"\n      }\n    },\n    \"visibility\": {\n      \"comment\": true,\n      \"text\": true,\n      \"user\": false\n    },\n    \"event\": {\n      \"identifier\": \"f7c737db-4b50-4982-8804-7c2b9fa89020\",\n      \"type\": \"update\",\n      \"date_created\": \"2026-03-18 12:38:23.437225+00:00\"\n    }\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "9ee44161-4592-4ca4-84c3-1f3cbc763482",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "wikidata",
+                    "properties",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Wikidata Property identifier (P-number, e.g. P31)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fields\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 5201\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "215d0690-8efd-4238-a7b2-22b6c6a3f17b",
+              "name": "Forbidden",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "wikidata",
+                    "properties",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Wikidata Property identifier (P-number, e.g. P31)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fields\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 5201\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "30db5c02-da22-44e8-95e6-095219a3244e",
+              "name": "Not Found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "wikidata",
+                    "properties",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Wikidata Property identifier (P-number, e.g. P31)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fields\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 5201\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "2afb474b-f084-4bd5-a8a3-37d71990e1ce",
+              "name": "Unprocessable Entity",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "wikidata",
+                    "properties",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Wikidata Property identifier (P-number, e.g. P31)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fields\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 5201\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "dd4b14b4-20dd-41c2-82b5-7a78e27c3ae2",
+              "name": "Internal Server Error, Retry Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "wikidata",
+                    "properties",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Wikidata Property identifier (P-number, e.g. P31)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fields\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 5201\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0073d36d-af43-45a4-bc70-2a335c0bdb46",
+          "name": "/v2/wikidata/labels/:identifier",
+          "request": {
+            "name": "/v2/wikidata/labels/:identifier",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "wikidata",
+                "labels",
+                ":identifier"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Select which fields to receive in your response, using JSON dot notation."
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Select which fields to receive in your response, using JSON dot notation."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "identifier",
+                  "description": "(Required) Wikidata item identifier (Q-number, e.g. Q42), or property identifier (P-number, e.g. P31)"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "53c03725-ffc8-42ed-8f82-2c1c243a3eb4",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "wikidata",
+                    "labels",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Wikidata item identifier (Q-number, e.g. Q42), or property identifier (P-number, e.g. P31)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"ce\": \"Оьзлер\",\n    \"en\": \"Özler\"\n  },\n  {\n    \"ce\": \"Оьзлер\",\n    \"en\": \"Özler\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "6a0b29b0-0cd8-4dcb-8cd9-056d1b25f21c",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "wikidata",
+                    "labels",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Wikidata item identifier (Q-number, e.g. Q42), or property identifier (P-number, e.g. P31)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 5201\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f6752274-9d82-4634-9210-11bcde0e1ece",
+              "name": "Forbidden",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "wikidata",
+                    "labels",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Wikidata item identifier (Q-number, e.g. Q42), or property identifier (P-number, e.g. P31)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 5201\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "7effabd7-0f23-41b2-9277-5baf9581d33b",
+              "name": "Not Found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "wikidata",
+                    "labels",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Wikidata item identifier (Q-number, e.g. Q42), or property identifier (P-number, e.g. P31)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 5201\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "1a252e16-a363-409a-a312-a4353e41b36a",
+              "name": "Unprocessable Entity",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "wikidata",
+                    "labels",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Wikidata item identifier (Q-number, e.g. Q42), or property identifier (P-number, e.g. P31)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 5201\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a9582e72-164d-4eb8-be96-d5f49af021d7",
+              "name": "Internal Server Error, Retry Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "wikidata",
+                    "labels",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Wikidata item identifier (Q-number, e.g. Q42), or property identifier (P-number, e.g. P31)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 5201\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c4887598-38b9-4c69-a9c9-6a6a921098af",
+          "name": "/v2/wikidata/labels/:identifier",
+          "request": {
+            "name": "/v2/wikidata/labels/:identifier",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "wikidata",
+                "labels",
+                ":identifier"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "identifier",
+                  "description": "(Required) Wikidata item identifier (Q-number, e.g. Q42), or property identifier (P-number, e.g. P31)"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fields\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "cebd379c-0f76-4eea-9e5a-3d944b07af08",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "wikidata",
+                    "labels",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Wikidata item identifier (Q-number, e.g. Q42), or property identifier (P-number, e.g. P31)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fields\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"ce\": \"Оьзлер\",\n    \"en\": \"Özler\"\n  },\n  {\n    \"ce\": \"Оьзлер\",\n    \"en\": \"Özler\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "02bba9bd-ffed-464d-8ab3-4743de25dd57",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "wikidata",
+                    "labels",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Wikidata item identifier (Q-number, e.g. Q42), or property identifier (P-number, e.g. P31)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fields\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 5201\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "3898ffb9-64c8-4a07-a8ba-cbc2ca266812",
+              "name": "Forbidden",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "wikidata",
+                    "labels",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Wikidata item identifier (Q-number, e.g. Q42), or property identifier (P-number, e.g. P31)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fields\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 5201\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "7f55b363-f119-488f-a3a8-f0481e759976",
+              "name": "Not Found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "wikidata",
+                    "labels",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Wikidata item identifier (Q-number, e.g. Q42), or property identifier (P-number, e.g. P31)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fields\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 5201\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "68e5712b-049f-4d53-83a2-77acdc781fd9",
+              "name": "Unprocessable Entity",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "wikidata",
+                    "labels",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Wikidata item identifier (Q-number, e.g. Q42), or property identifier (P-number, e.g. P31)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fields\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 5201\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f6030e8c-5113-4681-b8cb-c0c75a1b89a0",
+              "name": "Internal Server Error, Retry Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "wikidata",
+                    "labels",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Wikidata item identifier (Q-number, e.g. Q42), or property identifier (P-number, e.g. P31)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fields\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 5201\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.enterprise.wikimedia.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "77e6a405-e3f5-4587-834e-ab3d8802d387",
+    "name": "Wikimedia Enterprise API spec articles wikidata API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "OpenAPI 3.0 specification for the Metadata, On-demand, Snapshot, and Realtime Batch API(s) of WME.\n\nWhile we provide this swagger spec for quick reference, our official documentation is located on our website:\n\n- [Official Documentation](https://enterprise.wikimedia.com/docs/)\n- [Data Dictionary & Schema](https://enterprise.wikimedia.com/docs/data-dictionary/)\n",
+      "type": "text/plain"
+    }
+  }
+}

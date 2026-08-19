@@ -1,0 +1,367 @@
+{
+  "item": [
+    {
+      "id": "f05e921e-44c7-483a-af5d-d1816febd445",
+      "name": "offline",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "883bb69f-1987-486d-b52d-e62acc0b8f84",
+          "name": "Get styles and scripts for offline consumption of mobile-html-formatted pages",
+          "request": {
+            "name": "Get styles and scripts for offline consumption of mobile-html-formatted pages",
+            "description": {
+              "content": "Provides links to scripts and styles needed for viewing mobile-html-formatted pages offline.\n\nStability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "page",
+                "mobile-html-offline-resources",
+                ":title"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "title",
+                  "description": "(Required) Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json; charset=utf-8; profile=\"https://www.mediawiki.org/wiki/Specs/Mobile-HTML-Offline-Resources/1.2.1\""
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0eb6e9e7-772f-4add-ad70-eeca32d787e3",
+              "name": "links to scripts and styles to accompany the mobile-html of the page for offline consumption",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "page",
+                    "mobile-html-offline-resources",
+                    ":title"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "title",
+                      "description": "(Required) Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json; charset=utf-8; profile=\"https://www.mediawiki.org/wiki/Specs/Mobile-HTML-Offline-Resources/1.2.1\""
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8; profile=\"https://www.mediawiki.org/wiki/Specs/Mobile-HTML-Offline-Resources/1.2.1\""
+                }
+              ],
+              "body": "\"string\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "b4729a85-f5ae-4a7e-aa2a-95e4385c7c03",
+              "name": "Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "page",
+                    "mobile-html-offline-resources",
+                    ":title"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "title",
+                      "description": "(Required) Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/problem+json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/problem+json"
+                }
+              ],
+              "body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"detail\": \"string\",\n  \"instance\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3a47a6e5-6d85-44ac-ab53-83ff126d9152",
+          "name": "Get styles and scripts for offline consumption of mobile-html-formatted pages",
+          "request": {
+            "name": "Get styles and scripts for offline consumption of mobile-html-formatted pages",
+            "description": {
+              "content": "Provides links to scripts and styles needed for viewing mobile-html-formatted pages offline.\n\nStability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "page",
+                "mobile-html-offline-resources",
+                ":title",
+                ":revision"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "title",
+                  "description": "(Required) Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "revision",
+                  "description": "(Required) Optional page revision. Note that older revisions are not stored, so request latency with the revision would be higher.\n"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json; charset=utf-8; profile=\"https://www.mediawiki.org/wiki/Specs/Mobile-HTML-Offline-Resources/1.2.1\""
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fcd4583c-dd0d-4a89-b174-eefb6cff72aa",
+              "name": "links to scripts and styles to accompany the mobile-html of the page for offline consumption",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "page",
+                    "mobile-html-offline-resources",
+                    ":title",
+                    ":revision"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "title",
+                      "description": "(Required) Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "revision",
+                      "description": "(Required) Optional page revision. Note that older revisions are not stored, so request latency with the revision would be higher.\n"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json; charset=utf-8; profile=\"https://www.mediawiki.org/wiki/Specs/Mobile-HTML-Offline-Resources/1.2.1\""
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8; profile=\"https://www.mediawiki.org/wiki/Specs/Mobile-HTML-Offline-Resources/1.2.1\""
+                }
+              ],
+              "body": "\"string\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f2d3db10-3a27-417f-a57b-8dc982b880fd",
+              "name": "Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "page",
+                    "mobile-html-offline-resources",
+                    ":title",
+                    ":revision"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "title",
+                      "description": "(Required) Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "revision",
+                      "description": "(Required) Optional page revision. Note that older revisions are not stored, so request latency with the revision would be higher.\n"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/problem+json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/problem+json"
+                }
+              ],
+              "body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"detail\": \"string\",\n  \"instance\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.enterprise.wikimedia.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "f21d0b98-5405-4cbb-aa7b-1796f58ccc5c",
+    "name": "Wikimedia Enterprise API spec articles offline API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "OpenAPI 3.0 specification for the Metadata, On-demand, Snapshot, and Realtime Batch API(s) of WME.\n\nWhile we provide this swagger spec for quick reference, our official documentation is located on our website:\n\n- [Official Documentation](https://enterprise.wikimedia.com/docs/)\n- [Data Dictionary & Schema](https://enterprise.wikimedia.com/docs/data-dictionary/)\n",
+      "type": "text/plain"
+    }
+  }
+}

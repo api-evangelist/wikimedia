@@ -1,0 +1,2415 @@
+{
+  "item": [
+    {
+      "id": "c2b57ffa-2e8e-4036-bac3-94474ffca7c3",
+      "name": "structured-snapshots",
+      "description": {
+        "content": "(BETA) Structured Contents Snapshot API",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "b16926cf-84f4-4de6-a8b8-d842249474fe",
+          "name": "/v2/snapshots/structured-contents",
+          "request": {
+            "name": "/v2/snapshots/structured-contents",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "snapshots",
+                "structured-contents"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Select which fields to receive in your response, using JSON dot notation."
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Select which fields to receive in your response, using JSON dot notation."
+                },
+                {
+                  "disabled": false,
+                  "key": "filters",
+                  "value": "{\"field\":\"<string>\",\"value\":\"<string>\"}",
+                  "description": "Select which projects and languages to receive in your response."
+                },
+                {
+                  "disabled": false,
+                  "key": "filters",
+                  "value": "{\"field\":\"<string>\",\"value\":\"<string>\"}",
+                  "description": "Select which projects and languages to receive in your response."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "528d493b-ba72-4e6e-b97e-79a6c3718303",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "snapshots",
+                    "structured-contents"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "filters",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "key": "filters",
+                      "value": "[object Object]"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"identifier\": \"string\",\n    \"version\": \"string\",\n    \"date_modified\": \"string\",\n    \"in_language\": {\n      \"identifier\": \"en\",\n      \"name\": \"English\",\n      \"alternate_name\": \"English\",\n      \"direction\": \"ltr\"\n    },\n    \"is_part_of\": {\n      \"identifier\": \"enwiki\",\n      \"code\": \"wiki\",\n      \"name\": \"Wikipedia\",\n      \"url\": \"https://en.wikipedia.org\",\n      \"in_language\": {\n        \"identifier\": \"en\",\n        \"name\": \"English\",\n        \"alternate_name\": \"English\",\n        \"direction\": \"ltr\"\n      }\n    },\n    \"namespace\": {\n      \"identifier\": 0\n    },\n    \"size\": {\n      \"unit_text\": \"B\",\n      \"value\": 76760\n    },\n    \"chunks\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  {\n    \"identifier\": \"string\",\n    \"version\": \"string\",\n    \"date_modified\": \"string\",\n    \"in_language\": {\n      \"identifier\": \"en\",\n      \"name\": \"English\",\n      \"alternate_name\": \"English\",\n      \"direction\": \"ltr\"\n    },\n    \"is_part_of\": {\n      \"identifier\": \"enwiki\",\n      \"code\": \"wiki\",\n      \"name\": \"Wikipedia\",\n      \"url\": \"https://en.wikipedia.org\",\n      \"in_language\": {\n        \"identifier\": \"en\",\n        \"name\": \"English\",\n        \"alternate_name\": \"English\",\n        \"direction\": \"ltr\"\n      }\n    },\n    \"namespace\": {\n      \"identifier\": 0\n    },\n    \"size\": {\n      \"unit_text\": \"B\",\n      \"value\": 76760\n    },\n    \"chunks\": [\n      \"string\",\n      \"string\"\n    ]\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "102dd65a-1fcc-4141-9faf-441dcc637e32",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "snapshots",
+                    "structured-contents"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "filters",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "key": "filters",
+                      "value": "[object Object]"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 2916\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "415ad2f6-3aed-448c-9c47-f44808d656b5",
+              "name": "Forbidden",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "snapshots",
+                    "structured-contents"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "filters",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "key": "filters",
+                      "value": "[object Object]"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 2916\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "b5ffcbee-b49c-43c4-b604-c797bfbde847",
+              "name": "Unprocessable Entity",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "snapshots",
+                    "structured-contents"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "filters",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "key": "filters",
+                      "value": "[object Object]"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 2916\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "2cbb4cec-d318-4571-b6d2-0e0b5e1145a8",
+              "name": "Internal Server Error, Retry Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "snapshots",
+                    "structured-contents"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "filters",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "key": "filters",
+                      "value": "[object Object]"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 2916\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b0e6a407-bf67-4912-9a81-eecb0da6f62c",
+          "name": "/v2/snapshots/structured-contents",
+          "request": {
+            "name": "/v2/snapshots/structured-contents",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "snapshots",
+                "structured-contents"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fields\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"filters\": [\n    {\n      \"field\": \"<string>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"field\": \"<string>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "52dff60e-2fdd-4ab4-8866-5e9e097a2022",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "snapshots",
+                    "structured-contents"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fields\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"filters\": [\n    {\n      \"field\": \"string\",\n      \"value\": \"string\"\n    },\n    {\n      \"field\": \"string\",\n      \"value\": \"string\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"identifier\": \"string\",\n    \"version\": \"string\",\n    \"date_modified\": \"string\",\n    \"in_language\": {\n      \"identifier\": \"en\",\n      \"name\": \"English\",\n      \"alternate_name\": \"English\",\n      \"direction\": \"ltr\"\n    },\n    \"is_part_of\": {\n      \"identifier\": \"enwiki\",\n      \"code\": \"wiki\",\n      \"name\": \"Wikipedia\",\n      \"url\": \"https://en.wikipedia.org\",\n      \"in_language\": {\n        \"identifier\": \"en\",\n        \"name\": \"English\",\n        \"alternate_name\": \"English\",\n        \"direction\": \"ltr\"\n      }\n    },\n    \"namespace\": {\n      \"identifier\": 0\n    },\n    \"size\": {\n      \"unit_text\": \"B\",\n      \"value\": 76760\n    },\n    \"chunks\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  {\n    \"identifier\": \"string\",\n    \"version\": \"string\",\n    \"date_modified\": \"string\",\n    \"in_language\": {\n      \"identifier\": \"en\",\n      \"name\": \"English\",\n      \"alternate_name\": \"English\",\n      \"direction\": \"ltr\"\n    },\n    \"is_part_of\": {\n      \"identifier\": \"enwiki\",\n      \"code\": \"wiki\",\n      \"name\": \"Wikipedia\",\n      \"url\": \"https://en.wikipedia.org\",\n      \"in_language\": {\n        \"identifier\": \"en\",\n        \"name\": \"English\",\n        \"alternate_name\": \"English\",\n        \"direction\": \"ltr\"\n      }\n    },\n    \"namespace\": {\n      \"identifier\": 0\n    },\n    \"size\": {\n      \"unit_text\": \"B\",\n      \"value\": 76760\n    },\n    \"chunks\": [\n      \"string\",\n      \"string\"\n    ]\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "1e6e6bc9-6c4e-4dfd-9803-95822aa551cf",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "snapshots",
+                    "structured-contents"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fields\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"filters\": [\n    {\n      \"field\": \"string\",\n      \"value\": \"string\"\n    },\n    {\n      \"field\": \"string\",\n      \"value\": \"string\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 2916\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "7910c979-1a3d-42d8-b826-208e4488925b",
+              "name": "Forbidden",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "snapshots",
+                    "structured-contents"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fields\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"filters\": [\n    {\n      \"field\": \"string\",\n      \"value\": \"string\"\n    },\n    {\n      \"field\": \"string\",\n      \"value\": \"string\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 2916\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "e6638590-384c-4113-bd48-19023b5de953",
+              "name": "Unprocessable Entity",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "snapshots",
+                    "structured-contents"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fields\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"filters\": [\n    {\n      \"field\": \"string\",\n      \"value\": \"string\"\n    },\n    {\n      \"field\": \"string\",\n      \"value\": \"string\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 2916\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "64efcc23-cc4d-40a9-932e-91408f386675",
+              "name": "Internal Server Error, Retry Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "snapshots",
+                    "structured-contents"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fields\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"filters\": [\n    {\n      \"field\": \"string\",\n      \"value\": \"string\"\n    },\n    {\n      \"field\": \"string\",\n      \"value\": \"string\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 2916\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9db730e6-0560-4bdc-a33f-b141bad67e2e",
+          "name": "/v2/snapshots/structured-contents/:identifier",
+          "request": {
+            "name": "/v2/snapshots/structured-contents/:identifier",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "snapshots",
+                "structured-contents",
+                ":identifier"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Select which fields to receive in your response, using JSON dot notation."
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Select which fields to receive in your response, using JSON dot notation."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "identifier",
+                  "description": "(Required) Structured Contents Snapshot identifier looks like `<language><project_name>_namespace_<number>`, examples: `dewiki_namespace_0` downloads structured_contents used in de.wikipedia.org, `enwiki_namespace_0` downloads articles used in en.wikipedia.org. Note: the Structured Contents Beta supports nine projects: `enwiki_namespace_0`, `dewiki_namespace_0`, `frwiki_namespace_0`, `eswiki_namespace_0`, `ptwiki_namespace_0`, `itwiki_namespace_0`, `nlwiki_namespace_0`, `cywiki_namespace_0`, and `idwiki_namespace_0`."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8d73f075-149b-4d13-b4a6-0edc6b2e7b45",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "snapshots",
+                    "structured-contents",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Structured Contents Snapshot identifier looks like `<language><project_name>_namespace_<number>`, examples: `dewiki_namespace_0` downloads structured_contents used in de.wikipedia.org, `enwiki_namespace_0` downloads articles used in en.wikipedia.org. Note: the Structured Contents Beta supports nine projects: `enwiki_namespace_0`, `dewiki_namespace_0`, `frwiki_namespace_0`, `eswiki_namespace_0`, `ptwiki_namespace_0`, `itwiki_namespace_0`, `nlwiki_namespace_0`, `cywiki_namespace_0`, and `idwiki_namespace_0`."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"identifier\": \"string\",\n  \"version\": \"string\",\n  \"date_modified\": \"string\",\n  \"in_language\": {\n    \"identifier\": \"en\",\n    \"name\": \"English\",\n    \"alternate_name\": \"English\",\n    \"direction\": \"ltr\"\n  },\n  \"is_part_of\": {\n    \"identifier\": \"enwiki\",\n    \"code\": \"wiki\",\n    \"name\": \"Wikipedia\",\n    \"url\": \"https://en.wikipedia.org\",\n    \"in_language\": {\n      \"identifier\": \"en\",\n      \"name\": \"English\",\n      \"alternate_name\": \"English\",\n      \"direction\": \"ltr\"\n    }\n  },\n  \"namespace\": {\n    \"identifier\": 0\n  },\n  \"size\": {\n    \"unit_text\": \"B\",\n    \"value\": 76760\n  },\n  \"chunks\": [\n    \"string\",\n    \"string\"\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "bfd379e4-9851-4e0e-907a-f901335ab0c3",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "snapshots",
+                    "structured-contents",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Structured Contents Snapshot identifier looks like `<language><project_name>_namespace_<number>`, examples: `dewiki_namespace_0` downloads structured_contents used in de.wikipedia.org, `enwiki_namespace_0` downloads articles used in en.wikipedia.org. Note: the Structured Contents Beta supports nine projects: `enwiki_namespace_0`, `dewiki_namespace_0`, `frwiki_namespace_0`, `eswiki_namespace_0`, `ptwiki_namespace_0`, `itwiki_namespace_0`, `nlwiki_namespace_0`, `cywiki_namespace_0`, and `idwiki_namespace_0`."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 2916\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "bf6ff435-62d8-4d5e-9072-9c9fce2ab2f8",
+              "name": "Forbidden",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "snapshots",
+                    "structured-contents",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Structured Contents Snapshot identifier looks like `<language><project_name>_namespace_<number>`, examples: `dewiki_namespace_0` downloads structured_contents used in de.wikipedia.org, `enwiki_namespace_0` downloads articles used in en.wikipedia.org. Note: the Structured Contents Beta supports nine projects: `enwiki_namespace_0`, `dewiki_namespace_0`, `frwiki_namespace_0`, `eswiki_namespace_0`, `ptwiki_namespace_0`, `itwiki_namespace_0`, `nlwiki_namespace_0`, `cywiki_namespace_0`, and `idwiki_namespace_0`."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 2916\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "353aabda-50b0-4704-95e2-00fb229097cd",
+              "name": "Not Found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "snapshots",
+                    "structured-contents",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Structured Contents Snapshot identifier looks like `<language><project_name>_namespace_<number>`, examples: `dewiki_namespace_0` downloads structured_contents used in de.wikipedia.org, `enwiki_namespace_0` downloads articles used in en.wikipedia.org. Note: the Structured Contents Beta supports nine projects: `enwiki_namespace_0`, `dewiki_namespace_0`, `frwiki_namespace_0`, `eswiki_namespace_0`, `ptwiki_namespace_0`, `itwiki_namespace_0`, `nlwiki_namespace_0`, `cywiki_namespace_0`, and `idwiki_namespace_0`."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 2916\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "3776fa32-1220-4739-9072-d40574fad74e",
+              "name": "Unprocessable Entity",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "snapshots",
+                    "structured-contents",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Structured Contents Snapshot identifier looks like `<language><project_name>_namespace_<number>`, examples: `dewiki_namespace_0` downloads structured_contents used in de.wikipedia.org, `enwiki_namespace_0` downloads articles used in en.wikipedia.org. Note: the Structured Contents Beta supports nine projects: `enwiki_namespace_0`, `dewiki_namespace_0`, `frwiki_namespace_0`, `eswiki_namespace_0`, `ptwiki_namespace_0`, `itwiki_namespace_0`, `nlwiki_namespace_0`, `cywiki_namespace_0`, and `idwiki_namespace_0`."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 2916\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "3e9bb445-8382-4b05-888d-e14dc8406ff4",
+              "name": "Internal Server Error, Retry Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "snapshots",
+                    "structured-contents",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "name"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Structured Contents Snapshot identifier looks like `<language><project_name>_namespace_<number>`, examples: `dewiki_namespace_0` downloads structured_contents used in de.wikipedia.org, `enwiki_namespace_0` downloads articles used in en.wikipedia.org. Note: the Structured Contents Beta supports nine projects: `enwiki_namespace_0`, `dewiki_namespace_0`, `frwiki_namespace_0`, `eswiki_namespace_0`, `ptwiki_namespace_0`, `itwiki_namespace_0`, `nlwiki_namespace_0`, `cywiki_namespace_0`, and `idwiki_namespace_0`."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 2916\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "29a5c80f-9e19-4c2f-87d6-37d1850d4556",
+          "name": "/v2/snapshots/structured-contents/:identifier",
+          "request": {
+            "name": "/v2/snapshots/structured-contents/:identifier",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "snapshots",
+                "structured-contents",
+                ":identifier"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "identifier",
+                  "description": "(Required) Structured Contents Snapshot identifier looks like `<language><project_name>_namespace_<number>`, examples: `dewiki_namespace_0` downloads structured_contents used in de.wikipedia.org, `enwiki_namespace_0` downloads articles used in en.wikipedia.org. Note: the Structured Contents Beta supports nine projects: `enwiki_namespace_0`, `dewiki_namespace_0`, `frwiki_namespace_0`, `eswiki_namespace_0`, `ptwiki_namespace_0`, `itwiki_namespace_0`, `nlwiki_namespace_0`, `cywiki_namespace_0`, and `idwiki_namespace_0`."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fields\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "773072f4-0d3b-43b6-ab9d-1e6d0f8b1a17",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "snapshots",
+                    "structured-contents",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Structured Contents Snapshot identifier looks like `<language><project_name>_namespace_<number>`, examples: `dewiki_namespace_0` downloads structured_contents used in de.wikipedia.org, `enwiki_namespace_0` downloads articles used in en.wikipedia.org. Note: the Structured Contents Beta supports nine projects: `enwiki_namespace_0`, `dewiki_namespace_0`, `frwiki_namespace_0`, `eswiki_namespace_0`, `ptwiki_namespace_0`, `itwiki_namespace_0`, `nlwiki_namespace_0`, `cywiki_namespace_0`, and `idwiki_namespace_0`."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fields\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"identifier\": \"string\",\n  \"version\": \"string\",\n  \"date_modified\": \"string\",\n  \"in_language\": {\n    \"identifier\": \"en\",\n    \"name\": \"English\",\n    \"alternate_name\": \"English\",\n    \"direction\": \"ltr\"\n  },\n  \"is_part_of\": {\n    \"identifier\": \"enwiki\",\n    \"code\": \"wiki\",\n    \"name\": \"Wikipedia\",\n    \"url\": \"https://en.wikipedia.org\",\n    \"in_language\": {\n      \"identifier\": \"en\",\n      \"name\": \"English\",\n      \"alternate_name\": \"English\",\n      \"direction\": \"ltr\"\n    }\n  },\n  \"namespace\": {\n    \"identifier\": 0\n  },\n  \"size\": {\n    \"unit_text\": \"B\",\n    \"value\": 76760\n  },\n  \"chunks\": [\n    \"string\",\n    \"string\"\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f288b877-ee0c-4d13-a83c-0e114545127b",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "snapshots",
+                    "structured-contents",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Structured Contents Snapshot identifier looks like `<language><project_name>_namespace_<number>`, examples: `dewiki_namespace_0` downloads structured_contents used in de.wikipedia.org, `enwiki_namespace_0` downloads articles used in en.wikipedia.org. Note: the Structured Contents Beta supports nine projects: `enwiki_namespace_0`, `dewiki_namespace_0`, `frwiki_namespace_0`, `eswiki_namespace_0`, `ptwiki_namespace_0`, `itwiki_namespace_0`, `nlwiki_namespace_0`, `cywiki_namespace_0`, and `idwiki_namespace_0`."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fields\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 2916\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "7db8218b-523e-4a2f-9ffa-b4ff674c154b",
+              "name": "Forbidden",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "snapshots",
+                    "structured-contents",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Structured Contents Snapshot identifier looks like `<language><project_name>_namespace_<number>`, examples: `dewiki_namespace_0` downloads structured_contents used in de.wikipedia.org, `enwiki_namespace_0` downloads articles used in en.wikipedia.org. Note: the Structured Contents Beta supports nine projects: `enwiki_namespace_0`, `dewiki_namespace_0`, `frwiki_namespace_0`, `eswiki_namespace_0`, `ptwiki_namespace_0`, `itwiki_namespace_0`, `nlwiki_namespace_0`, `cywiki_namespace_0`, and `idwiki_namespace_0`."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fields\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 2916\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "ab50f466-2538-45e1-bbd6-1c84f96ac584",
+              "name": "Not Found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "snapshots",
+                    "structured-contents",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Structured Contents Snapshot identifier looks like `<language><project_name>_namespace_<number>`, examples: `dewiki_namespace_0` downloads structured_contents used in de.wikipedia.org, `enwiki_namespace_0` downloads articles used in en.wikipedia.org. Note: the Structured Contents Beta supports nine projects: `enwiki_namespace_0`, `dewiki_namespace_0`, `frwiki_namespace_0`, `eswiki_namespace_0`, `ptwiki_namespace_0`, `itwiki_namespace_0`, `nlwiki_namespace_0`, `cywiki_namespace_0`, and `idwiki_namespace_0`."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fields\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 2916\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d3e87545-78a6-4e1c-9ba6-3396627585df",
+              "name": "Unprocessable Entity",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "snapshots",
+                    "structured-contents",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Structured Contents Snapshot identifier looks like `<language><project_name>_namespace_<number>`, examples: `dewiki_namespace_0` downloads structured_contents used in de.wikipedia.org, `enwiki_namespace_0` downloads articles used in en.wikipedia.org. Note: the Structured Contents Beta supports nine projects: `enwiki_namespace_0`, `dewiki_namespace_0`, `frwiki_namespace_0`, `eswiki_namespace_0`, `ptwiki_namespace_0`, `itwiki_namespace_0`, `nlwiki_namespace_0`, `cywiki_namespace_0`, and `idwiki_namespace_0`."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fields\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 2916\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "45559933-4d05-4aa7-996f-56a2b35a8a0a",
+              "name": "Internal Server Error, Retry Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "snapshots",
+                    "structured-contents",
+                    ":identifier"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Structured Contents Snapshot identifier looks like `<language><project_name>_namespace_<number>`, examples: `dewiki_namespace_0` downloads structured_contents used in de.wikipedia.org, `enwiki_namespace_0` downloads articles used in en.wikipedia.org. Note: the Structured Contents Beta supports nine projects: `enwiki_namespace_0`, `dewiki_namespace_0`, `frwiki_namespace_0`, `eswiki_namespace_0`, `ptwiki_namespace_0`, `itwiki_namespace_0`, `nlwiki_namespace_0`, `cywiki_namespace_0`, and `idwiki_namespace_0`."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fields\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 2916\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "243cc01a-feb9-456e-b49f-ac7a2098f8c3",
+          "name": "Project Structured Contents Snapshot Headers",
+          "request": {
+            "name": "Project Structured Contents Snapshot Headers",
+            "description": {
+              "content": "Set of headers that describe the structured contents snapshot download.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "snapshots",
+                "structured-contents",
+                ":identifier",
+                "download"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "identifier",
+                  "description": "(Required) Snapshot identifier looks like `<language><project_name>_namespace_<number>`, examples: `dewiki_namespace_14` downloads categories used in de.wikipedia.org, `enwiki_namespace_0` downloads articles used in en.wikipedia.org, `frwikivoyage_namespace_10` downloads wikitext templates used in fr.wikivoyage.org. See our Metadata Endpoints for language, projects, and namespaces available for configuration."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "HEAD",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0bc74dbf-7c2a-49da-a134-64994bd40ed8",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "snapshots",
+                    "structured-contents",
+                    ":identifier",
+                    "download"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Snapshot identifier looks like `<language><project_name>_namespace_<number>`, examples: `dewiki_namespace_14` downloads categories used in de.wikipedia.org, `enwiki_namespace_0` downloads articles used in en.wikipedia.org, `frwikivoyage_namespace_10` downloads wikitext templates used in fr.wikivoyage.org. See our Metadata Endpoints for language, projects, and namespaces available for configuration."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "HEAD",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "HTTP response header is a marker used by the server to advertise its support for partial requests.",
+                  "key": "Accept-Ranges",
+                  "value": "string"
+                },
+                {
+                  "disabled": false,
+                  "description": "Response HTTP header contains a date and time when the origin server believes the resource was last modified.",
+                  "key": "Last-Modified",
+                  "value": "string"
+                },
+                {
+                  "disabled": false,
+                  "description": "Header indicates the size of the message body, in bytes, sent to the recipient.",
+                  "key": "Content-Length",
+                  "value": "string"
+                },
+                {
+                  "disabled": false,
+                  "description": "Entity tag - HTTP response header is an identifier for a specific version of a resource.",
+                  "key": "ETag",
+                  "value": "string"
+                },
+                {
+                  "disabled": false,
+                  "description": "Header indicating if the content is expected to be displayed in the browser  or as an attachment, that is downloaded and saved locally.",
+                  "key": "Content-Disposition",
+                  "value": "string"
+                },
+                {
+                  "disabled": false,
+                  "description": "Lists any encodings that have been applied to the representation (message payload), and in what order.",
+                  "key": "Content-Encoding",
+                  "value": "string"
+                },
+                {
+                  "disabled": false,
+                  "description": "Contains the date/time after which the response is considered expired.",
+                  "key": "Expires",
+                  "value": "string"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "1de05bc6-7029-4e4d-ada6-abed46e9267b",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "snapshots",
+                    "structured-contents",
+                    ":identifier",
+                    "download"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Snapshot identifier looks like `<language><project_name>_namespace_<number>`, examples: `dewiki_namespace_14` downloads categories used in de.wikipedia.org, `enwiki_namespace_0` downloads articles used in en.wikipedia.org, `frwikivoyage_namespace_10` downloads wikitext templates used in fr.wikivoyage.org. See our Metadata Endpoints for language, projects, and namespaces available for configuration."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "HEAD",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 2916\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "32ad64ac-a19f-445c-86db-77fe6974631b",
+              "name": "Forbidden",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "snapshots",
+                    "structured-contents",
+                    ":identifier",
+                    "download"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Snapshot identifier looks like `<language><project_name>_namespace_<number>`, examples: `dewiki_namespace_14` downloads categories used in de.wikipedia.org, `enwiki_namespace_0` downloads articles used in en.wikipedia.org, `frwikivoyage_namespace_10` downloads wikitext templates used in fr.wikivoyage.org. See our Metadata Endpoints for language, projects, and namespaces available for configuration."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "HEAD",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 2916\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "956f28ef-cf38-454f-b993-3fa8e60c1551",
+              "name": "Not Found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "snapshots",
+                    "structured-contents",
+                    ":identifier",
+                    "download"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Snapshot identifier looks like `<language><project_name>_namespace_<number>`, examples: `dewiki_namespace_14` downloads categories used in de.wikipedia.org, `enwiki_namespace_0` downloads articles used in en.wikipedia.org, `frwikivoyage_namespace_10` downloads wikitext templates used in fr.wikivoyage.org. See our Metadata Endpoints for language, projects, and namespaces available for configuration."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "HEAD",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 2916\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "da9ffe01-adc2-4e34-8854-e7c086263235",
+              "name": "Unprocessable Entity",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "snapshots",
+                    "structured-contents",
+                    ":identifier",
+                    "download"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Snapshot identifier looks like `<language><project_name>_namespace_<number>`, examples: `dewiki_namespace_14` downloads categories used in de.wikipedia.org, `enwiki_namespace_0` downloads articles used in en.wikipedia.org, `frwikivoyage_namespace_10` downloads wikitext templates used in fr.wikivoyage.org. See our Metadata Endpoints for language, projects, and namespaces available for configuration."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "HEAD",
+                "body": {}
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 2916\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "651cb8ca-cd9f-45c2-a4b0-e42002d70c7b",
+              "name": "Internal Server Error, Retry Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "snapshots",
+                    "structured-contents",
+                    ":identifier",
+                    "download"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Snapshot identifier looks like `<language><project_name>_namespace_<number>`, examples: `dewiki_namespace_14` downloads categories used in de.wikipedia.org, `enwiki_namespace_0` downloads articles used in en.wikipedia.org, `frwikivoyage_namespace_10` downloads wikitext templates used in fr.wikivoyage.org. See our Metadata Endpoints for language, projects, and namespaces available for configuration."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "HEAD",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 2916\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6223ca93-ad96-4d29-814d-8a3804049991",
+          "name": "/v2/snapshots/structured-contents/:identifier/download",
+          "request": {
+            "name": "/v2/snapshots/structured-contents/:identifier/download",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "snapshots",
+                "structured-contents",
+                ":identifier",
+                "download"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "identifier",
+                  "description": "(Required) Structured Contents Snapshot identifier looks like `<language><project_name>_namespace_<number>`, examples: `dewiki_namespace_0` downloads structured_contents used in de.wikipedia.org, `enwiki_namespace_0` downloads articles used in en.wikipedia.org. Note: the Structured Contents Beta supports nine projects: `enwiki_namespace_0`, `dewiki_namespace_0`, `frwiki_namespace_0`, `eswiki_namespace_0`, `ptwiki_namespace_0`, `itwiki_namespace_0`, `nlwiki_namespace_0`, `cywiki_namespace_0`, and `idwiki_namespace_0`."
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "The Range HTTP request header indicates the part of a document that the server should return.",
+                "key": "Range",
+                "value": "<string>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/gzip"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1e3bebca-bc33-4b75-a431-7c689324da09",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "snapshots",
+                    "structured-contents",
+                    ":identifier",
+                    "download"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Structured Contents Snapshot identifier looks like `<language><project_name>_namespace_<number>`, examples: `dewiki_namespace_0` downloads structured_contents used in de.wikipedia.org, `enwiki_namespace_0` downloads articles used in en.wikipedia.org. Note: the Structured Contents Beta supports nine projects: `enwiki_namespace_0`, `dewiki_namespace_0`, `frwiki_namespace_0`, `eswiki_namespace_0`, `ptwiki_namespace_0`, `itwiki_namespace_0`, `nlwiki_namespace_0`, `cywiki_namespace_0`, and `idwiki_namespace_0`."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "The Range HTTP request header indicates the part of a document that the server should return.",
+                    "key": "Range",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/gzip"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/gzip"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "868830ee-5f43-4a04-9dd5-6e3249e3afcc",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "snapshots",
+                    "structured-contents",
+                    ":identifier",
+                    "download"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Structured Contents Snapshot identifier looks like `<language><project_name>_namespace_<number>`, examples: `dewiki_namespace_0` downloads structured_contents used in de.wikipedia.org, `enwiki_namespace_0` downloads articles used in en.wikipedia.org. Note: the Structured Contents Beta supports nine projects: `enwiki_namespace_0`, `dewiki_namespace_0`, `frwiki_namespace_0`, `eswiki_namespace_0`, `ptwiki_namespace_0`, `itwiki_namespace_0`, `nlwiki_namespace_0`, `cywiki_namespace_0`, and `idwiki_namespace_0`."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "The Range HTTP request header indicates the part of a document that the server should return.",
+                    "key": "Range",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 2916\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "1ee3b6a8-ec6f-4acf-9081-c16e823013c4",
+              "name": "Forbidden",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "snapshots",
+                    "structured-contents",
+                    ":identifier",
+                    "download"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Structured Contents Snapshot identifier looks like `<language><project_name>_namespace_<number>`, examples: `dewiki_namespace_0` downloads structured_contents used in de.wikipedia.org, `enwiki_namespace_0` downloads articles used in en.wikipedia.org. Note: the Structured Contents Beta supports nine projects: `enwiki_namespace_0`, `dewiki_namespace_0`, `frwiki_namespace_0`, `eswiki_namespace_0`, `ptwiki_namespace_0`, `itwiki_namespace_0`, `nlwiki_namespace_0`, `cywiki_namespace_0`, and `idwiki_namespace_0`."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "The Range HTTP request header indicates the part of a document that the server should return.",
+                    "key": "Range",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 2916\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a2403d2f-fd74-47fb-8d57-e671cabf55d7",
+              "name": "Not Found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "snapshots",
+                    "structured-contents",
+                    ":identifier",
+                    "download"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Structured Contents Snapshot identifier looks like `<language><project_name>_namespace_<number>`, examples: `dewiki_namespace_0` downloads structured_contents used in de.wikipedia.org, `enwiki_namespace_0` downloads articles used in en.wikipedia.org. Note: the Structured Contents Beta supports nine projects: `enwiki_namespace_0`, `dewiki_namespace_0`, `frwiki_namespace_0`, `eswiki_namespace_0`, `ptwiki_namespace_0`, `itwiki_namespace_0`, `nlwiki_namespace_0`, `cywiki_namespace_0`, and `idwiki_namespace_0`."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "The Range HTTP request header indicates the part of a document that the server should return.",
+                    "key": "Range",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 2916\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "ab0615a4-7fa6-4c03-876e-1ec1f2599d9b",
+              "name": "Unprocessable Entity",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "snapshots",
+                    "structured-contents",
+                    ":identifier",
+                    "download"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Structured Contents Snapshot identifier looks like `<language><project_name>_namespace_<number>`, examples: `dewiki_namespace_0` downloads structured_contents used in de.wikipedia.org, `enwiki_namespace_0` downloads articles used in en.wikipedia.org. Note: the Structured Contents Beta supports nine projects: `enwiki_namespace_0`, `dewiki_namespace_0`, `frwiki_namespace_0`, `eswiki_namespace_0`, `ptwiki_namespace_0`, `itwiki_namespace_0`, `nlwiki_namespace_0`, `cywiki_namespace_0`, and `idwiki_namespace_0`."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "The Range HTTP request header indicates the part of a document that the server should return.",
+                    "key": "Range",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 2916\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "7e30d746-b58a-448e-97dd-00d924790638",
+              "name": "Internal Server Error, Retry Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "snapshots",
+                    "structured-contents",
+                    ":identifier",
+                    "download"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "identifier",
+                      "description": "(Required) Structured Contents Snapshot identifier looks like `<language><project_name>_namespace_<number>`, examples: `dewiki_namespace_0` downloads structured_contents used in de.wikipedia.org, `enwiki_namespace_0` downloads articles used in en.wikipedia.org. Note: the Structured Contents Beta supports nine projects: `enwiki_namespace_0`, `dewiki_namespace_0`, `frwiki_namespace_0`, `eswiki_namespace_0`, `ptwiki_namespace_0`, `itwiki_namespace_0`, `nlwiki_namespace_0`, `cywiki_namespace_0`, and `idwiki_namespace_0`."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "The Range HTTP request header indicates the part of a document that the server should return.",
+                    "key": "Range",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\",\n  \"status\": 2916\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.enterprise.wikimedia.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "cbffa3d7-6687-4684-8351-cb4e49f05935",
+    "name": "Wikimedia Enterprise API spec articles structured-snapshots API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "OpenAPI 3.0 specification for the Metadata, On-demand, Snapshot, and Realtime Batch API(s) of WME.\n\nWhile we provide this swagger spec for quick reference, our official documentation is located on our website:\n\n- [Official Documentation](https://enterprise.wikimedia.com/docs/)\n- [Data Dictionary & Schema](https://enterprise.wikimedia.com/docs/data-dictionary/)\n",
+      "type": "text/plain"
+    }
+  }
+}
