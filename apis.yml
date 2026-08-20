@@ -42,6 +42,13 @@ apis:
   - Search
   - Revisions
   - Media
+  - Transforms
+  tags_raw:
+  - Wikipedia
+  - Pages
+  - Search
+  - Revisions
+  - Media
   - Transform
   properties:
   - type: Documentation
@@ -57,6 +64,8 @@ apis:
   humanURL: https://www.mediawiki.org/wiki/API:Main_page
   baseURL: https://en.wikipedia.org/w/api.php
   tags:
+  - Articles
+  tags_raw:
   - articles
   properties:
   - type: OpenAPI
@@ -87,6 +96,8 @@ apis:
   humanURL: https://www.mediawiki.org/wiki/API:Main_page
   baseURL: https://en.wikipedia.org/w/api.php
   tags:
+  - Batches
+  tags_raw:
   - batches
   properties:
   - type: OpenAPI
@@ -147,6 +158,8 @@ apis:
   humanURL: https://www.mediawiki.org/wiki/API:Main_page
   baseURL: https://en.wikipedia.org/w/api.php
   tags:
+  - Codes
+  tags_raw:
   - codes
   properties:
   - type: OpenAPI
@@ -177,6 +190,8 @@ apis:
   humanURL: https://www.mediawiki.org/wiki/API:Main_page
   baseURL: https://en.wikipedia.org/w/api.php
   tags:
+  - Language
+  tags_raw:
   - languages
   properties:
   - type: OpenAPI
@@ -267,6 +282,8 @@ apis:
   humanURL: https://www.mediawiki.org/wiki/API:Main_page
   baseURL: https://en.wikipedia.org/w/api.php
   tags:
+  - Namespaces
+  tags_raw:
   - namespaces
   properties:
   - type: OpenAPI
@@ -297,6 +314,8 @@ apis:
   humanURL: https://www.mediawiki.org/wiki/API:Main_page
   baseURL: https://en.wikipedia.org/w/api.php
   tags:
+  - Offline
+  tags_raw:
   - offline
   properties:
   - type: OpenAPI
@@ -357,6 +376,8 @@ apis:
   humanURL: https://www.mediawiki.org/wiki/API:Main_page
   baseURL: https://en.wikipedia.org/w/api.php
   tags:
+  - Project
+  tags_raw:
   - projects
   properties:
   - type: OpenAPI
@@ -447,6 +468,8 @@ apis:
   humanURL: https://www.mediawiki.org/wiki/API:Main_page
   baseURL: https://en.wikipedia.org/w/api.php
   tags:
+  - Snapshots
+  tags_raw:
   - snapshots
   properties:
   - type: OpenAPI
