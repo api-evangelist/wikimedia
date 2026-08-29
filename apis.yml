@@ -1,5 +1,17 @@
 name: Wikimedia
 description: Wikimedia provides REST APIs for accessing Wikipedia, Wikidata, Commons, and other Wikimedia project content including page summaries, search, media files, page revision history, and usage metrics. The suite includes the MediaWiki Action API for bot and edit operations, the MediaWiki REST API for modern content access, and the Wikimedia Enterprise API for commercial-scale high-volume data reuse across 920+ datasets and 360+ languages.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: self-serve
