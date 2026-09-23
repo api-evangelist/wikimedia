@@ -1,22 +1,17 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Wikimedia Enterprise API spec articles Transforms API
-  description: 'OpenAPI 3.0 specification for the Metadata, On-demand, Snapshot, and Realtime Batch API(s) of WME.
-
-
-    While we provide this swagger spec for quick reference, our official documentation is located on our website:
-
-
-    - [Official Documentation](https://enterprise.wikimedia.com/docs/)
-
-    - [Data Dictionary & Schema](https://enterprise.wikimedia.com/docs/data-dictionary/)
-
-    '
-  version: 2.0.0
+  version: 1.0.0
+  title: Wikimedia REST Transforms API
+  description: This API provides cacheable and straightforward access to Wikimedia content and data, in machine-readable formats.
+  termsOfService: https://wikimediafoundation.org/wiki/Terms_of_Use
+  contact:
+    name: the Wikimedia Services team
+    url: http://mediawiki.org/wiki/Wikimedia_REST_API
+  license:
+    name: Apache2
+    url: http://www.apache.org/licenses/LICENSE-2.0
 servers:
-- url: https://api.enterprise.wikimedia.com
-security:
-- bearerAuth: []
+- url: /api/rest_v1
 tags:
 - name: Transforms
   description: convert content between HTML and Wikitext
@@ -26,7 +21,7 @@ paths:
       tags:
       - Transforms
       summary: Transform HTML to Wikitext
-      description: 'Transform [Parsoid HTML](https://www.mediawiki.org/wiki/Parsoid/MediaWiki_DOM_spec)
+      description: 'Transform Parsoid HTML
 
         to Wikitext.
 
@@ -35,18 +30,16 @@ paths:
 
         pass in the `title`, `revision`, and `If-Match` header. This lets
 
-        [Parsoid](https://www.mediawiki.org/wiki/Parsoid) preserve small
+        Parsoid preserve small
 
         syntactic variations in wikitext, which ensures that diffs are
 
         readable.
 
 
-        - Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)
+        - Stability: stable
 
-        - Rate limit: 25 req/s
-
-        '
+        - Rate limit: 25 req/s'
       parameters:
       - name: if-match
         in: header
@@ -110,12 +103,14 @@ paths:
               schema:
                 $ref: '#/components/schemas/problem'
       x-monitor: false
+      operationId: postTransformHtmlToWikitext
+      x-operation-id-source: derived
   /transform/html/to/wikitext/{title}:
     post:
       tags:
       - Transforms
       summary: Transform HTML to Wikitext
-      description: 'Transform [Parsoid HTML](https://www.mediawiki.org/wiki/Parsoid/MediaWiki_DOM_spec)
+      description: 'Transform Parsoid HTML
 
         to Wikitext.
 
@@ -124,18 +119,16 @@ paths:
 
         pass in the `title`, `revision`, and `If-Match` header. This lets
 
-        [Parsoid](https://www.mediawiki.org/wiki/Parsoid) preserve small
+        Parsoid preserve small
 
         syntactic variations in wikitext, which ensures that diffs are
 
         readable.
 
 
-        - Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)
+        - Stability: stable
 
-        - Rate limit: 25 req/s
-
-        '
+        - Rate limit: 25 req/s'
       parameters:
       - name: title
         in: path
@@ -205,12 +198,14 @@ paths:
               schema:
                 $ref: '#/components/schemas/problem'
       x-monitor: false
+      operationId: postTransformHtmlToWikitextByTitle
+      x-operation-id-source: derived
   /transform/html/to/wikitext/{title}/{revision}:
     post:
       tags:
       - Transforms
       summary: Transform HTML to Wikitext
-      description: 'Transform [Parsoid HTML](https://www.mediawiki.org/wiki/Parsoid/MediaWiki_DOM_spec)
+      description: 'Transform Parsoid HTML
 
         to Wikitext.
 
@@ -219,18 +214,16 @@ paths:
 
         pass in the `title`, `revision`, and `If-Match` header. This lets
 
-        [Parsoid](https://www.mediawiki.org/wiki/Parsoid) preserve small
+        Parsoid preserve small
 
         syntactic variations in wikitext, which ensures that diffs are
 
         readable.
 
 
-        - Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)
+        - Stability: stable
 
-        - Rate limit: 25 req/s
-
-        '
+        - Rate limit: 25 req/s'
       parameters:
       - name: title
         in: path
@@ -306,6 +299,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/problem'
       x-monitor: false
+      operationId: postTransformHtmlToWikitextByTitleByRevision
+      x-operation-id-source: derived
   /transform/wikitext/to/html:
     post:
       tags:
@@ -316,11 +311,9 @@ paths:
         also need to supply the title.
 
 
-        - Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)
+        - Stability: stable
 
-        - Rate limit: 25 req/s (5 req/s when `stash: true`)
-
-        '
+        - Rate limit: 25 req/s (5 req/s when `stash: true`)'
       requestBody:
         content:
           multipart/form-data:
@@ -377,6 +370,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/problem'
       x-monitor: false
+      operationId: postTransformWikitextToHtml
+      x-operation-id-source: derived
   /transform/wikitext/to/html/{title}:
     post:
       tags:
@@ -387,11 +382,9 @@ paths:
         also need to supply the title.
 
 
-        - Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)
+        - Stability: stable
 
-        - Rate limit: 25 req/s (5 req/s when `stash: true`)
-
-        '
+        - Rate limit: 25 req/s (5 req/s when `stash: true`)'
       requestBody:
         content:
           multipart/form-data:
@@ -469,6 +462,8 @@ paths:
           headers:
             content-type: /^text\/html.+/
           body: /^<h2.*>Heading<\/h2>$/
+      operationId: postTransformWikitextToHtmlByTitle
+      x-operation-id-source: derived
   /transform/wikitext/to/html/{title}/{revision}:
     post:
       tags:
@@ -479,11 +474,9 @@ paths:
         also need to supply the title.
 
 
-        - Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)
+        - Stability: stable
 
-        - Rate limit: 25 req/s (5 req/s when `stash: true`)
-
-        '
+        - Rate limit: 25 req/s (5 req/s when `stash: true`)'
       requestBody:
         content:
           multipart/form-data:
@@ -553,6 +546,8 @@ paths:
         required: true
         schema:
           type: integer
+      operationId: postTransformWikitextToHtmlByTitleByRevision
+      x-operation-id-source: derived
   /transform/wikitext/to/lint:
     post:
       tags:
@@ -561,11 +556,9 @@ paths:
       description: 'Parse the supplied wikitext and check it for lint errors.
 
 
-        - Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)
+        - Stability: experimental
 
-        - Rate limit: 25 req/s
-
-        '
+        - Rate limit: 25 req/s'
       requestBody:
         content:
           multipart/form-data:
@@ -619,6 +612,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/problem'
       x-monitor: false
+      operationId: postTransformWikitextToLint
+      x-operation-id-source: derived
   /transform/wikitext/to/lint/{title}:
     post:
       tags:
@@ -627,11 +622,9 @@ paths:
       description: 'Parse the supplied wikitext and check it for lint errors.
 
 
-        - Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)
+        - Stability: experimental
 
-        - Rate limit: 25 req/s
-
-        '
+        - Rate limit: 25 req/s'
       requestBody:
         content:
           multipart/form-data:
@@ -683,6 +676,8 @@ paths:
         required: true
         schema:
           type: string
+      operationId: postTransformWikitextToLintByTitle
+      x-operation-id-source: derived
   /transform/wikitext/to/lint/{title}/{revision}:
     post:
       tags:
@@ -691,11 +686,9 @@ paths:
       description: 'Parse the supplied wikitext and check it for lint errors.
 
 
-        - Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)
+        - Stability: experimental
 
-        - Rate limit: 25 req/s
-
-        '
+        - Rate limit: 25 req/s'
       requestBody:
         content:
           multipart/form-data:
@@ -753,6 +746,8 @@ paths:
         required: true
         schema:
           type: integer
+      operationId: postTransformWikitextToLintByTitleByRevision
+      x-operation-id-source: derived
   /transform/wikitext/to/mobile-html/{title}:
     post:
       tags:
@@ -761,14 +756,12 @@ paths:
       description: 'Transform wikitext to Mobile HTML.
 
 
-        - Stability: [stable](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Stable)
+        - Stability: stable
 
         - Rate limit: 25 req/s (5 req/s when `stash: true`)
 
 
-        Please follow [wikitech-l](https://lists.wikimedia.org/mailman/listinfo/wikitech-l) or [mediawiki-api-announce](https://lists.wikimedia.org/mailman/listinfo/mediawiki-api-announce) for announcements of breaking changes.
-
-        '
+        Please follow wikitech-l or mediawiki-api-announce for announcements of breaking changes.'
       parameters:
       - name: title
         in: path
@@ -842,8 +835,5 @@ components:
           type: string
         instance:
           type: string
-  securitySchemes:
-    bearerAuth:
-      type: http
-      scheme: bearer
-      bearerFormat: JWT
+x-host-basePath: /api/rest_v1
+x-default-params: {}

@@ -1,24 +1,22 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Wikimedia Enterprise API spec articles batches API
+  title: Wikimedia Enterprise API spec Batches API
   description: 'OpenAPI 3.0 specification for the Metadata, On-demand, Snapshot, and Realtime Batch API(s) of WME.
 
 
     While we provide this swagger spec for quick reference, our official documentation is located on our website:
 
 
-    - [Official Documentation](https://enterprise.wikimedia.com/docs/)
+    - Official Documentation
 
-    - [Data Dictionary & Schema](https://enterprise.wikimedia.com/docs/data-dictionary/)
-
-    '
+    - Data Dictionary & Schema'
   version: 2.0.0
 servers:
 - url: https://api.enterprise.wikimedia.com
 security:
 - bearerAuth: []
 tags:
-- name: batches
+- name: Batches
   description: Realtime Batch API
   externalDocs:
     description: enterprise docs - realtime api
@@ -29,7 +27,7 @@ paths:
     description: Returns a list of available Realtime (Batch) bundles by date and hour (00, 01, ..., 23). Includes identifiers, file sizes and other relevant metadata.
     get:
       tags:
-      - batches
+      - Batches
       parameters:
       - in: path
         name: date
@@ -141,9 +139,13 @@ paths:
                 example: '{"message":"string","status":500}
 
                   '
+      summary: Get batches by date by hour
+      x-summary-source: derived
+      operationId: getV2BatchesByDateByHour
+      x-operation-id-source: derived
     post:
       tags:
-      - batches
+      - Batches
       parameters:
       - in: path
         name: date
@@ -258,12 +260,16 @@ paths:
                 example: '{"message":"string","status":500}
 
                   '
+      summary: Create batches by date by hour
+      x-summary-source: derived
+      operationId: postV2BatchesByDateByHour
+      x-operation-id-source: derived
   /v2/batches/{date}/{hour}/{identifier}:
     summary: Hourly Batch File Info
     description: Information on specific hourly batch. Includes identifier, file size and other relevant metadata.
     get:
       tags:
-      - batches
+      - Batches
       parameters:
       - in: path
         name: date
@@ -373,9 +379,13 @@ paths:
                 example: '{"message":"string","status":500}
 
                   '
+      summary: Get batches by date by hour by identifier
+      x-summary-source: derived
+      operationId: getV2BatchesByDateByHourByIdentifier
+      x-operation-id-source: derived
     post:
       tags:
-      - batches
+      - Batches
       parameters:
       - in: path
         name: date
@@ -489,6 +499,10 @@ paths:
                 example: '{"message":"string","status":500}
 
                   '
+      summary: Create batches by date by hour by identifier
+      x-summary-source: derived
+      operationId: postV2BatchesByDateByHourByIdentifier
+      x-operation-id-source: derived
   /v2/batches/{date}/{hour}/{identifier}/download:
     summary: Hourly Batch File Download
     description: Downloadable bundle of updated articles by project, namespace, date, and hour. Generated hourly starting at 00:00 UTC each day.
@@ -496,7 +510,7 @@ paths:
       summary: Project Updates (Batch) Headers
       description: Set of headers that describe the hourly download.
       tags:
-      - batches
+      - Batches
       parameters:
       - in: path
         name: date
@@ -620,9 +634,11 @@ paths:
                 example: '{"message":"string","status":500}
 
                   '
+      operationId: headV2BatchesByDateByHourByIdentifierDownload
+      x-operation-id-source: derived
     get:
       tags:
-      - batches
+      - Batches
       parameters:
       - in: path
         name: date
@@ -723,30 +739,12 @@ paths:
                 example: '{"message":"string","status":500}
 
                   '
+      summary: Get batches by date by hour by identifier download
+      x-summary-source: derived
+      operationId: getV2BatchesByDateByHourByIdentifierDownload
+      x-operation-id-source: derived
 components:
   schemas:
-    error:
-      type: object
-      properties:
-        message:
-          type: string
-        status:
-          type: integer
-    size:
-      type: object
-      properties:
-        unit_text:
-          type: string
-          example: B
-        value:
-          type: number
-          example: 76760
-    article_namespace:
-      type: object
-      properties:
-        identifier:
-          type: number
-          example: 0
     language:
       type: object
       properties:
@@ -762,6 +760,28 @@ components:
         direction:
           type: string
           example: ltr
+    filter:
+      type: object
+      properties:
+        field:
+          type: string
+        value:
+          type: string
+    size:
+      type: object
+      properties:
+        unit_text:
+          type: string
+          example: B
+        value:
+          type: number
+          example: 76760
+    article_namespace:
+      type: object
+      properties:
+        identifier:
+          type: number
+          example: 0
     project:
       type: object
       properties:
@@ -779,13 +799,13 @@ components:
           example: https://en.wikipedia.org
         in_language:
           $ref: '#/components/schemas/language'
-    filter:
+    error:
       type: object
       properties:
-        field:
+        message:
           type: string
-        value:
-          type: string
+        status:
+          type: integer
     batch:
       type: object
       properties:

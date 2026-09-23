@@ -1,22 +1,17 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Wikimedia Enterprise API spec articles Citation API
-  description: 'OpenAPI 3.0 specification for the Metadata, On-demand, Snapshot, and Realtime Batch API(s) of WME.
-
-
-    While we provide this swagger spec for quick reference, our official documentation is located on our website:
-
-
-    - [Official Documentation](https://enterprise.wikimedia.com/docs/)
-
-    - [Data Dictionary & Schema](https://enterprise.wikimedia.com/docs/data-dictionary/)
-
-    '
-  version: 2.0.0
+  version: 1.0.0
+  title: Wikimedia REST Citation API
+  description: This API provides cacheable and straightforward access to Wikimedia content and data, in machine-readable formats.
+  termsOfService: https://wikimediafoundation.org/wiki/Terms_of_Use
+  contact:
+    name: the Wikimedia Services team
+    url: http://mediawiki.org/wiki/Wikimedia_REST_API
+  license:
+    name: Apache2
+    url: http://www.apache.org/licenses/LICENSE-2.0
 servers:
-- url: https://api.enterprise.wikimedia.com
-security:
-- bearerAuth: []
+- url: /api/rest_v1
 tags:
 - name: Citation
   description: generation of citation data
@@ -25,8 +20,34 @@ paths:
     get:
       tags:
       - Citation
-      summary: Get citation data given an article identifier.
-      description: "Generates citation data given a URL, DOI, PMID, or PMCID.\n\nAutomated requests can be made at a rate of 1 request per second (rps).\n\nSee more at [Citoid service documentation](https://www.mediawiki.org/wiki/Citoid)\n\nThe citation data can be requested in one of the following formats:\n  - `mediawiki`: format designed for MediaWiki to be used with `templateData`.\n    Uses [Zotero field names](https://aurimasv.github.io/z2csl/typeMap.xml).\n  - `mediawiki-basefields`: `mediawiki` format with Zotero `basefield` field names.\n  - `zotero`: format used by [Zotero](https://www.zotero.org/).\n  - `bibtex`: format used in conjunction with LaTeX documents.\n    See [bibtex.org](http://www.bibtex.org/).\n  - `wikibase`: format designed for [Wikibase](https://www.mediawiki.org/wiki/Extension:Wikibase_Repository).\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n"
+      summary: Get citation data given an article identifier
+      description: 'Generates citation data given a URL, DOI, PMID, or PMCID.
+
+
+        Automated requests can be made at a rate of 1 request per second (rps).
+
+
+        See more at Citoid service documentation
+
+
+        The citation data can be requested in one of the following formats:
+
+        - `mediawiki`: format designed for MediaWiki to be used with `templateData`.
+
+        Uses Zotero field names.
+
+        - `mediawiki-basefields`: `mediawiki` format with Zotero `basefield` field names.
+
+        - `zotero`: format used by Zotero.
+
+        - `bibtex`: format used in conjunction with LaTeX documents.
+
+        See bibtex.org.
+
+        - `wikibase`: format designed for Wikibase.
+
+
+        Stability: unstable'
       parameters:
       - name: format
         in: path
@@ -75,19 +96,6 @@ paths:
       x-monitor: false
 components:
   schemas:
-    result:
-      required:
-      - title
-      - url
-      - itemType
-      type: object
-      properties:
-        itemType:
-          type: string
-        title:
-          type: string
-        url:
-          type: string
     problem:
       required:
       - type
@@ -101,8 +109,18 @@ components:
           type: string
         instance:
           type: string
-  securitySchemes:
-    bearerAuth:
-      type: http
-      scheme: bearer
-      bearerFormat: JWT
+    result:
+      required:
+      - title
+      - url
+      - itemType
+      type: object
+      properties:
+        itemType:
+          type: string
+        title:
+          type: string
+        url:
+          type: string
+x-host-basePath: /api/rest_v1
+x-default-params: {}

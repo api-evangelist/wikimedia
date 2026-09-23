@@ -1,24 +1,22 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Wikimedia Enterprise API spec articles API
+  title: Wikimedia Enterprise API spec Articles API
   description: 'OpenAPI 3.0 specification for the Metadata, On-demand, Snapshot, and Realtime Batch API(s) of WME.
 
 
     While we provide this swagger spec for quick reference, our official documentation is located on our website:
 
 
-    - [Official Documentation](https://enterprise.wikimedia.com/docs/)
+    - Official Documentation
 
-    - [Data Dictionary & Schema](https://enterprise.wikimedia.com/docs/data-dictionary/)
-
-    '
+    - Data Dictionary & Schema'
   version: 2.0.0
 servers:
 - url: https://api.enterprise.wikimedia.com
 security:
 - bearerAuth: []
 tags:
-- name: articles
+- name: Articles
   description: On-demand API
   externalDocs:
     description: enterprise docs - on-demand api
@@ -29,7 +27,7 @@ paths:
     description: Most current revision of an article.
     get:
       tags:
-      - articles
+      - Articles
       parameters:
       - in: path
         name: name
@@ -140,9 +138,13 @@ paths:
                 example: '{"message":"string","status":500}
 
                   '
+      summary: Get articles by name
+      x-summary-source: derived
+      operationId: getV2ArticlesByName
+      x-operation-id-source: derived
     post:
       tags:
-      - articles
+      - Articles
       parameters:
       - in: path
         name: name
@@ -254,8 +256,24 @@ paths:
                 example: '{"message":"string","status":500}
 
                   '
+      summary: Create articles by name
+      x-summary-source: derived
+      operationId: postV2ArticlesByName
+      x-operation-id-source: derived
 components:
   schemas:
+    visibility:
+      type: object
+      properties:
+        comment:
+          type: boolean
+          example: true
+        text:
+          type: boolean
+          example: true
+        user:
+          type: boolean
+          example: false
     article:
       properties:
         event:
@@ -313,89 +331,6 @@ components:
         visibility:
           $ref: '#/components/schemas/visibility'
       type: object
-    license:
-      type: object
-      properties:
-        identifier:
-          type: string
-          example: CC-BY-SA-4.0
-        name:
-          type: string
-          example: Creative Commons Attribution-ShareAlike License 4.0
-        url:
-          type: string
-          example: https://creativecommons.org/licenses/by-sa/4.0/
-    project:
-      type: object
-      properties:
-        identifier:
-          type: string
-          example: enwiki
-        code:
-          type: string
-          example: wiki
-        name:
-          type: string
-          example: Wikipedia
-        url:
-          type: string
-          example: https://en.wikipedia.org
-        in_language:
-          $ref: '#/components/schemas/language'
-    revertrisk:
-      properties:
-        prediction:
-          type: boolean
-        probability:
-          properties:
-            'false':
-              type: number
-            'true':
-              type: number
-          type: object
-      type: object
-    link:
-      type: object
-      properties:
-        url:
-          type: string
-        text:
-          type: string
-        images:
-          type: array
-          items:
-            $ref: '#/components/schemas/image'
-    editor:
-      properties:
-        date_started:
-          type: string
-        edit_count:
-          type: integer
-        groups:
-          items:
-            type: string
-          type: array
-        identifier:
-          type: integer
-        is_anonymous:
-          type: boolean
-        is_bot:
-          type: boolean
-        name:
-          type: string
-      type: object
-    category:
-      properties:
-        name:
-          type: string
-        url:
-          type: string
-      type: object
-    referenceneed:
-      properties:
-        reference_need_score:
-          type: number
-      type: object
     citation:
       type: object
       properties:
@@ -405,104 +340,13 @@ components:
           type: string
         text:
           type: string
-    scores:
+    article_body:
       properties:
-        revertrisk:
-          $ref: '#/components/schemas/revertrisk'
-        referencerisk:
-          $ref: '#/components/schemas/referencerisk'
-        referenceneed:
-          $ref: '#/components/schemas/referenceneed'
-      type: object
-    redirect:
-      properties:
-        name:
+        html:
           type: string
-        url:
+        wikitext:
           type: string
       type: object
-    part:
-      type: object
-      properties:
-        name:
-          type: string
-        type:
-          type: string
-        value:
-          type: string
-        values:
-          type: array
-          items:
-            type: string
-        has_parts:
-          type: array
-          items:
-            type: object
-        images:
-          type: array
-          items:
-            $ref: '#/components/schemas/image'
-        links:
-          type: array
-          items:
-            $ref: '#/components/schemas/link'
-        citations:
-          type: array
-          items:
-            $ref: '#/components/schemas/citation'
-    maintenance_tags:
-      properties:
-        citation_needed_count:
-          type: integer
-        pov_count:
-          type: integer
-        clarification_needed_count:
-          type: integer
-        update_count:
-          type: integer
-      type: object
-    entity:
-      type: object
-      properties:
-        identifier:
-          type: string
-        url:
-          type: string
-    version:
-      properties:
-        comment:
-          type: string
-        editor:
-          $ref: '#/components/schemas/editor'
-        identifier:
-          type: integer
-        is_flagged_stable:
-          type: boolean
-        is_minor_edit:
-          type: boolean
-        noindex:
-          type: boolean
-        scores:
-          $ref: '#/components/schemas/scores'
-        maintenance_tags:
-          $ref: '#/components/schemas/maintenance_tags'
-        tags:
-          items:
-            type: string
-          type: array
-      type: object
-    visibility:
-      type: object
-      properties:
-        comment:
-          type: boolean
-          example: true
-        text:
-          type: boolean
-          example: true
-        user:
-          type: boolean
-          example: false
     image:
       type: object
       properties:
@@ -548,40 +392,62 @@ components:
           enum: unknown, bitmap, drawing, audio, video, multimedia, office, text, executable, archive
           description: Mediawiki media type of the image
           example: drawing
-    filter:
+    license:
       type: object
       properties:
-        field:
+        identifier:
           type: string
-        value:
-          type: string
-    template:
-      properties:
+          example: CC-BY-SA-4.0
         name:
           type: string
+          example: Creative Commons Attribution-ShareAlike License 4.0
         url:
           type: string
-      type: object
-    error:
-      type: object
-      properties:
-        message:
-          type: string
-        status:
-          type: integer
+          example: https://creativecommons.org/licenses/by-sa/4.0/
     article_namespace:
       type: object
       properties:
         identifier:
           type: number
           example: 0
-    article_body:
+    revertrisk:
       properties:
-        html:
+        prediction:
+          type: boolean
+        probability:
+          properties:
+            'false':
+              type: number
+            'true':
+              type: number
+          type: object
+      type: object
+    editor:
+      properties:
+        date_started:
           type: string
-        wikitext:
+        edit_count:
+          type: integer
+        groups:
+          items:
+            type: string
+          type: array
+        identifier:
+          type: integer
+        is_anonymous:
+          type: boolean
+        is_bot:
+          type: boolean
+        name:
           type: string
       type: object
+    entity:
+      type: object
+      properties:
+        identifier:
+          type: string
+        url:
+          type: string
     language:
       type: object
       properties:
@@ -597,21 +463,6 @@ components:
         direction:
           type: string
           example: ltr
-    thumbnail:
-      type: object
-      properties:
-        contentUrl:
-          type: string
-          format: uri
-          description: Thumbnail URL
-        width:
-          description: Thumbnail width in pixels
-          type: integer
-          example: 156
-        height:
-          description: Thumbnail height in pixels
-          type: integer
-          example: 255
     event:
       type: object
       properties:
@@ -632,6 +483,102 @@ components:
         reference_risk_score:
           type: number
       type: object
+    maintenance_tags:
+      properties:
+        citation_needed_count:
+          type: integer
+        pov_count:
+          type: integer
+        clarification_needed_count:
+          type: integer
+        update_count:
+          type: integer
+      type: object
+    category:
+      properties:
+        name:
+          type: string
+        url:
+          type: string
+      type: object
+    thumbnail:
+      type: object
+      properties:
+        contentUrl:
+          type: string
+          format: uri
+          description: Thumbnail URL
+        width:
+          description: Thumbnail width in pixels
+          type: integer
+          example: 156
+        height:
+          description: Thumbnail height in pixels
+          type: integer
+          example: 255
+    project:
+      type: object
+      properties:
+        identifier:
+          type: string
+          example: enwiki
+        code:
+          type: string
+          example: wiki
+        name:
+          type: string
+          example: Wikipedia
+        url:
+          type: string
+          example: https://en.wikipedia.org
+        in_language:
+          $ref: '#/components/schemas/language'
+    redirect:
+      properties:
+        name:
+          type: string
+        url:
+          type: string
+      type: object
+    version:
+      properties:
+        comment:
+          type: string
+        editor:
+          $ref: '#/components/schemas/editor'
+        identifier:
+          type: integer
+        is_flagged_stable:
+          type: boolean
+        is_minor_edit:
+          type: boolean
+        noindex:
+          type: boolean
+        scores:
+          $ref: '#/components/schemas/scores'
+        maintenance_tags:
+          $ref: '#/components/schemas/maintenance_tags'
+        tags:
+          items:
+            type: string
+          type: array
+      type: object
+    scores:
+      properties:
+        revertrisk:
+          $ref: '#/components/schemas/revertrisk'
+        referencerisk:
+          $ref: '#/components/schemas/referencerisk'
+        referenceneed:
+          $ref: '#/components/schemas/referenceneed'
+      type: object
+    filter:
+      type: object
+      properties:
+        field:
+          type: string
+        value:
+          type: string
     protection:
       type: object
       properties:
@@ -649,6 +596,65 @@ components:
         type:
           type: string
           example: edit
+    referenceneed:
+      properties:
+        reference_need_score:
+          type: number
+      type: object
+    link:
+      type: object
+      properties:
+        url:
+          type: string
+        text:
+          type: string
+        images:
+          type: array
+          items:
+            $ref: '#/components/schemas/image'
+    error:
+      type: object
+      properties:
+        message:
+          type: string
+        status:
+          type: integer
+    part:
+      type: object
+      properties:
+        name:
+          type: string
+        type:
+          type: string
+        value:
+          type: string
+        values:
+          type: array
+          items:
+            type: string
+        has_parts:
+          type: array
+          items:
+            type: object
+        images:
+          type: array
+          items:
+            $ref: '#/components/schemas/image'
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/link'
+        citations:
+          type: array
+          items:
+            $ref: '#/components/schemas/citation'
+    template:
+      properties:
+        name:
+          type: string
+        url:
+          type: string
+      type: object
   securitySchemes:
     bearerAuth:
       type: http
