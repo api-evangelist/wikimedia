@@ -72,7 +72,7 @@ apis:
   - FN: Wikimedia Developer Relations
     url: https://www.mediawiki.org/wiki/Developer_advocacy
 - aid: wikimedia:wikimedia-articles-api
-  name: Wikimedia articles API
+  name: Wikimedia Articles API
   description: On-demand API
   humanURL: https://www.mediawiki.org/wiki/API:Main_page
   baseURL: https://en.wikipedia.org/w/api.php
@@ -104,7 +104,7 @@ apis:
   - type: FinOps
     url: /finops/wikimedia-enterprise.yml
 - aid: wikimedia:wikimedia-batches-api
-  name: Wikimedia batches API
+  name: Wikimedia Batches API
   description: Realtime Batch API
   humanURL: https://www.mediawiki.org/wiki/API:Main_page
   baseURL: https://en.wikipedia.org/w/api.php
@@ -168,7 +168,7 @@ apis:
   - type: FinOps
     url: /finops/wikimedia-enterprise.yml
 - aid: wikimedia:wikimedia-codes-api
-  name: Wikimedia codes API
+  name: Wikimedia Codes API
   description: Metadata
   humanURL: https://www.mediawiki.org/wiki/API:Main_page
   baseURL: https://en.wikipedia.org/w/api.php
@@ -200,7 +200,7 @@ apis:
   - type: FinOps
     url: /finops/wikimedia-enterprise.yml
 - aid: wikimedia:wikimedia-languages-api
-  name: Wikimedia languages API
+  name: Wikimedia Languages API
   description: Metadata
   humanURL: https://www.mediawiki.org/wiki/API:Main_page
   baseURL: https://en.wikipedia.org/w/api.php
@@ -292,7 +292,7 @@ apis:
   - type: FinOps
     url: /finops/wikimedia-enterprise.yml
 - aid: wikimedia:wikimedia-namespaces-api
-  name: Wikimedia namespaces API
+  name: Wikimedia Namespaces API
   description: Metadata
   humanURL: https://www.mediawiki.org/wiki/API:Main_page
   baseURL: https://en.wikipedia.org/w/api.php
@@ -324,7 +324,7 @@ apis:
   - type: FinOps
     url: /finops/wikimedia-enterprise.yml
 - aid: wikimedia:wikimedia-offline-api
-  name: Wikimedia offline API
+  name: Wikimedia Offline API
   description: The offline API from Wikimedia — 2 operation(s) for offline.
   humanURL: https://www.mediawiki.org/wiki/API:Main_page
   baseURL: https://en.wikipedia.org/w/api.php
@@ -386,7 +386,7 @@ apis:
   - type: FinOps
     url: /finops/wikimedia-enterprise.yml
 - aid: wikimedia:wikimedia-projects-api
-  name: Wikimedia projects API
+  name: Wikimedia Projects API
   description: Metadata
   humanURL: https://www.mediawiki.org/wiki/API:Main_page
   baseURL: https://en.wikipedia.org/w/api.php
@@ -482,7 +482,7 @@ apis:
   - type: FinOps
     url: /finops/wikimedia-enterprise.yml
 - aid: wikimedia:wikimedia-snapshots-api
-  name: Wikimedia snapshots API
+  name: Wikimedia Snapshots API
   description: Snapshot API
   humanURL: https://www.mediawiki.org/wiki/API:Main_page
   baseURL: https://en.wikipedia.org/w/api.php
@@ -514,7 +514,7 @@ apis:
   - type: FinOps
     url: /finops/wikimedia-enterprise.yml
 - aid: wikimedia:wikimedia-structured-contents-api
-  name: Wikimedia structured-contents API
+  name: Wikimedia Structured Contents API
   description: (Beta) Structured Contents On-demand API
   humanURL: https://www.mediawiki.org/wiki/API:Main_page
   baseURL: https://en.wikipedia.org/w/api.php
@@ -546,7 +546,7 @@ apis:
   - type: FinOps
     url: /finops/wikimedia-enterprise.yml
 - aid: wikimedia:wikimedia-structured-snapshots-api
-  name: Wikimedia structured-snapshots API
+  name: Wikimedia Structured Snapshots API
   description: (BETA) Structured Contents Snapshot API
   humanURL: https://www.mediawiki.org/wiki/API:Main_page
   baseURL: https://en.wikipedia.org/w/api.php
@@ -636,7 +636,7 @@ apis:
   - type: FinOps
     url: /finops/wikimedia-enterprise.yml
 - aid: wikimedia:wikimedia-wikidata-api
-  name: Wikimedia wikidata API
+  name: Wikimedia Wikidata API
   description: The wikidata API from Wikimedia — 3 operation(s) for wikidata.
   humanURL: https://www.mediawiki.org/wiki/API:Main_page
   baseURL: https://en.wikipedia.org/w/api.php

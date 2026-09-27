@@ -1311,6 +1311,57 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    snapshot:
+      type: object
+      properties:
+        identifier:
+          type: string
+        version:
+          type: string
+        date_modified:
+          type: string
+        in_language:
+          $ref: '#/components/schemas/language'
+        is_part_of:
+          $ref: '#/components/schemas/project'
+        namespace:
+          $ref: '#/components/schemas/article_namespace'
+        size:
+          $ref: '#/components/schemas/size'
+        chunks:
+          type: array
+          items:
+            type: string
+    article_namespace:
+      type: object
+      properties:
+        identifier:
+          type: number
+          example: 0
+    project:
+      type: object
+      properties:
+        identifier:
+          type: string
+          example: enwiki
+        code:
+          type: string
+          example: wiki
+        name:
+          type: string
+          example: Wikipedia
+        url:
+          type: string
+          example: https://en.wikipedia.org
+        in_language:
+          $ref: '#/components/schemas/language'
+    error:
+      type: object
+      properties:
+        message:
+          type: string
+        status:
+          type: integer
     language:
       type: object
       properties:
@@ -1342,57 +1393,6 @@ components:
           type: string
         value:
           type: string
-    article_namespace:
-      type: object
-      properties:
-        identifier:
-          type: number
-          example: 0
-    project:
-      type: object
-      properties:
-        identifier:
-          type: string
-          example: enwiki
-        code:
-          type: string
-          example: wiki
-        name:
-          type: string
-          example: Wikipedia
-        url:
-          type: string
-          example: https://en.wikipedia.org
-        in_language:
-          $ref: '#/components/schemas/language'
-    snapshot:
-      type: object
-      properties:
-        identifier:
-          type: string
-        version:
-          type: string
-        date_modified:
-          type: string
-        in_language:
-          $ref: '#/components/schemas/language'
-        is_part_of:
-          $ref: '#/components/schemas/project'
-        namespace:
-          $ref: '#/components/schemas/article_namespace'
-        size:
-          $ref: '#/components/schemas/size'
-        chunks:
-          type: array
-          items:
-            type: string
-    error:
-      type: object
-      properties:
-        message:
-          type: string
-        status:
-          type: integer
   securitySchemes:
     bearerAuth:
       type: http
