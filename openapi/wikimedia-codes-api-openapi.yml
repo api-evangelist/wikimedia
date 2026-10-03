@@ -450,15 +450,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    code:
-      type: object
-      properties:
-        identifier:
-          type: string
-        name:
-          type: string
-        description:
-          type: string
     error:
       type: object
       properties:
@@ -472,6 +463,15 @@ components:
         field:
           type: string
         value:
+          type: string
+    code:
+      type: object
+      properties:
+        identifier:
+          type: string
+        name:
+          type: string
+        description:
           type: string
   securitySchemes:
     bearerAuth:
