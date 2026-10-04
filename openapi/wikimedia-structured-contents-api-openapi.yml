@@ -264,6 +264,13 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    filter:
+      type: object
+      properties:
+        field:
+          type: string
+        value:
+          type: string
     revertrisk:
       properties:
         prediction:
@@ -285,80 +292,6 @@ components:
         referenceneed:
           $ref: '#/components/schemas/referenceneed'
       type: object
-    entity:
-      type: object
-      properties:
-        identifier:
-          type: string
-        url:
-          type: string
-    project:
-      type: object
-      properties:
-        identifier:
-          type: string
-          example: enwiki
-        code:
-          type: string
-          example: wiki
-        name:
-          type: string
-          example: Wikipedia
-        url:
-          type: string
-          example: https://en.wikipedia.org
-        in_language:
-          $ref: '#/components/schemas/language'
-    structured-content:
-      properties:
-        name:
-          type: string
-        identifier:
-          type: integer
-        abstract:
-          type: string
-        description:
-          type: string
-        url:
-          type: string
-        date_created:
-          type: string
-        date_modified:
-          type: string
-        infoboxes:
-          type: array
-          items:
-            $ref: '#/components/schemas/part'
-        sections:
-          type: array
-          items:
-            $ref: '#/components/schemas/part'
-        main_entity:
-          $ref: '#/components/schemas/entity'
-        additional_entities:
-          type: array
-          items:
-            $ref: '#/components/schemas/entity'
-        image:
-          $ref: '#/components/schemas/image'
-        version:
-          $ref: '#/components/schemas/version'
-        is_part_of:
-          $ref: '#/components/schemas/project'
-        in_language:
-          $ref: '#/components/schemas/language'
-        license:
-          $ref: '#/components/schemas/license'
-        references:
-          $ref: '#/components/schemas/reference'
-        tables:
-          $ref: '#/components/schemas/table'
-      type: object
-    referencerisk:
-      properties:
-        reference_risk_score:
-          type: number
-      type: object
     license:
       type: object
       properties:
@@ -376,6 +309,30 @@ components:
         reference_need_score:
           type: number
       type: object
+    citation:
+      type: object
+      properties:
+        identifier:
+          type: string
+        group:
+          type: string
+        text:
+          type: string
+    language:
+      type: object
+      properties:
+        identifier:
+          type: string
+          example: en
+        name:
+          type: string
+          example: English
+        alternate_name:
+          type: string
+          example: English
+        direction:
+          type: string
+          example: ltr
     image:
       type: object
       properties:
@@ -421,33 +378,64 @@ components:
           enum: unknown, bitmap, drawing, audio, video, multimedia, office, text, executable, archive
           description: Mediawiki media type of the image
           example: drawing
-    table:
+    entity:
       type: object
       properties:
         identifier:
           type: string
-        headers:
+        url:
+          type: string
+    link:
+      type: object
+      properties:
+        url:
+          type: string
+        text:
+          type: string
+        images:
           type: array
           items:
-            type: array
-            items:
-              type: object
-              properties:
-                value:
-                  type: string
-        rows:
+            $ref: '#/components/schemas/image'
+    part:
+      type: object
+      properties:
+        name:
+          type: string
+        type:
+          type: string
+        value:
+          type: string
+        values:
           type: array
           items:
-            type: array
-            items:
-              type: object
-              properties:
-                value:
-                  type: string
-        confidence_score:
-          type: number
-          minimum: 0
-          maximum: 1
+            type: string
+        has_parts:
+          type: array
+          items:
+            type: object
+        images:
+          type: array
+          items:
+            $ref: '#/components/schemas/image'
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/link'
+        citations:
+          type: array
+          items:
+            $ref: '#/components/schemas/citation'
+    maintenance_tags:
+      properties:
+        citation_needed_count:
+          type: integer
+        pov_count:
+          type: integer
+        clarification_needed_count:
+          type: integer
+        update_count:
+          type: integer
+      type: object
     reference:
       type: object
       properties:
@@ -479,35 +467,100 @@ components:
                 $ref: '#/components/schemas/link'
         parent_reference:
           type: string
-    part:
-      type: object
+    structured-content:
       properties:
         name:
           type: string
-        type:
+        identifier:
+          type: integer
+        abstract:
           type: string
-        value:
+        description:
           type: string
-        values:
+        url:
+          type: string
+        date_created:
+          type: string
+        date_modified:
+          type: string
+        infoboxes:
           type: array
           items:
-            type: string
-        has_parts:
+            $ref: '#/components/schemas/part'
+        sections:
           type: array
           items:
-            type: object
-        images:
+            $ref: '#/components/schemas/part'
+        main_entity:
+          $ref: '#/components/schemas/entity'
+        additional_entities:
           type: array
           items:
-            $ref: '#/components/schemas/image'
-        links:
+            $ref: '#/components/schemas/entity'
+        image:
+          $ref: '#/components/schemas/image'
+        version:
+          $ref: '#/components/schemas/version'
+        is_part_of:
+          $ref: '#/components/schemas/project'
+        in_language:
+          $ref: '#/components/schemas/language'
+        license:
+          $ref: '#/components/schemas/license'
+        references:
+          $ref: '#/components/schemas/reference'
+        tables:
+          $ref: '#/components/schemas/table'
+      type: object
+    table:
+      type: object
+      properties:
+        identifier:
+          type: string
+        headers:
           type: array
           items:
-            $ref: '#/components/schemas/link'
-        citations:
+            type: array
+            items:
+              type: object
+              properties:
+                value:
+                  type: string
+        rows:
           type: array
           items:
-            $ref: '#/components/schemas/citation'
+            type: array
+            items:
+              type: object
+              properties:
+                value:
+                  type: string
+        confidence_score:
+          type: number
+          minimum: 0
+          maximum: 1
+    project:
+      type: object
+      properties:
+        identifier:
+          type: string
+          example: enwiki
+        code:
+          type: string
+          example: wiki
+        name:
+          type: string
+          example: Wikipedia
+        url:
+          type: string
+          example: https://en.wikipedia.org
+        in_language:
+          $ref: '#/components/schemas/language'
+    referencerisk:
+      properties:
+        reference_risk_score:
+          type: number
+      type: object
     editor:
       properties:
         date_started:
@@ -527,17 +580,13 @@ components:
         name:
           type: string
       type: object
-    maintenance_tags:
-      properties:
-        citation_needed_count:
-          type: integer
-        pov_count:
-          type: integer
-        clarification_needed_count:
-          type: integer
-        update_count:
-          type: integer
+    error:
       type: object
+      properties:
+        message:
+          type: string
+        status:
+          type: integer
     thumbnail:
       type: object
       properties:
@@ -553,13 +602,6 @@ components:
           description: Thumbnail height in pixels
           type: integer
           example: 255
-    error:
-      type: object
-      properties:
-        message:
-          type: string
-        status:
-          type: integer
     version:
       properties:
         comment:
@@ -583,48 +625,6 @@ components:
             type: string
           type: array
       type: object
-    citation:
-      type: object
-      properties:
-        identifier:
-          type: string
-        group:
-          type: string
-        text:
-          type: string
-    link:
-      type: object
-      properties:
-        url:
-          type: string
-        text:
-          type: string
-        images:
-          type: array
-          items:
-            $ref: '#/components/schemas/image'
-    filter:
-      type: object
-      properties:
-        field:
-          type: string
-        value:
-          type: string
-    language:
-      type: object
-      properties:
-        identifier:
-          type: string
-          example: en
-        name:
-          type: string
-          example: English
-        alternate_name:
-          type: string
-          example: English
-        direction:
-          type: string
-          example: ltr
   securitySchemes:
     bearerAuth:
       type: http

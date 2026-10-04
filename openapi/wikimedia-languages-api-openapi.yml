@@ -431,13 +431,6 @@ components:
           type: string
         status:
           type: integer
-    filter:
-      type: object
-      properties:
-        field:
-          type: string
-        value:
-          type: string
     language:
       type: object
       properties:
@@ -453,6 +446,13 @@ components:
         direction:
           type: string
           example: ltr
+    filter:
+      type: object
+      properties:
+        field:
+          type: string
+        value:
+          type: string
   securitySchemes:
     bearerAuth:
       type: http

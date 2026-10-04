@@ -762,6 +762,22 @@ components:
           $ref: '#/components/schemas/article_namespace'
         size:
           $ref: '#/components/schemas/size'
+    size:
+      type: object
+      properties:
+        unit_text:
+          type: string
+          example: B
+        value:
+          type: number
+          example: 76760
+    filter:
+      type: object
+      properties:
+        field:
+          type: string
+        value:
+          type: string
     project:
       type: object
       properties:
@@ -786,28 +802,6 @@ components:
           type: string
         status:
           type: integer
-    filter:
-      type: object
-      properties:
-        field:
-          type: string
-        value:
-          type: string
-    article_namespace:
-      type: object
-      properties:
-        identifier:
-          type: number
-          example: 0
-    size:
-      type: object
-      properties:
-        unit_text:
-          type: string
-          example: B
-        value:
-          type: number
-          example: 76760
     language:
       type: object
       properties:
@@ -823,6 +817,12 @@ components:
         direction:
           type: string
           example: ltr
+    article_namespace:
+      type: object
+      properties:
+        identifier:
+          type: number
+          example: 0
   securitySchemes:
     bearerAuth:
       type: http
