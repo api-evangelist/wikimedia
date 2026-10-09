@@ -1,3 +1,8 @@
+# Provenance stamped 2026-10-07 (roadmap#943): written by an API Evangelist sweep (dated 2026-06-13 by the file itself), not
+# harvested from the provider. `method: generated` so the economics campaign may replace it with a
+# dated, verbatim transcription; every figure below is unverified until it does.
+method: generated
+generated: '2026-06-13'
 name: Wikimedia REST API (RESTBase) Rate Limits
 description: Rate limiting information for the Wikimedia REST API served at /api/rest_v1/ on Wikipedia and other Wikimedia projects. This API benefits from globally distributed caching infrastructure designed to support high request volumes with reduced latencies.
 url: https://www.mediawiki.org/wiki/Wikimedia_REST_API

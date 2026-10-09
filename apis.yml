@@ -666,6 +666,12 @@ apis:
   - type: FinOps
     url: /finops/wikimedia-enterprise.yml
 common:
+  - type: Plans
+    url: plans/wikimedia-enterprise.yml
+  - type: RateLimits
+    url: rate-limits/mediawiki-action-api.yml
+  - type: FinOps
+    url: finops/wikimedia-enterprise.yml
   - type: AgenticAccess
     url: agentic-access/wikimedia-agentic-access.yml
   - type: VulnerabilityDisclosure
