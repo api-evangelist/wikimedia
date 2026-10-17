@@ -768,6 +768,32 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    list_read:
+      title: list
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 42
+        name:
+          type: string
+          example: Planets
+        description:
+          type: string
+          example: Planets of the Solar System
+        created:
+          type: string
+          format: date-time
+          description: Creation date (in ISO 8601)
+        updated:
+          type: string
+          format: date-time
+          description: Last modification date (in ISO 8601)
+      required:
+      - id
+      - name
+      - created
+      - updated
     list_write:
       title: list
       type: object
@@ -816,32 +842,6 @@ components:
           type: string
         instance:
           type: string
-    list_read:
-      title: list
-      type: object
-      properties:
-        id:
-          type: integer
-          example: 42
-        name:
-          type: string
-          example: Planets
-        description:
-          type: string
-          example: Planets of the Solar System
-        created:
-          type: string
-          format: date-time
-          description: Creation date (in ISO 8601)
-        updated:
-          type: string
-          format: date-time
-          description: Last modification date (in ISO 8601)
-      required:
-      - id
-      - name
-      - created
-      - updated
     list_entry_write:
       type: object
       properties:

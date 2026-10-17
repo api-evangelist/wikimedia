@@ -1311,6 +1311,44 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    project:
+      type: object
+      properties:
+        identifier:
+          type: string
+          example: enwiki
+        code:
+          type: string
+          example: wiki
+        name:
+          type: string
+          example: Wikipedia
+        url:
+          type: string
+          example: https://en.wikipedia.org
+        in_language:
+          $ref: '#/components/schemas/language'
+    language:
+      type: object
+      properties:
+        identifier:
+          type: string
+          example: en
+        name:
+          type: string
+          example: English
+        alternate_name:
+          type: string
+          example: English
+        direction:
+          type: string
+          example: ltr
+    article_namespace:
+      type: object
+      properties:
+        identifier:
+          type: number
+          example: 0
     size:
       type: object
       properties:
@@ -1348,23 +1386,6 @@ components:
           type: array
           items:
             type: string
-    project:
-      type: object
-      properties:
-        identifier:
-          type: string
-          example: enwiki
-        code:
-          type: string
-          example: wiki
-        name:
-          type: string
-          example: Wikipedia
-        url:
-          type: string
-          example: https://en.wikipedia.org
-        in_language:
-          $ref: '#/components/schemas/language'
     error:
       type: object
       properties:
@@ -1372,27 +1393,6 @@ components:
           type: string
         status:
           type: integer
-    language:
-      type: object
-      properties:
-        identifier:
-          type: string
-          example: en
-        name:
-          type: string
-          example: English
-        alternate_name:
-          type: string
-          example: English
-        direction:
-          type: string
-          example: ltr
-    article_namespace:
-      type: object
-      properties:
-        identifier:
-          type: number
-          example: 0
   securitySchemes:
     bearerAuth:
       type: http
